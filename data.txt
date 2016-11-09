@@ -1,0 +1,3651 @@
+<!-- 面包屑模块 -->
+<div class="intro clear" mod-id="lj-common-bread">
+	<div class="container">
+		<div class="fl l-txt">
+			<i class="icon">
+			</i>
+			&nbsp;
+			<a href="/">
+				链家网北京站
+			</a>
+			<span class="stp">
+				&nbsp;&gt;&nbsp;
+			</span>
+			<span>
+				北京租房
+			</span>
+		</div>
+		<div class="fr r-txt">
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div class="filter-box">
+		<div class="hd clear">
+			<ul class="tab-lst">
+				<li class="on">
+					<a href="/zufang/">
+						<span>
+							全部租房
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="/ditiezufang/">
+						<span>
+							地铁租房
+						</span>
+					</a>
+				</li>
+			</ul>
+			<div class="info">
+				<span class="num">
+					真实房源，假一赔百元，不封顶！
+				</span>
+			</div>
+		</div>
+		<div>
+			<div class="bd" id="filter-options">
+				<dl class="dl-lst clear">
+					<dt>
+						区域：
+					</dt>
+					<dd data-index="0">
+						<div class="option-list">
+							<a href="/zufang/" class="on">
+								不限
+							</a>
+							<a href="/zufang/dongcheng/">
+								东城
+							</a>
+							<a href="/zufang/xicheng/">
+								西城
+							</a>
+							<a href="/zufang/chaoyang/">
+								朝阳
+							</a>
+							<a href="/zufang/haidian/">
+								海淀
+							</a>
+							<a href="/zufang/fengtai/">
+								丰台
+							</a>
+							<a href="/zufang/shijingshan/">
+								石景山
+							</a>
+							<a href="/zufang/tongzhou/">
+								通州
+							</a>
+							<a href="/zufang/changping/">
+								昌平
+							</a>
+							<a href="/zufang/daxing/">
+								大兴
+							</a>
+							<a href="/zufang/yizhuangkaifaqu/">
+								亦庄开发区
+							</a>
+							<a href="/zufang/shunyi/">
+								顺义
+							</a>
+							<a href="/zufang/fangshan/">
+								房山
+							</a>
+							<a href="/zufang/mentougou/">
+								门头沟
+							</a>
+							<a href="/zufang/pinggu/">
+								平谷
+							</a>
+							<a href="/zufang/huairou/">
+								怀柔
+							</a>
+							<a href="/zufang/miyun/">
+								密云
+							</a>
+							<a href="/zufang/yanqing/">
+								延庆
+							</a>
+							<a href="/zufang/yanjiao/">
+								燕郊
+							</a>
+						</div>
+					</dd>
+				</dl>
+				<dl class="dl-lst clear">
+					<dt>
+						租金：
+					</dt>
+					<dd data-index="1">
+						<div class="option-list">
+							<a href="/zufang/" class="on">
+								不限
+							</a>
+							<a href="/zufang/rp1/">
+								1500元以下
+							</a>
+							<a href="/zufang/rp2/">
+								1500-2500元
+							</a>
+							<a href="/zufang/rp3/">
+								2500-3500元
+							</a>
+							<a href="/zufang/rp4/">
+								3500-4500元
+							</a>
+							<a href="/zufang/rp5/">
+								4500-5500元
+							</a>
+							<a href="/zufang/rp6/">
+								5500-6500元
+							</a>
+							<a href="/zufang/rp7/">
+								6500元以上
+							</a>
+							<div class="custom" data-type="price">
+								<div class="txt-box">
+									<input type="text" class="txt" name="min_price" data-index="1" value=""
+									/>
+								</div>
+								&nbsp;-&nbsp;
+								<div class="txt-box">
+									<input type="text" class="txt" name="max_price" data-index="1" value=""
+									/>
+								</div>
+								&nbsp;元
+								<input type="button" data-type="price" class="ok" value="确定" />
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl class="dl-lst clear">
+					<dt>
+						面积：
+					</dt>
+					<dd data-index="2">
+						<div class="option-list">
+							<a href="/zufang/" class="on">
+								不限
+							</a>
+							<a href="/zufang/ra1/">
+								30平以下
+							</a>
+							<a href="/zufang/ra2/">
+								30-50平
+							</a>
+							<a href="/zufang/ra3/">
+								50-70平
+							</a>
+							<a href="/zufang/ra4/">
+								70-90平
+							</a>
+							<a href="/zufang/ra5/">
+								90-120平
+							</a>
+							<a href="/zufang/ra6/">
+								120-140平
+							</a>
+							<a href="/zufang/ra7/">
+								140-160平
+							</a>
+							<a href="/zufang/ra8/">
+								160-200平
+							</a>
+							<a href="/zufang/ra9/">
+								200平以上
+							</a>
+							<div class="custom" data-type="area">
+								<div class="txt-box">
+									<input type="text" class="txt" name="min_area" data-index="2" value=""
+									/>
+								</div>
+								&nbsp;-&nbsp;
+								<div class="txt-box">
+									<input type="text" class="txt" name="max_area" data-index="2" value=""
+									/>
+								</div>
+								&nbsp;平
+								<input type="button" data-type="area" class="ok" value="确定" />
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl class="dl-lst clear">
+					<dt>
+						房型：
+					</dt>
+					<dd data-index="3">
+						<div class="option-list">
+							<a href="/zufang/" class="on">
+								不限
+							</a>
+							<a href="/zufang/l1/">
+								一室
+							</a>
+							<a href="/zufang/l2/">
+								二室
+							</a>
+							<a href="/zufang/l3/">
+								三室
+							</a>
+							<a href="/zufang/l4/">
+								四室
+							</a>
+							<a href="/zufang/l5/">
+								五室
+							</a>
+							<a href="/zufang/l6/">
+								五室以上
+							</a>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="filter-bar01">
+				<div id="sort-panel" class="sort-panel">
+					<div class="left">
+						<div class="fs14">
+							<span class="left">
+								筛选：
+							</span>
+						</div>
+						<div class="right">
+							<div class="d-1 dropdown">
+								<span>
+									朝向
+								</span>
+								<i>
+								</i>
+								<ul class="fil-item">
+									<a href="/zufang/f1/">
+										<li>
+											朝东
+										</li>
+									</a>
+									<a href="/zufang/f2/">
+										<li>
+											朝南
+										</li>
+									</a>
+									<a href="/zufang/f3/">
+										<li>
+											朝西
+										</li>
+									</a>
+									<a href="/zufang/f4/">
+										<li>
+											朝北
+										</li>
+									</a>
+									<a href="/zufang/f5/">
+										<li>
+											南北
+										</li>
+									</a>
+								</ul>
+							</div>
+							<div class="d-2 dropdown">
+								<span>
+									楼层
+								</span>
+								<i>
+								</i>
+								<ul class="fil-item">
+									<a href="/zufang/lc1/">
+										<li>
+											低楼层
+										</li>
+									</a>
+									<a href="/zufang/lc2/">
+										<li>
+											中楼层
+										</li>
+									</a>
+									<a href="/zufang/lc3/">
+										<li>
+											高楼层
+										</li>
+									</a>
+								</ul>
+							</div>
+							<div class="d-3 dropdown">
+								<span>
+									品牌
+								</span>
+								<i>
+								</i>
+								<ul class="fil-item">
+									<a href="/zufang/">
+										<li>
+											全部品牌
+										</li>
+									</a>
+									<a href="/zufang/bd1/">
+										<li>
+											链家
+										</li>
+									</a>
+									<a href="/zufang/bd2/">
+										<li>
+											自如
+										</li>
+									</a>
+								</ul>
+							</div>
+							<div class="d-4 dropdown">
+								<span>
+									方式
+								</span>
+								<i>
+								</i>
+								<ul class="fil-item">
+									<a href="/zufang/">
+										<li>
+											全部方式
+										</li>
+									</a>
+									<a href="/zufang/rt1/">
+										<li>
+											整租
+										</li>
+									</a>
+									<a href="/zufang/rt2/">
+										<li>
+											合租
+										</li>
+									</a>
+								</ul>
+							</div>
+							<div class="item-check">
+								<ul>
+									<li>
+										<a href="/zufang/su1/">
+											<i>
+											</i>
+											近地铁
+										</a>
+									</li>
+									<li>
+										<a href="/zufang/ht1/">
+											<i>
+											</i>
+											有采暖
+										</a>
+									</li>
+									<li>
+										<a href="/zufang/rd1/">
+											<i>
+											</i>
+											精装修
+										</a>
+									</li>
+									<li>
+										<a href="/zufang/ky1/">
+											<i>
+											</i>
+											随时看房
+										</a>
+									</li>
+									<li>
+										<a href="/zufang/idb1/">
+											<i>
+											</i>
+											独立阳台
+										</a>
+									</li>
+									<li>
+										<a href="/zufang/pt1/">
+											<i>
+											</i>
+											独卫
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- <div class="item-check"><ul><li><a href="#;" class="check-a"><i></i>满五唯一</a></li><li><a href="#;"><i></i>房本满五年</a></li><li><a href="#;"><i></i>近地铁</a></li><li><a href="#;"><i></i>学区房</a></li><li><a href="#;"><i></i>不限购</a></li></ul></div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filter-bar01">
+				<div class="sort-bar" id="sort-bar">
+					<span>
+						排序：
+					</span>
+					<div class="sort-parent on">
+						<a href="/zufang/">
+							<span>
+								默认
+							</span>
+						</a>
+					</div>
+					<div class="sort-parent">
+						<a href="/zufang/rco10/">
+							<span>
+								最新
+							</span>
+						</a>
+					</div>
+					<div class="sort-parent">
+						<a href="/zufang/rco20/">
+							<span>
+								租金低
+							</span>
+						</a>
+					</div>
+					<div class="sort-parent">
+						<span>
+							面积
+						</span>
+						<i>
+						</i>
+						<ul class="sort-children">
+							<li>
+								<a href="/zufang/rco31/">
+									面积从小到大
+								</a>
+							</li>
+							<li>
+								<a href="/zufang/rco32/">
+									面积从大到小
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="sort-parent">
+						<a href="/zufang/rco40/">
+							<span>
+								地铁距离近
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main-box clear">
+		<div class="con-box">
+			<div class="list-head clear">
+				<h2>
+					共有
+					<span>
+						14173
+					</span>
+					套北京在租房源
+				</h2>
+				<div class="view-type" id="viewType">
+					<div class="modeshows modeshow">
+						<span class="l-show view-mod" data-type="real" id="lshow">
+							<i>
+							</i>
+							实景图模式
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-wrap">
+				<ul id="house-lst" class="house-lst">
+					<li data-index="0" data-id="101100768389">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100768389.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/78b4405f-4e94-4a75-a8c9-0b6853b34efc.jpg.280x210.jpg"
+								alt="柏林三期南向大一居  业主自住房  中高楼层 长期出租" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/1007d45a-be02-41dc-a75a-3a7cf658db49.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100768389.html"
+								title="柏林三期南向大一居  业主自住房  中高楼层 长期出租">
+									柏林三期南向大一居 业主自住房 中高楼层 长期出租
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027375967/" class="laisuzhou">
+										<span class="region">
+											柏林爱乐三期&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											1室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										68平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/guanzhuang/">
+											管庄租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共15层)
+										<span>
+											/
+										</span>
+										2007年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离6号线黄渠站787米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5200
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.10.31 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											27
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="1" data-id="101100788583">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100788583.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/b7b19356-cde0-4cc0-a405-e47299784ddf.jpg.280x210.jpg"
+								alt="云趣园三区精装三居两卫 双卧朝南 临近地铁 拎包入住" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/665c23ce-df5e-4fd4-b30b-c13fe2ffee71.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100788583.html"
+								title="云趣园三区精装三居两卫 双卧朝南 临近地铁 拎包入住">
+									云趣园三区精装三居两卫 双卧朝南 临近地铁 拎包入住
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027381983/" class="laisuzhou">
+										<span class="region">
+											云趣园三区&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											3室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										112平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/huilongguan2/">
+											回龙观租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共6层)
+										<span>
+											/
+										</span>
+										2000年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离8号线育知路站1182米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													自供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										6000
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.05 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											8
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="2" data-id="101100755478">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100755478.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/d59c3700-84c9-45cd-bc6f-9a0be82ef2e5.jpg.280x210.jpg"
+								alt="黄渠柏林爱乐精装修一居 已经改好两居  随时看房" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/00bf3eb6-9633-4edf-884c-9d71cd5ea7f7.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100755478.html"
+								title="黄渠柏林爱乐精装修一居 已经改好两居  随时看房">
+									黄渠柏林爱乐精装修一居 已经改好两居 随时看房
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027375967/" class="laisuzhou">
+										<span class="region">
+											柏林爱乐三期&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											1室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										70平米&nbsp;&nbsp;
+									</span>
+									<span>
+										西
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/guanzhuang/">
+											管庄租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共11层)
+										<span>
+											/
+										</span>
+										2007年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离6号线常营站810米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										4800
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.10.30 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											23
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="3" data-id="101100756774">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100756774.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/7e59bc69-b797-4d17-bd90-2243a561d64e.jpg.280x210.jpg"
+								alt="富力城A区家具家电都齐两居出租" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/81de5c88-6bc5-4198-a9e8-67e80090d59a.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100756774.html"
+								title="富力城A区家具家电都齐两居出租">
+									富力城A区家具家电都齐两居出租
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027374272/" class="laisuzhou">
+										<span class="region">
+											富力城A区&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										88平米&nbsp;&nbsp;
+									</span>
+									<span>
+										北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/shuangjing/">
+											双井租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共26层)
+										<span>
+											/
+										</span>
+										2004年建板塔结合
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离10号线双井站297米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										11500
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.03 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											23
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="4" data-id="101100729360">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100729360.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/8c6a2a6c-3802-4aca-933d-daf3991967f6.jpg.280x210.jpg"
+								alt="和平西街 精装两居室 紧邻地铁 采光好 随时入住 " data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/f5b48424-d355-4708-82d6-47c4cf7ce2c4.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100729360.html"
+								title="和平西街 精装两居室 紧邻地铁 采光好 随时入住 ">
+									和平西街 精装两居室 紧邻地铁 采光好 随时入住
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027375216/" class="laisuzhou">
+										<span class="region">
+											和平西街&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										59平米&nbsp;&nbsp;
+									</span>
+									<span>
+										东南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/hepingli/">
+											和平里租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共16层)
+										<span>
+											/
+										</span>
+										1986年建塔楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离5号线和平西桥站26米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="decoration">
+											</span>
+											<span class="decoration-ex">
+												<span>
+													精装修
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										6300
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.05 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											29
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="5" data-id="101100698248">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100698248.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/f2e8c905-2f8e-4c53-addc-add778cdc5ad.png.280x210.jpg"
+								alt="后现代城 全南两居 中低楼层 采光好" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/b8b52b6f-1ebf-47a7-8944-2ff267af08a8.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100698248.html"
+								title="后现代城 全南两居 中低楼层 采光好">
+									后现代城 全南两居 中低楼层 采光好
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027375357/" class="laisuzhou">
+										<span class="region">
+											后现代城&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										103平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/dawanglu/">
+											大望路租房
+										</a>
+										<span>
+											/
+										</span>
+										低楼层(共27层)
+										<span>
+											/
+										</span>
+										2007年建塔楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离7号线大郊亭站478米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										8500
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.10.27 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											21
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="6" data-id="101100704973">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100704973.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/6cf96229-bbd0-45bd-b4df-29561693a389.jpg.280x210.jpg"
+								alt="北街家园六区 2室1厅 2900元" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/0683f457-443e-4c49-b479-9a6b7585cd0b.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100704973.html"
+								title="北街家园六区 2室1厅 2900元">
+									北街家园六区 2室1厅 2900元
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027379515/" class="laisuzhou">
+										<span class="region">
+											北街家园六区&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										60平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/shahe2/">
+											沙河租房
+										</a>
+										<span>
+											/
+										</span>
+										低楼层(共18层)
+										<span>
+											/
+										</span>
+										2009年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										2900
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.07 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											32
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="7" data-id="101100722951">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100722951.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/8147caf6-8fe4-4799-a91f-bb2deb976028.jpg.280x210.jpg"
+								alt="融泽家园精装两居紧邻西二旗城铁辉煌国际百度软件园" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/28644a01-f8b5-47e2-8cdb-a7532cd69d8b.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100722951.html"
+								title="融泽家园精装两居紧邻西二旗城铁辉煌国际百度软件园">
+									融泽家园精装两居紧邻西二旗城铁辉煌国际百度软件园
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111047349969/" class="laisuzhou">
+										<span class="region">
+											融泽嘉园&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										87平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/huilongguan2/">
+											回龙观租房
+										</a>
+										<span>
+											/
+										</span>
+										低楼层(共27层)
+										<span>
+											/
+										</span>
+										2014年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="decoration">
+											</span>
+											<span class="decoration-ex">
+												<span>
+													精装修
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5200
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.08 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											30
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="8" data-id="101100724345">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100724345.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/1e7ab078-e874-4b75-a9db-10999e109785.jpg.280x210.jpg"
+								alt="万年花城精装一改二 交通方便 随时入住" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/02525591-aa09-4136-9353-a8de4ba2818e.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100724345.html"
+								title="万年花城精装一改二 交通方便 随时入住">
+									万年花城精装一改二 交通方便 随时入住
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027380388/" class="laisuzhou">
+										<span class="region">
+											万年花城四期&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										70平米&nbsp;&nbsp;
+									</span>
+									<span>
+										北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/yuquanying/">
+											玉泉营租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共27层)
+										<span>
+											/
+										</span>
+										2008年建塔楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离10号线首经贸站412米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="decoration">
+											</span>
+											<span class="decoration-ex">
+												<span>
+													精装修
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5200
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.07 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											20
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="9" data-id="101100789695">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100789695.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/3df7c1d3-e2bf-419b-9b6b-c8fe742c707f.jpg.280x210.jpg"
+								alt="阿曼寓所 精装修 临青年路地铁 小区人车分离 居住舒适" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/71b9557c-e59b-4c85-b395-0c6cba3b94ae.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100789695.html"
+								title="阿曼寓所 精装修 临青年路地铁 小区人车分离 居住舒适">
+									阿曼寓所 精装修 临青年路地铁 小区人车分离 居住舒适
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027375643/" class="laisuzhou">
+										<span class="region">
+											阿曼寓所&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											1室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										62平米&nbsp;&nbsp;
+									</span>
+									<span>
+										西
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/gaobeidian/">
+											高碑店租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共16层)
+										<span>
+											/
+										</span>
+										2007年建板塔结合
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离6号线青年路站959米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="decoration">
+											</span>
+											<span class="decoration-ex">
+												<span>
+													精装修
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													自供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5500
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.06 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											1
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="10" data-id="101100797312">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100797312.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/31062c8a-c962-49bd-8155-117e67a33f0f.jpg.280x210.jpg"
+								alt="朝庭公寓2居室 精装修 看房随时 拎包入住" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/dbf03a58-1793-4a57-a979-320dc8ed4e38.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100797312.html"
+								title="朝庭公寓2居室 精装修 看房随时 拎包入住">
+									朝庭公寓2居室 精装修 看房随时 拎包入住
+								</a>
+								<i class="new-label">
+								</i>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027376570/" class="laisuzhou">
+										<span class="region">
+											朝庭公寓&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										112平米&nbsp;&nbsp;
+									</span>
+									<span>
+										西
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/wangjing/">
+											望京租房
+										</a>
+										<span>
+											/
+										</span>
+										低楼层(共27层)
+										<span>
+											/
+										</span>
+										2008年建板塔结合
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离14号线(东段)望京南站342米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="decoration">
+											</span>
+											<span class="decoration-ex">
+												<span>
+													精装修
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													自供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										10000
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.04 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											1
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="11" data-id="101100788410">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100788410.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/00e15b8b-63ca-4421-b7e3-4a727d583717.jpg.280x210.jpg"
+								alt="丽水湾畔家园，东面二环交通方便，出行便利" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/24b0ad63-819f-40a3-a44f-5370ec95f287.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100788410.html"
+								title="丽水湾畔家园，东面二环交通方便，出行便利">
+									丽水湾畔家园，东面二环交通方便，出行便利
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027378078/" class="laisuzhou">
+										<span class="region">
+											丽水湾畔家园&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										130平米&nbsp;&nbsp;
+									</span>
+									<span>
+										西
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/guangqumen/">
+											广渠门租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共21层)
+										<span>
+											/
+										</span>
+										2002年建塔楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离7号线广渠门外站544米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										9500
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.06 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											1
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="12" data-id="101100765768">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100765768.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/356bdb52-2e93-44c3-8c82-7c5a8b6b9d05.jpg.280x210.jpg"
+								alt="融泽嘉园 1室1厅 4500元" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/1f069967-eecc-48d1-90c2-61361a902710.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100765768.html"
+								title="融泽嘉园 1室1厅 4500元">
+									融泽嘉园 1室1厅 4500元
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111047349969/" class="laisuzhou">
+										<span class="region">
+											融泽嘉园&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											1室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										63平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/huilongguan2/">
+											回龙观租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共34层)
+										<span>
+											/
+										</span>
+										2014年建板塔结合
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										4500
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.02 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											28
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="13" data-id="101100796740">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100796740.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/bdd2f3d8-41b0-4cd2-8232-468d5fb2a631.jpg.280x210.jpg"
+								alt="长安新城精装西南朝向两居可拎包入住" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/47834913-6c55-4826-86fe-31bfd8ecc6a7.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100796740.html"
+								title="长安新城精装西南朝向两居可拎包入住">
+									长安新城精装西南朝向两居可拎包入住
+								</a>
+								<i class="new-label">
+								</i>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027376313/" class="laisuzhou">
+										<span class="region">
+											长安新城一区&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										98平米&nbsp;&nbsp;
+									</span>
+									<span>
+										西南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/qingta1/">
+											青塔租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共28层)
+										<span>
+											/
+										</span>
+										2004年建塔楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="decoration">
+											</span>
+											<span class="decoration-ex">
+												<span>
+													精装修
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													自供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5400
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.04 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											1
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="14" data-id="101100800814">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100800814.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/f89a49e6-6750-4180-bcb2-7c20d1cae3a7.jpg.280x210.jpg"
+								alt="东湖湾 南北大两居 精装修 带东西 看房方便 有钥匙" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/b55ccc62-6cce-4b4e-9ca0-34ecce64694d.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100800814.html"
+								title="东湖湾 南北大两居 精装修 带东西 看房方便 有钥匙">
+									东湖湾 南北大两居 精装修 带东西 看房方便 有钥匙
+								</a>
+								<i class="new-label">
+								</i>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027373694/" class="laisuzhou">
+										<span class="region">
+											东湖湾二期&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室2厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										147平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/wangjing/">
+											望京租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共28层)
+										<span>
+											/
+										</span>
+										2010年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离14号线(东段)东湖渠站628米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										19000
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.05 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											1
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="15" data-id="101100789254">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100789254.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/7f392129-b40a-41fe-a50e-0f6147ed845e.jpg.280x210.jpg"
+								alt="阿尔法南北通透两居室 家具家电全齐 业主诚心出租" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/d8265e75-71f8-4741-868f-01c63ab0dae8.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100789254.html"
+								title="阿尔法南北通透两居室 家具家电全齐 业主诚心出租">
+									阿尔法南北通透两居室 家具家电全齐 业主诚心出租
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027375586/" class="laisuzhou">
+										<span class="region">
+											阿尔法社区三期&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										86平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/jiukeshu12/">
+											九棵树(家乐福)租房
+										</a>
+										<span>
+											/
+										</span>
+										低楼层(共6层)
+										<span>
+											/
+										</span>
+										2010年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													自供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										3300
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.01 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											3
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="16" data-id="101100792711">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100792711.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/3b32b287-d265-4ff4-8bab-2662eb9a7b72.jpg.280x210.jpg"
+								alt="大成国际 南向开间 家具家电齐全 拎包入住" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/9f85cf5d-c1bc-4d47-a617-7733ee0b4943.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100792711.html"
+								title="大成国际 南向开间 家具家电齐全 拎包入住">
+									大成国际 南向开间 家具家电齐全 拎包入住
+								</a>
+								<i class="new-label">
+								</i>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027376768/" class="laisuzhou">
+										<span class="region">
+											大成国际&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											1室0厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										54平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/baiziwan/">
+											百子湾租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共21层)
+										<span>
+											/
+										</span>
+										2007年建板塔结合
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离7号线百子湾站631米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5700
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.06 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											1
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="17" data-id="101100794556">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100794556.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/794dc42b-6b0a-4142-aca8-dec79eed0843.jpg.280x210.jpg"
+								alt="北京人家三居两卫 南北通透 近地铁 拎包入住 诚心出租" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/a69fc623-8dd2-42ea-967d-eafb6668f585.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100794556.html"
+								title="北京人家三居两卫 南北通透 近地铁 拎包入住 诚心出租">
+									北京人家三居两卫 南北通透 近地铁 拎包入住 诚心出租
+								</a>
+								<i class="new-label">
+								</i>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027375926/" class="laisuzhou">
+										<span class="region">
+											北京人家&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											3室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										126平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/huilongguan2/">
+											回龙观租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共6层)
+										<span>
+											/
+										</span>
+										2002年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5500
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.07 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											3
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="18" data-id="101100770729">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100770729.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/06cfc9b7-b4fb-4286-9117-5cfbbb8e31e4.jpg.280x210.jpg"
+								alt="融泽嘉园 2室1厅 5100元" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/9aae0259-6d03-4158-b8bb-bc9675edae44.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100770729.html"
+								title="融泽嘉园 2室1厅 5100元">
+									融泽嘉园 2室1厅 5100元
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111047349969/" class="laisuzhou">
+										<span class="region">
+											融泽嘉园&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										97平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/huilongguan2/">
+											回龙观租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共28层)
+										<span>
+											/
+										</span>
+										2014年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5100
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.01 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											27
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="19" data-id="101092168239">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101092168239.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/4bd9f73f-3f1c-499c-8939-e18bf97bde5e.jpg.280x210.jpg"
+								alt="国风上观  办公好房  南北四居室   有钥匙  随时看" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/be215852-4639-4c0e-b0f9-094983653407.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101092168239.html"
+								title="国风上观  办公好房  南北四居室   有钥匙  随时看">
+									国风上观 办公好房 南北四居室 有钥匙 随时看
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027374557/" class="laisuzhou">
+										<span class="region">
+											国风上观&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											4室2厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										210平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 西 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/wangjing/">
+											望京租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共27层)
+										<span>
+											/
+										</span>
+										2010年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离14号线(东段)望京南站969米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="decoration">
+											</span>
+											<span class="decoration-ex">
+												<span>
+													精装修
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													自供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										22000
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.02 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											38
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="20" data-id="101100787156">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100787156.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/2baf0ecb-3460-4a0e-b7dd-b46f8b8fb78b.jpg.280x210.jpg"
+								alt="百旺家苑 3室0厅 3600元" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/5324be7e-3793-4e68-ab22-a7e63c908f19.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100787156.html"
+								title="百旺家苑 3室0厅 3600元">
+									百旺家苑 3室0厅 3600元
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027376136/" class="laisuzhou">
+										<span class="region">
+											百旺家苑&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											3室0厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										95平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/malianwa/">
+											马连洼租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共9层)
+										<span>
+											/
+										</span>
+										2003年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										3600
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.05 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											6
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="21" data-id="101100767442">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100767442.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/e11e78c4-a4e8-4d62-a661-eea089a52968.jpg.280x210.jpg"
+								alt="富力城B区 3室1厅 12600元" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/0c26a2fe-38cb-4a47-a072-2703471d3bff.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100767442.html"
+								title="富力城B区 3室1厅 12600元">
+									富力城B区 3室1厅 12600元
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027374273/" class="laisuzhou">
+										<span class="region">
+											富力城B区&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											3室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										102平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/shuangjing/">
+											双井租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共18层)
+										<span>
+											/
+										</span>
+										2005年建板塔结合
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离10号线双井站462米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										12600
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.05 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											12
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="22" data-id="101100785656">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100785656.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/dda877f7-4404-4b48-a84a-7f9f94ed29d8.jpg.280x210.jpg"
+								alt="正规两居 南北通透 家具齐备 拎包入 住欢迎看房" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/376ad9e2-f05f-4c47-a6f3-c67fd2084fc0.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100785656.html"
+								title="正规两居 南北通透 家具齐备 拎包入 住欢迎看房">
+									正规两居 南北通透 家具齐备 拎包入 住欢迎看房
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027374458/" class="laisuzhou">
+										<span class="region">
+											富卓苑&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										79平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/majiabao/">
+											马家堡租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共6层)
+										<span>
+											/
+										</span>
+										2000年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离4号线公益西桥站286米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													自供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5000
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.04 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											6
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="23" data-id="101100790867">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100790867.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/8472a3e1-f825-48dc-8e29-dfe260ec097a.jpg.280x210.jpg"
+								alt="阳光花园 1室1厅 6500元" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/18df1d7e-2904-4989-9dec-410380bacedc.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100790867.html"
+								title="阳光花园 1室1厅 6500元">
+									阳光花园 1室1厅 6500元
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027381661/" class="laisuzhou">
+										<span class="region">
+											阳光花园&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											1室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										65平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/jiaomen/">
+											角门租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共10层)
+										<span>
+											/
+										</span>
+										2010年建板塔结合
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离10号线角门东站191米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										6500
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.03 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											6
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="24" data-id="101100776907">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100776907.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/d15abbc9-d435-44a6-b157-d872c3987344.jpg.280x210.jpg"
+								alt="马甸桥裕中西里区地铁健德门，北土城，安华桥，都很近" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/0ec14f2b-443a-41b6-8c90-0a8703754f3c.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100776907.html"
+								title="马甸桥裕中西里区地铁健德门，北土城，安华桥，都很近">
+									马甸桥裕中西里区地铁健德门，北土城，安华桥，都很近
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027382272/" class="laisuzhou">
+										<span class="region">
+											裕中西里&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											3室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										89平米&nbsp;&nbsp;
+									</span>
+									<span>
+										东 南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/madian1/">
+											马甸租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共20层)
+										<span>
+											/
+										</span>
+										1991年建塔楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离10号线健德门站700米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										8000
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.10.29 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											11
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="25" data-id="101100771540">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100771540.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/e6aa82c3-62e9-4207-ab71-1fe61d98155f.jpg.280x210.jpg"
+								alt="嘉园一里 精装三居 阳光房 给您一个温馨的家" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/b6dbf51a-eaee-4655-87d0-d59d31036ead.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100771540.html"
+								title="嘉园一里 精装三居 阳光房 给您一个温馨的家">
+									嘉园一里 精装三居 阳光房 给您一个温馨的家
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027377554/" class="laisuzhou">
+										<span class="region">
+											嘉园一里&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											3室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										90平米&nbsp;&nbsp;
+									</span>
+									<span>
+										东南 南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/majiabao/">
+											马家堡租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共20层)
+										<span>
+											/
+										</span>
+										1996年建塔楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离4号线马家堡站461米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										6700
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.04 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											7
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="26" data-id="101100804033">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100804033.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/84f7b9a9-271b-4f9e-97c8-f9ce84c324c2.jpg.280x210.jpg"
+								alt="道家园 3室1厅 7300元" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/f6354562-4a81-47d2-bba5-5061f3b22b26.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100804033.html"
+								title="道家园 3室1厅 7300元">
+									道家园 3室1厅 7300元
+								</a>
+								<i class="new-label">
+								</i>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027373740/" class="laisuzhou">
+										<span class="region">
+											道家园&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											3室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										80平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/tianshuiyuan/">
+											甜水园租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共12层)
+										<span>
+											/
+										</span>
+										1999年建板塔结合
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离6号线金台路站691米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										7300
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.08 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											6
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="27" data-id="101100773251">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100773251.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/a0e56068-6b0a-4153-b460-951e2b9d1b0a.jpg.280x210.jpg"
+								alt="西南向两居室 高楼层 有电梯  不临街临花园  " data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/bece9e43-70fe-45a2-9cdc-9624ab3600c0.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100773251.html"
+								title="西南向两居室 高楼层 有电梯  不临街临花园  ">
+									西南向两居室 高楼层 有电梯 不临街临花园
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027374186/" class="laisuzhou">
+										<span class="region">
+											芳城园一区&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										65平米&nbsp;&nbsp;
+									</span>
+									<span>
+										西南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/fangzhuang1/">
+											方庄租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共27层)
+										<span>
+											/
+										</span>
+										1994年建板塔结合
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离14号线(东段)方庄站593米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5300
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.01 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											10
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="28" data-id="101100711243">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100711243.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/c719e5de-3539-478b-b969-b49d48656e1b.jpg.280x210.jpg"
+								alt="紫竹公园 花园桥地铁站 &lt;span&gt;优质&lt;/span&gt;房源" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/107753ce-13bd-42eb-a6ac-2f7b12fd8bb1.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100711243.html"
+								title="紫竹公园 花园桥地铁站 &lt;span&gt;优质&lt;/span&gt;房源">
+									紫竹公园 花园桥地铁站 &lt;span&gt;优质&lt;/span&gt;房源
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027379279/" class="laisuzhou">
+										<span class="region">
+											三虎桥南路17号院&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											2室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										59平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/zizhuqiao/">
+											紫竹桥租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共6层)
+										<span>
+											/
+										</span>
+										1985年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离6号线花园桥站482米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										6000
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.11.01 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											12
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+					<li data-index="29" data-id="101100809927">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100809927.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/f8121ead-b919-40fb-8dac-cd0e36db0341.jpg.280x210.jpg"
+								alt="华冠丽景  东直门   雍和宫  板楼带电梯  精装修" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/08a3810e-a5c6-4028-9e04-19aebf569396.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100809927.html"
+								title="华冠丽景  东直门   雍和宫  板楼带电梯  精装修">
+									华冠丽景 东直门 雍和宫 板楼带电梯 精装修
+								</a>
+								<i class="new-label">
+								</i>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027374993/" class="laisuzhou">
+										<span class="region">
+											华冠丽景&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											3室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										144平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南 北
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/dongzhimen/">
+											东直门租房
+										</a>
+										<span>
+											/
+										</span>
+										中楼层(共7层)
+										<span>
+											/
+										</span>
+										2003年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离2号线雍和宫站939米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													自供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										27000
+									</span>
+									元/月
+								</div>
+								<div class="price-pre">
+									2016.11.06 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											0
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
+				</ul>
+				<div style="display:none;">
+					<p>
+						北京租房信息
+					</p>
+					<p>
+						链家网北京站北京租房频道提供真实、时时的北京租房房源信息，北京租房房源目前为14173套，全部由线下经纪人确认核实上传，信息可靠，北京租房用户可以在链家网北京租房频道和北京租房频道移动端最快速、最及时的找到自己想要的真实、放心房源。链家网北京租房平台，真房源，如你所见！
+					</p>
+					<p>
+						首邑上城 三居室 业主诚心出租 交通出行:该小区周边公交站点密集，还有好多公共自行车站点，往东1千米左右就是京开高速，交通出行相当便利。 周边配套:该小区所在位置有绿地缤纷城、华联商场等商城，京军医院，邮政、建行等银行，康庄公园，大兴第三幼儿园、兴华中学等学校，满足日常生活的需要，出行的话交通便利。
+						小区介绍:此房所在小区每栋楼都带电梯，楼间距大，小区内有地上地下停车位。环境好，安静，安全舒适。 户型介绍:此房是南北通透三居，家具家电齐都有，每个房间都有空调可以直接拎包入住。
+					</p>
+				</div>
+				<div class="page-box house-lst-page-box" comp-module='page' page-url="/zufang/pg{page}/"
+				page-data='{"totalPage":100,"curPage":1}'>
+				</div>
