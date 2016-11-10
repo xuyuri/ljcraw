@@ -1,0 +1,106 @@
+<li data-index="0" data-id="101100768389">
+						<div class="pic-panel">
+							<a target="_blank" href="http://bj.lianjia.com/zufang/101100768389.html">
+								<img src="http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161108192427"
+								data-img="http://image1.ljcdn.com/110000-inspection/78b4405f-4e94-4a75-a8c9-0b6853b34efc.jpg.280x210.jpg"
+								alt="柏林三期南向大一居  业主自住房  中高楼层 长期出租" data-apart-layout="http://image1.ljcdn.com/x-se/hdic-frame/1007d45a-be02-41dc-a75a-3a7cf658db49.jpg.280x210.jpg"
+								/>
+							</a>
+						</div>
+						<div class="info-panel">
+							<h2>
+								<a target="_blank" href="http://bj.lianjia.com/zufang/101100768389.html"
+								title="柏林三期南向大一居  业主自住房  中高楼层 长期出租">
+									柏林三期南向大一居 业主自住房 中高楼层 长期出租
+								</a>
+							</h2>
+							<div class="col-1">
+								<div class="where">
+									<a href="http://bj.lianjia.com/xiaoqu/1111027375967/" class="laisuzhou">
+										<span class="region">
+											柏林爱乐三期&nbsp;&nbsp;
+										</span>
+									</a>
+									<span class="zone">
+										<span>
+											1室1厅&nbsp;&nbsp;
+										</span>
+									</span>
+									<span class="meters">
+										68平米&nbsp;&nbsp;
+									</span>
+									<span>
+										南
+									</span>
+								</div>
+								<div class="other">
+									<div class="con">
+										<a href="http://bj.lianjia.com/zufang/guanzhuang/">
+											管庄租房
+										</a>
+										<span>
+											/
+										</span>
+										高楼层(共15层)
+										<span>
+											/
+										</span>
+										2007年建板楼
+									</div>
+								</div>
+								<div class="chanquan">
+									<div class="left agency">
+										<div class="view-label left">
+											<span class="fang-subway">
+											</span>
+											<span class="fang-subway-ex">
+												<span>
+													距离6号线黄渠站787米
+												</span>
+											</span>
+											<span class="haskey">
+											</span>
+											<span class="haskey-ex">
+												<span>
+													随时看房
+												</span>
+											</span>
+											<span class="heating">
+											</span>
+											<span class="heating-ex">
+												<span>
+													集中供暖
+												</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<div class="price">
+									<span class="num">
+										5200
+									</span>
+									元/月
+									<img src="http://static1.ljcdn.com/pc/asset/img/animatedec.gif?_v=20161108192427">
+								</div>
+								<div class="price-pre">
+									2016.10.31 更新
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="square">
+									<div>
+										<span class="num">
+											27
+										</span>
+										人
+									</div>
+									<div class="col-look">
+										看过此房
+									</div>
+								</div>
+							</div>
+							<!--<div class="view"><span class="view-map">预览地图</span><span class="notice-focus" data-id=""></span><a class="view-del" target="_blank" href="" title=""></a></div>-->
+						</div>
+					</li>
