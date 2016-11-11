@@ -7,4 +7,4 @@
  */
 require_once "../lib/Lj.Craw.php";
 
-Craw::crawPage(1);
+Craw::crawPage(2);
