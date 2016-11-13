@@ -76,6 +76,49 @@ Class Craw {
                         $info['meters'] = $meters ? str_replace('&nbsp;', '', $meters[1]) : '';
                         //朝向
                         $info['direction'] = $meters ? str_replace('&nbsp;', '', $meters[2]) : '';
+                        preg_match('~<div class="con"><a href="http://bj.lianjia.com/zufang/(.*?)/">(.*?)</a><span>/</span>(.*?)楼层\(共(\d+)层\)<span>/</span>(.*?)</div>~', $v, $area);
+                        //区域ID
+                        $info['areaid'] = $area ? $area[1] : '';
+                        //区域名称
+                        $info['area'] = $area ? $area[2] : '';
+                        //楼层阶级
+                        $level = $area ? $area[3] : '';
+                        if(!empty($level)) {
+                            switch($level) {
+                                case '高':
+                                    $info['floor'] = 3;
+                                    break;
+                                case '中':
+                                    $info['floor'] = 2;
+                                    break;
+                                case '低':
+                                    $info['floor'] = 1;
+                                    break;
+                            }
+                        }
+                        //楼层
+                        $info['floor'] = $area ? $area[4] : 0;
+                        //板楼
+                        $info['banlou'] = $area ? $area[5] : '';
+                        preg_match('~<span class="fang-subway-ex"><span>距离(\d+)号线(.*?)站.*?</span>~',$v, $subway);
+                        //地铁线
+                        $info['line'] = $subway ? $subway[1] : 0;
+                        //地铁站点
+                        $info['station'] = $subway ? $subway[2] : '';
+                        preg_match('~<span class="decoration-ex"><span>(.*?)</span>~',$v, $decoration);
+                        //装修类型
+                        $info['decoration'] = $decoration ? $decoration[1] : 0;
+                        preg_match('~<span class="heating-ex"><span>(.*?)</span>~',$v, $heating);
+                        //供暖类型
+                        $info['heating'] = $heating ? $heating[1] : 0;
+                        preg_match_all('~<span class="num">(\d+)</span>~', $v, $price);
+                        //价格
+                        $info['price'] = $price ? $price[1][0] : 0;
+                        //看房认识
+                        $info['visit'] = $price ? $price[1][1] : 0;
+                        preg_match('~<div class="price-pre">(.*?)更新</div>~', $v, $update);
+                        //更新日期
+                        $info['update'] = $update ? $update[1] : '';
                         print_r($info);
 
 
