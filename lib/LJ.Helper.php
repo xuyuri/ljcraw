@@ -48,4 +48,30 @@ class Helper
         $int = (int)$int;
         return ($int < 0 && $int >= self::$minInt) ? $int : 0;
     }
+
+    /**
+     * 获取页面内容
+     * @param string $url   页面URL
+     * @return string       页面内容
+     * @author      yurixu 2016-11-16
+     * @example     Helper::getContents();
+     */
+    public static function getContents($url) {
+        $result = '';
+        if(!empty($url)) {
+            if(LjConfig::CURL_PROXY_HOST != '0.0.0.0') {
+                $proxy = stream_context_create(array(
+                    'http' => array(
+                        'timeout' => 5,
+                        'proxy' => LjConfig::CURL_PROXY_HOST.':'.LjConfig::CURL_PROXY_PORT,
+                        'request_fulluri' => true,
+                    ),
+                ));
+                $result = file_get_contents($url, false, $proxy);
+            } else {
+                $result = file_get_contents($url);
+            }
+        }
+        return $result;
+    }
 }

@@ -171,7 +171,8 @@ Class LjCommand {
      */
     public function queryAll($fetchAssociative=true,$params=array())
     {
-        return $this->queryInternal('fetchAll',$fetchAssociative ? $this->_fetchMode : PDO::FETCH_NUM, $params);
+        //return $this->queryInternal('fetchAll',$fetchAssociative ? $this->_fetchMode : PDO::FETCH_NUM, $params);
+        return $this->queryInternal('fetchAll',PDO::FETCH_ASSOC, $params);
     }
 
     /**
@@ -190,7 +191,9 @@ Class LjCommand {
      */
     public function queryRow($fetchAssociative=true,$params=array())
     {
-        return $this->queryInternal('fetch',$fetchAssociative ? $this->_fetchMode : PDO::FETCH_NUM, $params);
+//        return $this->queryInternal('fetch',$fetchAssociative ? $this->_fetchMode : PDO::FETCH_NUM, $params);
+        return $this->queryInternal('fetch',PDO::FETCH_ASSOC, $params);
+
     }
 
     /**

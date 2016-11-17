@@ -1,0 +1,94 @@
+$line = array(
+            array(
+                'type' => '1',
+                'name' => '1号线',
+                'lj_no' => 'li647',
+                'parentid' => 0,
+            ),
+            array(
+                'type' => '1',
+                'name' => '2号线',
+                'lj_no' => 'li648',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '4号线',
+                'lj_no' => 'li656',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '5号线',
+                'lj_no' => 'li649',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '6号线',
+                'lj_no' => 'li46107350',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '7号线',
+                'lj_no' => 'li46537785',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '8号线',
+                'lj_no' => 'li659',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '9号线',
+                'lj_no' => 'li43145267',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '10号线',
+                'lj_no' => 'li651',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '13号线',
+                'lj_no' => 'li652',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '14号线(东段)',
+                'lj_no' => 'li46461179',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '14号线(西段)',
+                'lj_no' => 'li1110790465974155',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '15号线',
+                'lj_no' => 'li43143633',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '八通线',
+                'lj_no' => 'li653',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '亦庄线',
+                'lj_no' => 'li43144847',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '昌平线',
+                'lj_no' => 'li43144993',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '房山线',
+                'lj_no' => 'li43145111',
+                'parentid' => 0,
+            ),array(
+                'type' => '1',
+                'name' => '机场线',
+                'lj_no' => 'li654',
+                'parentid' => 0,
+            ),
+        );

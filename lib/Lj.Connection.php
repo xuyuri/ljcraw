@@ -96,6 +96,7 @@ Class LjConnection {
             try
             {
                 $this->_pdo=$this->createPdoInstance();
+                $this->initConnection($this->_pdo);
                 $this->_active=true;
             }
             catch(PDOException $e)
@@ -124,6 +125,19 @@ Class LjConnection {
             throw new Exception('LjConnection failed to open the DB connection.');
 
         return $instance;
+    }
+
+    /**
+     * Initializes the open db connection.
+     * This method is invoked right after the db connection is established.
+     * The default implementation is to set the charset for MySQL, MariaDB and PostgreSQL database connections.
+     * @param PDO $pdo the PDO instance
+     */
+    protected function initConnection($pdo)
+    {
+        $driver=strtolower($pdo->getAttribute(PDO::ATTR_DRIVER_NAME));
+        if(in_array($driver,array('pgsql','mysql','mysqli')))
+            $pdo->exec('SET NAMES '.$pdo->quote('UTF8'));
     }
 
     /**

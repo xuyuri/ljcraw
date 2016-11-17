@@ -12,10 +12,22 @@ Class LjConfig {
     const DETAIL_BASE_URL = 'http://bj.lianjia.com/zufang/';
     //小区
     const DISTRICT_BASE_URL = 'http://bj.lianjia.com/xiaoqu/';
+    //地铁
+    const SUBWAY_BASE_URL = 'http://bj.lianjia.com/ditiezufang/';
     //数据库用户名
     const DB_USER_NAME = 'root';
     //数据库密码
     const DB_PASSWORD = 'xyw';
     //数据库连接
     const BD_CONNECTION = 'mysql:host=localhost;dbname=ljCraw';
+
+    /**
+     * 这里设置代理机器，只有需要代理的时候才设置，不需要代理，请设置为0.0.0.0和0
+     * 默认CURL_PROXY_HOST=0.0.0.0和CURL_PROXY_PORT=0，此时不开启代理（如有需要才设置）
+     */
+    /*const CURL_PROXY_HOST = "0.0.0.0";
+    const CURL_PROXY_PORT = 0;*/
+
+    /*const CURL_PROXY_HOST = "dGNwOi8vcHJveHkudGVuY2VudC5jb20";
+    const CURL_PROXY_PORT = 8080;*/
 }

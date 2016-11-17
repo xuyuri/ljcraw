@@ -8,9 +8,7 @@
 require_once "../lib/Lj.Craw.php";
 require_once "../lib/Lj.ZDBTool.php";
 
-//Craw::crawPage(1);
-
-$sql = 'delete  FROM `t_area` where id = 2';
-$tool = new ZDBTool();
-$data = $tool->execute($sql);
-print_r($data);
+$result = Craw::crawPage(1);
+print_r($result);
+//echo Craw::crawArea();
+//echo Craw::crawSubWay();
