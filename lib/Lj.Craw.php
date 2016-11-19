@@ -98,7 +98,7 @@ Class Craw {
                 foreach($list as $k => $v) {
                     //var_dump($v);die;
                     $info = array();
-                    preg_match('~data-id="(\d+)"~', $v, $buildid);
+                    preg_match('~data-id="(\S+)"~', $v, $buildid);
                     if(!empty($buildid)) {
                         //房源ID
                         $info['buildid'] = $buildid[1];
@@ -217,11 +217,11 @@ Class Craw {
      * @author                  yurixu 2016-11-17
      * @example                 Craw::parseSubWay();
      */
-    public static function parseSubWay($content, $parentid) {
+    public static function parseLine($content, $parentid) {
         $parentid = Helper::CheckPlusInt($parentid);
         $result = 0;
         $subway = array();
-        $table = 't_subway';
+        $table = 't_line';
         if(!empty($content)) {
             $head_preg = '~<div class="option-list sub-option-list">([\s\S]*?)</div>~';
             $head = array();
