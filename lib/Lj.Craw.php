@@ -60,9 +60,9 @@ Class Craw {
      * 抓取地铁数据（仅运行一次）
      * @return array        插入数据表记录数
      * @author              yurixu 2016-11-17
-     * @example             Craw::crawSubWay();
+     * @example             Craw::crawLine();
      */
-    public static function crawSubWay() {
+    public static function crawLine() {
         $result = 0;
         $sql = ' SELECT id, name, lj_no FROM t_subway WHERE parentid = 0 ';
         $tool = new ZDBTool();
@@ -71,7 +71,7 @@ Class Craw {
             $url = $url = LjConfig::SUBWAY_BASE_URL.$v['lj_no'];
             $contents = Helper::getContents($url);
             if(!empty($contents)) {
-                $result += self::parseSubWay($contents, $v['id']);
+                $result += self::parseLine($contents, $v['id']);
             }
         }
         return $result;
@@ -215,7 +215,7 @@ Class Craw {
      * @param string $content   页码数据内容
      * @return array            解析后数据集
      * @author                  yurixu 2016-11-17
-     * @example                 Craw::parseSubWay();
+     * @example                 Craw::parseLine();
      */
     public static function parseLine($content, $parentid) {
         $parentid = Helper::CheckPlusInt($parentid);
