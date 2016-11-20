@@ -50,6 +50,47 @@ class Helper
     }
 
     /**
+     * 处理字符串，过滤特殊字符，防止SQL注入
+     * @param $string
+     * @return string
+     * @author      yurixu 2016-11-09
+     * @example     Helper::EscapeString();
+     */
+    public static function EscapeString($string) {
+        if(!empty($string)) {
+            $string = trim($string);
+            $string = htmlspecialchars($string, ENT_QUOTES);
+
+            if (get_magic_quotes_gpc()) {
+                $string = stripslashes($string);
+            }
+            // 如果不是数字则加引号
+            if (!is_numeric($string)) {
+                $string = mysql_real_escape_string($string);
+            }
+        }
+
+        return $string;
+
+    }
+
+    /**
+     * 返回多维数组中指定的一列，组合成一个新的一维数组
+     * 【备注】PHP5.5会自带array_column()函数，此方法用于PHP5.5以下版本
+     * @param array $array          原数组
+     * @param int $type             0：对整个数组获取value组成新数组；1：获取某一列value，返回一维数组
+     * @param string $columnName    列名
+     * @return array
+     * @author      yurixu 2015-8-15
+     * @example     Helper::arrayColumn();
+     */
+    public static function  arrayColumn(array $array, $columnName='', $type=1) {
+        return array_map(function ($element) use ($type, $columnName) {
+            return $type ? $element[$columnName] : array_values($element);
+        }, $array);
+    }
+
+    /**
      * 获取页面内容
      * @param string $url   页面URL
      * @return string       页面内容

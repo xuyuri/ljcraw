@@ -1,0 +1,1718 @@
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Cache-Control" content="no-transform" /><meta http-equiv="Cache-Control" content="no-siteapp" /><meta name="format-detection" content="telephone=no" /><meta name="applicable-device" content="pc"><link rel="alternate" media="only screen and (max-width: 640px)" href="" >
+<meta name="mobile-agent" content="format=html5;url="><script>
+ljConf = {
+    city_id: '110000',
+    city_abbr: 'bj',
+    city_name: '北京',
+    channel: 'xiaoqu',
+    page: 'xiaoqu_list',
+    pageConfig: {"ajaxroot":"http:\/\/ajax.api.lianjia.com\/","leanCloudAppid":"4e1dh2g3tn08i6swaqtperykbrdas2r8xebmusjeucrptsfd","leanCloudAppkey":"jcd4alcajl0cp4w7vj6gd8zuib7chk5653dy4biffqgynn4n"}
+};
+</script>
+
+<title>安定门第3页小区二手房(北京链家网)</title>
+<meta name="description" content="链家网安定门第3页小区频道,现有安定门第3页小区117个.小区频道提供小区的二手房、租房、信息及安定门第3页热门小区的排行情况.为您挑选小区提供便利,并提供小区户型功能,方便您找到适合自己的房子." />
+<meta name="keywords" content="安定门第3页小区,安定门第3页小区,安定门第3页小区房源,安定门第3页小区二手房,安定门第3页小区租房" />
+<link href="/favicon.ico" type="image/x-icon" rel=icon><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"><link rel="stylesheet" href="http://static1.ljcdn.com/pc/asset/common.css?_v=20161118202752">
+<link rel="stylesheet" href="http://static1.ljcdn.com/pc/asset/ershoufang/xiaoquList/index.css?_v=20161118202752">
+<!--[if lt IE 9]><script type="text/javascript" src="http://static1.ljcdn.com/dep/common-require/html5.js?_v=20161118202752"></script><![endif]-->
+<script>
+function RESIZEIMG(b,k,l,m){var c=b.parentNode;var d=parseInt(c.offsetWidth)||k;var e=parseInt(c.offsetHeight)||l;var f=d/e;var g=b.naturalWidth||b.width;var h=b.naturalHeight||b.height;var i=g/h;var j="width";if(f<i){j="height";try{b.style["left"]="-"+parseInt(Math.abs((d-(g*e/h))/2))+"px"}catch(e){}}else if(m){try{b.style["top"]="-"+parseInt(Math.abs((e-(h*d/g))/2))+"px"}catch(e){}};b.style[j]="100%";};
+</script>
+<script>
+var _czc = _czc || [];
+_czc.push(["_setAccount", "1254525948"]);
+</script>
+
+<script type="text/javascript">
+var _smq = _smq || [];
+_smq.push(['_setAccount', '41331c2', new Date()]);
+_smq.push(['_setDomainName', 'lianjia.com']);
+_smq.push(['pageview']);
+(function() {
+var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+})();
+</script>
+</head><body><script>
+__STAT_LJ_CONF = {
+    params: {
+        ljweb_group: ['SEARCH','BIGDATA_PC'],
+        ljweb_id: '',
+        ljweb_mod: '',
+        ljweb_bl: '',
+        ljweb_el: '',
+        ljweb_index: '',
+        ljweb_value: '',
+        ljweb_url: '',
+        ljweb_ljref: (document.cookie.match(/(?:^| )ljref=([^;]*)(?:;|$)/) || ['',''])[1],
+        ljweb_sample: (document.cookie.match(/(?:^| )sample_traffic_test=([^;]*)(?:;|$)/) || ['',''])[1],
+        ljweb_ref: document.referrer,
+        ljweb_cid: '110000',
+        ljweb_channel: 'xiaoqu',
+        ljweb_page: 'xiaoqu_list'
+    }
+};
+
+
+
+var UT = {
+    send: function() {
+
+    }
+};
+var LjUserTrack = {
+    log: [],
+    initInterval: false,
+    intervalLog: function() {
+        setTimeout(function() {
+            if(window.$ULOG && $ULOG.send) {
+                for(var i = 0, l = LjUserTrack.log.length; i < l; i++) {
+                    LjUserTrack.__send(LjUserTrack.log[i]);
+                }
+
+                for(var m = 0, n = LjUserTrack.logIds.length; m < n; m++) {
+                    LjUserTrack.__sendId(LjUserTrack.logIds[m]);
+                }
+            } else {
+                LjUserTrack.intervalLog();
+            }
+        }, 16.7);
+    },
+    _start_time: +new Date,
+    __send: function(data) {
+        $ULOG.send("10043", {
+            "pid": (window.__UDL_CONFIG && window.__UDL_CONFIG.pid && window.__UDL_CONFIG.pid)||"lianjiaweb",
+            "key": window.location.href,
+            "action": data
+        });
+    },
+    logIds: [],
+    __sendId: function(id) {
+        id && $ULOG.send(id, {
+            "pid": (window.__UDL_CONFIG && window.__UDL_CONFIG.pid && window.__UDL_CONFIG.pid)||"lianjiaweb",
+            "key": window.location.href
+        });
+    },
+    sendId: function(id) {
+        if(window.$ULOG && $ULOG.send) {
+            LjUserTrack.__sendId(id);
+        } else {
+            LjUserTrack.logIds.push(id);
+
+            LjUserTrack.initInterval || (LjUserTrack.initInterval = true, LjUserTrack.intervalLog());
+            
+        }
+    },
+    send: function(data, el, config) {
+
+        var utConf = __STAT_LJ_CONF;
+        var params = config || utConf.params,
+            win = window,
+            j;
+
+        data.groupIndex = data.ljweb_group || 0;
+
+        if (params) {
+            for (var d in params) {
+                if(params[d] !== j && data[d] === j) {
+                    data[d] = params[d];
+                }
+            }
+        }
+
+        if(el) {
+            this.checkClick(el, data);
+        }
+
+        data.ljweb_group = params['ljweb_group'][data.groupIndex || 0];
+
+        delete data.groupIndex;
+
+        if(data.typ) {
+            data.ljweb_bl = (data.ljweb_bl || '') + '_' + data.typ;
+            delete data.typ;
+        }
+
+        if(window.$ULOG && $ULOG.send) {
+            LjUserTrack.__send(data);
+        } else {
+            LjUserTrack.log.push(data);
+
+            LjUserTrack.initInterval || (LjUserTrack.initInterval = true, LjUserTrack.intervalLog());
+            
+        }
+
+    },
+    checkClick: function(el, data) {
+
+        var TAG_LINK = 'A';
+        var href = '';
+        var elParent = null;
+
+        href = (el.tagName.toUpperCase() === TAG_LINK ? el.getAttribute("href", 2) : '');
+        if(!href && (elParent = el.parentNode) && elParent.nodeType === 1) {
+            href = (elParent.tagName.toUpperCase() === TAG_LINK ? elParent.getAttribute("href", 2) : '');
+        }
+
+        if(href) {
+            data.ljweb_url = href;
+        } else {
+            data.ljweb_url = data.ljweb_url
+                  || el.getAttribute("data-log_url")
+                  || (elParent=el.parentNode||el).getAttribute("data-log_url")
+                  || (
+                        (elParent=elParent.parentNode||elParent)
+                     && (elParent.nodeType === 1)
+                     && elParent.getAttribute("data-log_url")
+                     )
+                  || "";
+        }
+
+        this.attr(el, data);
+            
+    },
+    path: function() {
+        
+    },
+    attr: function(el, data) {
+        var modId = el.getAttribute("log-mod");
+        var blAttr = el.getAttribute("data-bl");
+        var elAttr = el.getAttribute("data-el");
+        var InAttr = el.getAttribute("data-log_index");
+        var valAttr = el.getAttribute("data-log_value");
+        var idAttr = el.getAttribute("data-log_id");
+        var groupAttr = el.getAttribute("data-log_group");
+
+        data.ljweb_bl = data.ljweb_bl || blAttr || '';
+        data.ljweb_el = data.ljweb_el || elAttr || '';
+        data.ljweb_index = data.ljweb_index || InAttr || '';
+        data.ljweb_value = data.ljweb_value || valAttr || '';
+        data.ljweb_id = data.ljweb_id || idAttr || '';
+        data.groupIndex = data.groupIndex || groupAttr || 0;
+
+        if (!modId) { 
+            if (el.parentNode && el.parentNode.nodeType === 1 && el.parentNode.tagName.toUpperCase() !== 'BODY') {
+                this.attr(el.parentNode, data);
+            }
+        } else {
+            data.ljweb_mod = modId;
+        }
+    }
+};
+
+;;(function() {
+    var isW3c = !!document.addEventListener;
+
+    LjUserTrack.send({
+        ljweb_mod: 'pv',
+        ljweb_group: 1
+    });
+
+    /*window[isW3c ? 'addEventListener' : 'attachEvent'](
+        (isW3c ? '': 'on') + 'beforeunload',
+        function(e) {
+            var _end_time = +new Date;
+            UT.send({type: 'show', subtype: 'stay', time: (_end_time-UT._start_time)/1000});
+        },
+        false);*/
+})();
+
+
+
+
+
+</script>
+<div class="banner"><div class="container"><ul class="channelList"><li><a href="http://www.lianjia.com/">首页</a></li><li  class=""><a href="http://bj.lianjia.com/ershoufang/" >二手房</a></li><li  class=""><a href="http://bj.fang.lianjia.com/" >新房</a></li><li  class=""><a href="http://bj.lianjia.com/zufang/" >租房</a></li><li  rel="nofollow"  class=""><a href="http://you.lianjia.com/" >旅居地产</a></li><li  class=""><a href="http://us.lianjia.com/" >海外</a></li><li  class="selected"><a href="http://bj.lianjia.com/xiaoqu/" >小区</a></li><li  class=""><a href="http://bj.lianjia.com/jingjiren/" >经纪人</a></li><li  class=""><a href="http://bj.lianjia.com/fangjia/" >房价</a></li><li  class=""><a href="http://bj.lianjia.com/tool.html" target="_blank">工具</a></li><li  class=""><a href="http://bj.lianjia.com/yezhu/" target="_blank">卖房</a></li></ul><div class="banner-right"><div class="login" id="userInfoContainer"><i></i><a href="https://passport.lianjia.com/cas/login?service=http%3A%2F%2Fbj.lianjia.com%2Fxiaoqu%2Fandingmen%2Fpg3%2F" id="loginBtn">登录</a>/<a href="http://passport.lianjia.com/register/resources/lianjia/register.html?service=http%3A%2F%2Fbj.lianjia.com%2Fxiaoqu%2Fandingmen%2Fpg3%2F" rel="nofollow">注册</a></div><div class="phone"><i></i><span>热线电话1010-9666</span></div></div></div></div>
+
+
+<script type="text/template" id="userInfoTpl">
+  <i></i>
+  <%if(isAgent){%>
+    <a id="userNameContainer" href="<%=$.env.fixedUrl('http://agent.lianjia.com/')%>"><%=username%></a>
+  <%}else{%>
+    <a id="userNameContainer" href="<%=$.env.fixedUrl('http://user.lianjia.com/')%>" rel="nofollow"><%=username%></a>
+  <%}%>
+  <span id="tipContainer"></span>
+  &nbsp;&nbsp;<a href="<%=logoutUrl%>">退出</a>
+  <span id="pushNewsListContainer"></span>
+</script>
+<script type="text/template" id="pushNewsListTpl">
+  <div class="pushNewsList">
+    <%for(var i in group_by_type){%>
+      <%if(group_by_type[i].unread !== 0 && pushMsgMap.hasOwnProperty(i)){%>
+        <a href="<%=pushMsgMap[i].url%>"><%=$.replaceTpl(pushMsgMap[i].text, {unread:group_by_type[i].unread})%></a>
+      <%}%>
+    <%}%>
+  </div>
+</script>
+<div class="header"><div class="menu"><div class="menuLeft"><a href="/ershoufang" class="logo"></a><ul class="typeList"><li ><a href="/ershoufang/"  title="北京在售二手房" >在售</a></li><li ><a href="/chengjiao/"  title="北京成交二手房" >成交</a></li><li class="selected"><a href="/xiaoqu/"  title="北京小区二手房" >小区</a></li><li ><a href="/fangjia/"  title="北京房价二手房" >房价</a></li><li ><a href="/ditu/"  title="北京地图找房二手房" target="_blank">地图找房</a></li><li ><a href="/tool.html"  title="北京计算器二手房" >计算器</a></li></ul></div><div class="app"><a href="http://www.lianjia.com/client/" target="_blank"><i></i>下载链家APP</a></div></div><div class="search"><div class="input" log-mod="search"><form action="/ershoufang/rs" id="searchForm"><input type="text" id="searchInput" value="" autocomplete="off"><div class="inputRightPart"><div class="save" id="savedSearchMsg"><span id="savedSearchCount">0</span>条已保存搜索<span id="savedSearchArrow" class="downArrow"></span></div><button type="submit" class="searchButton" data-bl="search" data-el="search">&nbsp;<i></i>&nbsp;</button></div></form><div class="searchMsg" id="searchMsgContainer"></div></div></div></div>
+
+
+<script type="text/template" id="hotSearchTpl">
+  <div class="searchMsgTitle">
+    <span class="searchMsgName">热门搜索</span>
+  </div>
+  <ul data-bl="sug" data-el="history">
+    <%for(var i =0; i < list.length; i++){%>
+    <li>
+      <a role="addHistory" href="<%=list[i].url%>" data-log_index="<%=i+1%>" data-log_value="<%=list[i].string%>" class="sug--search_item">
+        <span class="msgListTitle" role="historyKey"><%=list[i].string%></span>
+      </a>
+    </li>
+    <%}%>
+  </ul>
+</script>
+<script type="text/template" id="searchHistoryTpl">
+  <div class="searchMsgTitle">
+    <span class="searchMsgName">搜索历史</span>
+    <div class="searchMsgTitleRightPart">
+      <a href="#" id="clearSearchHistory" class="manage">清除历史记录</a>
+    </div>
+  </div>
+  <ul data-bl="sug" data-el="history">
+  <%for(var i = 0; i < list.length; i++){%>
+    <li>
+      <a href="<%=list[i].url%>" role="addHistory" data-log_index="<%=i+1%>" data-log_value="<%=$.encodeHTML(list[i].name)%>" class="sug--search_item">
+        <span class="msgListTitle" role="historyKey"><%=$.encodeHTML(list[i].name)%></span>
+        <%if(list[i].newCount) {%>
+          <span class="msgListAdd"><%=list[i].newCount%>套新增房源</span>
+        <%}%>
+      </a>
+    </li>
+  <%}%>
+  </ul>
+</script>
+<script type="text/template" id="searchSuggestionTpl">
+  <div class="searchMsgTitle">
+    <span class="searchMsgName">你可能在找</span>
+  </div>
+  <ul data-bl="sug" data-el="sug">
+  <%for(var i = 0;i < list.length;i++){%>
+    <li>
+      <a href="<%=list[i].url%>" role="addHistory" data-log_index="<%=i+1%>" data-log_value="<%=list[i].title%>">
+        <span class="msgListTitle">
+          <span role="historyKey"><%=list[i].title%></span>
+          <%if(list[i].region){%>
+            <span class="msgListArea"><%=list[i].region%></span>
+          <%}%>
+        </span>
+        <%if(type === 'sell'){%>
+          <span class="msgListAdd">约<%=list[i].count%>套在售</span>
+        <%}else if(type === 'deal'){%>
+          <span class="msgListAdd">约<%=list[i].count%>套成交</span>
+        <%}%>
+      </a>
+    </li>
+  <%}%>
+  </ul>
+</script>
+<script type="text/template" id="savedSearchTpl">
+  <div class="searchMsgTitle">
+    <span class="searchMsgName">已保存搜索</span>
+    <div class="searchMsgTitleRightPart">
+    <%if(totalCount){%>
+      <a class="totalNew">查看<%=totalCount%>套新增房源</a>
+    <%}%>
+      <a href="<%=userCenterUrl%>" class="manage">管理</a>
+    </div>
+  </div>
+  <ul data-bl="sug" data-el="history">
+    <%for(var i = 0; i < savedData.length; i++){
+      var title = savedData[i].query ? savedData[i].query + '&nbsp;' : '';
+      title = title + savedData[i].title.join('&nbsp;');
+    %>
+      <li>
+        <a href="<%=savedData[i].url%>" role="savedSearch" data-log_index="<%=i+1%>" data-log_value="<%=title%>" class="sug--search_item">
+          <span class="msgListTitle"><%=title%></span>
+          <%if(savedData[i].unread && savedData[i].unread !== 0){%>
+          <span class="msgListAdd">新增<%=savedData[i].unread%>套</span>
+          <%}%>
+        </a>
+      </li>
+    <%}%>
+  </ul>
+</script>
+
+<script>
+  var hotSearchData = {
+    channel:[{"name":"\u4e8c\u624b\u623f","action":"ershoufang","channel":"ershoufang","checked":1,"tipsHot":{"query":[{"string":"\u65b0\u9f99\u57ce","url":"http:\/\/bj.lianjia.com\/ershoufang\/c1111027381003\/"},{"string":"\u5929\u901a\u82d1","url":"http:\/\/bj.lianjia.com\/ershoufang\/tiantongyuan\/"},{"string":"\u5317\u4eac\u65b0\u5929\u5730","url":"http:\/\/bj.lianjia.com\/ershoufang\/c1111027375945\/"},{"string":"\u8fdc\u6d0b\u5c71\u6c34","url":"http:\/\/bj.lianjia.com\/ershoufang\/c1111027382209\/"},{"string":"\u671b\u4eac","url":"http:\/\/bj.lianjia.com\/ershoufang\/wangjing\/"},{"string":"\u5317\u4eac\u50cf\u7d20","url":"http:\/\/bj.lianjia.com\/ershoufang\/sq45\/"},{"string":"\u8349\u623f\u7ad9\u9644\u8fd1\u623f\u6e90","url":"http:\/\/bj.lianjia.com\/ditiefang\/li46107350s46107204\/"},{"string":"13\u53f7\u7ebf\u5730\u94c1\u623f","url":"http:\/\/bj.lianjia.com\/ditiefang\/li652\/"}],"tips":"\u8bd5\u8bd5\u8f93\u5165\u5730\u94c1\u7ebf\/\u7ad9\u627e\u5730\u94c1\u623f\uff0c\u5982 13\u53f7\u7ebf"}},{"name":"\u5c0f\u533a","action":"xiaoqu","channel":"xiaoqu","checked":0,"tipsHot":{"query":[{"string":"\u8fdc\u6d0b\u5c71\u6c34","url":"http:\/\/bj.lianjia.com\/xiaoqu\/1111027382209\/"},{"string":"\u540e\u73b0\u4ee3\u57ce","url":"http:\/\/bj.lianjia.com\/xiaoqu\/1111027375357\/"},{"string":"\u8363\u4e302008","url":"http:\/\/bj.lianjia.com\/xiaoqu\/1111027378998\/"},{"string":"\u5929\u901a\u897f\u82d1\u4e09\u533a ","url":"http:\/\/bj.lianjia.com\/xiaoqu\/1111027380054\/"},{"string":"\u82f9\u679c\u793e\u533a","url":"http:\/\/bj.lianjia.com\/xiaoqu\/1111027378713\/"},{"string":"\u534e\u8d38\u57ce","url":"http:\/\/bj.lianjia.com\/xiaoqu\/1111027375158\/"},{"string":"\u5929\u901a\u82d1\u4e2d\u82d1","url":"http:\/\/bj.lianjia.com\/xiaoqu\/1111027380057\/"},{"string":"\u5317\u4eac\u65b0\u5929\u5730","url":"http:\/\/bj.lianjia.com\/xiaoqu\/1111027375945\/"}],"tips":"\u8bf7\u8f93\u5165\u5c0f\u533a\u540d\u5f00\u59cb\u67e5\u627e\u5c0f\u533a"}},{"name":"\u65b0\u623f","action":"loupan","channel":"xinfang","checked":0,"tipsHot":{"query":[{"string":"\u91d1\u6cf0\u4e3d\u6e7e","url":"http:\/\/bj.fang.lianjia.com\/loupan\/p_aaaog"},{"string":"\u516c\u56ed6\u53f7","url":"http:\/\/bj.fang.lianjia.com\/loupan\/p_gyaapsx\/"},{"string":"\u4eac\u6d32\u4e16\u5bb6","url":"http:\/\/bj.fang.lianjia.com\/loupan\/p_jzsjaaadk\/"},{"string":"\u9996\u521b\u6d3e\u5c1a\u56fd\u9645","url":"http:\/\/bj.fang.lianjia.com\/loupan\/p_scpsgjaaahy\/"},{"string":"\u5317\u4eac\u57ce\u5efa\u80dc\u8302\u50b2\u5c71","url":"http:\/\/bj.fang.lianjia.com\/loupan\/p_bjcjsmasaaajm\/"},{"string":"\u9996\u5f00\u7199\u60a6\u5c1a\u90e1","url":"http:\/\/bj.fang.lianjia.com\/loupan\/p_skxysjaaajp\/"},{"string":"\u5929\u6da6\u798f\u7199\u5927\u9053","url":"http:\/\/bj.fang.lianjia.com\/loupan\/p_trfxddaaaly\/"},{"string":"\u7ea2\u73ba\u53f0","url":"http:\/\/bj.fang.lianjia.com\/loupan\/p_hxtaaamn\/"}],"tips":"\u8bf7\u8f93\u5165\u697c\u76d8\u540d\u79f0\u5f00\u59cb\u627e\u623f"}},{"name":"\u67e5\u623f\u4ef7","action":"fangjia","channel":"fangjia","checked":0,"tipsHot":{"query":[{"string":"\u5927\u5174","url":"http:\/\/bj.lianjia.com\/fangjia\/daxing\/"},{"string":"\u660c\u5e73","url":"http:\/\/bj.lianjia.com\/fangjia\/changping\/"},{"string":"\u671b\u4eac","url":"http:\/\/bj.lianjia.com\/fangjia\/wangjing\/"},{"string":"\u6e05\u6cb3","url":"http:\/\/bj.lianjia.com\/fangjia\/qinghe\/"},{"string":"\u8fdc\u89c1\u540d\u82d1","url":"http:\/\/bj.lianjia.com\/fangjia\/c1111027381801\/"},{"string":"\u828d\u836f\u5c45\u5317\u91cc","url":"http:\/\/bj.lianjia.com\/fangjia\/c1111027379657\/"},{"string":"\u540e\u73b0\u4ee3\u57ce","url":"http:\/\/bj.lianjia.com\/fangjia\/c1111027375357\/"},{"string":"\u534e\u4e25\u5317\u91cc\u5c0f\u533a","url":"http:\/\/bj.lianjia.com\/fangjia\/c1111027375413\/"}],"tips":"\u8bf7\u8f93\u5165\u533a\u57df\u3001\u5546\u5708\u6216\u5c0f\u533a\u540d\u67e5\u8be2\u623f\u4ef7"}},{"name":"\u79df\u623f","action":"zufang","channel":"zufang","checked":0,"tipsHot":{"query":[{"string":"\u5317\u4eac\u50cf\u7d20","url":"http:\/\/bj.lianjia.com\/zufang\/rs%E5%8C%97%E4%BA%AC%E5%83%8F%E7%B4%A0"},{"string":"\u56de\u9f99\u89c2","url":"http:\/\/bj.lianjia.com\/zufang\/huilongguan2"},{"string":"\u7261\u4e39\u56ed","url":"http:\/\/bj.lianjia.com\/zufang\/mudanyuan"},{"string":"\u6e05\u6cb3","url":"http:\/\/bj.lianjia.com\/zufang\/qinghe11\/"},{"string":"\u5929\u901a\u82d1","url":"http:\/\/bj.lianjia.com\/ditiezufang\/li649s20598\/"},{"string":"\u9752\u5e74\u8def","url":"http:\/\/bj.lianjia.com\/ditiezufang\/li46107350s46107139\/"}],"tips":"\u8bf7\u8f93\u5165\u533a\u57df\u3001\u5546\u5708\u6216\u5c0f\u533a\u540d\u5f00\u59cb\u627e\u623f"}},{"name":"\u7ecf\u7eaa\u4eba","action":"jingjiren","channel":"jingjiren","checked":0,"tipsHot":{"query":[],"tips":"\u8bf7\u8f93\u5165\u5546\u5708\u3001\u5c0f\u533a\u6216\u7ecf\u7eaa\u4eba\u7684\u59d3\u540d\u3001\u7535\u8bdd..."}}],
+    curChannel:'ershoufang'
+  };
+</script>
+<div class="m-filter">
+          <div class="lanren">想要根据工作地来选房子，快试试<a href="/ditu?bar=steam" target="_blank">通勤找房</a></div>
+        <div class="position">
+      <dl>
+        <h2><dt title="北京小区位置">位置</dt></h2>
+        <dd>
+                  <a href="/xiaoqu/" class="selected" title="北京小区区域">
+            区域<span class="arrow"></span>
+          </a>
+                </dd>
+      </dl>
+      <dl>
+        <dt></dt>
+        <dd>
+          <!-- 区域 -->
+                    <div data-role="ershoufang" >
+            <div>
+                              <a href="/xiaoqu/dongcheng/" class="selected" title="北京东城小区二手房 ">东城</a>
+                              <a href="/xiaoqu/xicheng/"  title="北京西城小区二手房 ">西城</a>
+                              <a href="/xiaoqu/chaoyang/"  title="北京朝阳小区二手房 ">朝阳</a>
+                              <a href="/xiaoqu/haidian/"  title="北京海淀小区二手房 ">海淀</a>
+                              <a href="/xiaoqu/fengtai/"  title="北京丰台小区二手房 ">丰台</a>
+                              <a href="/xiaoqu/shijingshan/"  title="北京石景山小区二手房 ">石景山</a>
+                              <a href="/xiaoqu/tongzhou/"  title="北京通州小区二手房 ">通州</a>
+                              <a href="/xiaoqu/changping/"  title="北京昌平小区二手房 ">昌平</a>
+                              <a href="/xiaoqu/daxing/"  title="北京大兴小区二手房 ">大兴</a>
+                              <a href="/xiaoqu/yizhuangkaifaqu/"  title="北京亦庄开发区小区二手房 ">亦庄开发区</a>
+                              <a href="/xiaoqu/shunyi/"  title="北京顺义小区二手房 ">顺义</a>
+                              <a href="/xiaoqu/fangshan/"  title="北京房山小区二手房 ">房山</a>
+                              <a href="/xiaoqu/mentougou/"  title="北京门头沟小区二手房 ">门头沟</a>
+                              <a href="/xiaoqu/pinggu/"  title="北京平谷小区二手房 ">平谷</a>
+                              <a href="/xiaoqu/huairou/"  title="北京怀柔小区二手房 ">怀柔</a>
+                              <a href="/xiaoqu/miyun/"  title="北京密云小区二手房 ">密云</a>
+                              <a href="/xiaoqu/yanqing/"  title="北京延庆小区二手房 ">延庆</a>
+                              <a href="/xiaoqu/yanjiao/"  title="北京燕郊小区二手房 ">燕郊</a>
+                          </div>
+                          <div>
+                                  <b>A</b>
+                                      <a href="/xiaoqu/andingmen/" class="selected">安定门</a>
+                                      <a href="/xiaoqu/anzhen1/" >安贞</a>
+                                                    <b>B</b>
+                                      <a href="/xiaoqu/beijingnanzhan1/" >北京南站</a>
+                                                    <b>C</b>
+                                      <a href="/xiaoqu/chaoyangmenwai1/" >朝阳门外</a>
+                                      <a href="/xiaoqu/chaoyangmennei1/" >朝阳门内</a>
+                                      <a href="/xiaoqu/chongwenmen/" >崇文门</a>
+                                                    <b>D</b>
+                                      <a href="/xiaoqu/dongdan/" >东单</a>
+                                      <a href="/xiaoqu/dongzhimen/" >东直门</a>
+                                      <a href="/xiaoqu/dianmen/" >地安门</a>
+                                      <a href="/xiaoqu/donghuashi/" >东花市</a>
+                                      <a href="/xiaoqu/dongsi1/" >东四</a>
+                                      <a href="/xiaoqu/dengshikou/" >灯市口</a>
+                                                    <b>G</b>
+                                      <a href="/xiaoqu/guozhan1/" >国展</a>
+                                      <a href="/xiaoqu/guangqumen/" >广渠门</a>
+                                      <a href="/xiaoqu/gongti/" >工体</a>
+                                                    <b>H</b>
+                                      <a href="/xiaoqu/huixinxijie/" >惠新西街</a>
+                                      <a href="/xiaoqu/hepingli/" >和平里</a>
+                                                    <b>J</b>
+                                      <a href="/xiaoqu/jiaodaokou/" >交道口</a>
+                                      <a href="/xiaoqu/jinsong/" >劲松</a>
+                                      <a href="/xiaoqu/jianguomenwai/" >建国门外</a>
+                                      <a href="/xiaoqu/jianguomennei/" >建国门内</a>
+                                      <a href="/xiaoqu/jinbaojie/" >金宝街</a>
+                                                    <b>L</b>
+                                      <a href="/xiaoqu/liupukang/" >六铺炕</a>
+                                                    <b>M</b>
+                                      <a href="/xiaoqu/muxiyuan1/" >木樨园</a>
+                                      <a href="/xiaoqu/madian1/" >马甸</a>
+                                                    <b>P</b>
+                                      <a href="/xiaoqu/puhuangyu/" >蒲黄榆</a>
+                                                    <b>Q</b>
+                                      <a href="/xiaoqu/qianmen/" >前门</a>
+                                                    <b>S</b>
+                                      <a href="/xiaoqu/shuangjing/" >双井</a>
+                                                    <b>T</b>
+                                      <a href="/xiaoqu/taoranting1/" >陶然亭</a>
+                                      <a href="/xiaoqu/tiantan/" >天坛</a>
+                                                    <b>X</b>
+                                      <a href="/xiaoqu/xisi1/" >西四</a>
+                                      <a href="/xiaoqu/xiluoyuan/" >西罗园</a>
+                                      <a href="/xiaoqu/xidan/" >西单</a>
+                                                    <b>Y</b>
+                                      <a href="/xiaoqu/yongdingmen/" >永定门</a>
+                                      <a href="/xiaoqu/yangqiao1/" >洋桥</a>
+                                                    <b>Z</b>
+                                      <a href="/xiaoqu/zuoanmen1/" >左安门</a>
+                                                </div>
+                      </div>
+                    <!-- 地铁 -->
+                    <!-- 学区 -->
+                  </dd>
+      </dl>
+    </div>
+  
+  <div class="list-more">
+                                                                                                                                                                                                                        <dl class=" hasmore" >
+          <h2><dt title="北京均价小区二手房">均价</dt></h2>
+          <dd>
+                                                                                                                  <a href="javascript:;" class="nolink">
+                <span class="checkbox "></span>
+                <span class="name">2万以下</span>
+                              </a>
+                                                                                                                  <a href="javascript:;" class="nolink">
+                <span class="checkbox "></span>
+                <span class="name">2-3万</span>
+                              </a>
+                                                                                                                  <a href="javascript:;" class="nolink">
+                <span class="checkbox "></span>
+                <span class="name">3-4万</span>
+                              </a>
+                                                                                                                  <a href="javascript:;" class="nolink">
+                <span class="checkbox "></span>
+                <span class="name">4-5万</span>
+                              </a>
+                                                                    <a href="/xiaoqu/andingmen/p5/" class="">
+                <span class="checkbox "></span>
+                <span class="name">5-6万</span>
+                                  <span class="cnt">(1)</span>
+                              </a>
+                                                                    <a href="/xiaoqu/andingmen/p6/" class="">
+                <span class="checkbox "></span>
+                <span class="name">6万以上</span>
+                                  <span class="cnt">(49)</span>
+                              </a>
+                                                              <span class="customFilter mt" data-role="price">
+                <input type="text" role="minValue" value="">
+                <span>-</span>
+                <input type="text" role="maxValue" value="">&nbsp;
+                                  <span>万</span>
+                                <button class="btn-range hide" data-url="/xiaoqu/andingmen/bp{min}ep{max}/">确定</button>
+              </span>
+                                                  <span class="btn-showmore">+ 更多及自定义</span>
+                      </dd>
+        </dl>
+                                                                                                                                        <dl class=" " >
+          <h2><dt title="北京类型小区二手房">类型</dt></h2>
+          <dd>
+                                                                    <a href="/xiaoqu/andingmen/rty1/" class="">
+                <span class="checkbox "></span>
+                <span class="name">塔楼</span>
+                                  <span class="cnt">(17)</span>
+                              </a>
+                                                                    <a href="/xiaoqu/andingmen/rty2/" class="">
+                <span class="checkbox "></span>
+                <span class="name">板楼</span>
+                                  <span class="cnt">(52)</span>
+                              </a>
+                                                                    <a href="/xiaoqu/andingmen/rty3/" class="">
+                <span class="checkbox "></span>
+                <span class="name">塔板结合</span>
+                                  <span class="cnt">(18)</span>
+                              </a>
+                                                                    <a href="/xiaoqu/andingmen/rty4/" class="">
+                <span class="checkbox "></span>
+                <span class="name">其他</span>
+                                  <span class="cnt">(35)</span>
+                              </a>
+                                                          </dd>
+        </dl>
+                                                                                                                                                          <dl class=" " >
+          <h2><dt title="北京楼龄小区二手房">楼龄</dt></h2>
+          <dd>
+                                                                                                                  <a href="javascript:;" class="nolink">
+                <span class="checkbox "></span>
+                <span class="name">5年以内</span>
+                              </a>
+                                                                    <a href="/xiaoqu/andingmen/y2/" class="">
+                <span class="checkbox "></span>
+                <span class="name">10年以内</span>
+                                  <span class="cnt">(1)</span>
+                              </a>
+                                                                    <a href="/xiaoqu/andingmen/y3/" class="">
+                <span class="checkbox "></span>
+                <span class="name">15年以内</span>
+                                  <span class="cnt">(12)</span>
+                              </a>
+                                                                    <a href="/xiaoqu/andingmen/y4/" class="">
+                <span class="checkbox "></span>
+                <span class="name">20年以内</span>
+                                  <span class="cnt">(21)</span>
+                              </a>
+                                                                    <a href="/xiaoqu/andingmen/y5/" class="">
+                <span class="checkbox "></span>
+                <span class="name">20年以上</span>
+                                  <span class="cnt">(44)</span>
+                              </a>
+                                                          </dd>
+        </dl>
+                </div>
+  </div>
+<div class="content"><!-- 左侧内容 --><div class="leftContent"><div class="orderFilter"><div class="orderTag"><ul><li class='selected'><h3><a href="/xiaoqu/andingmen/">默认排序</span></a></h3></li><li ><h3><a href="/xiaoqu/andingmen/cro21/">小区均价</a></h3></li><li ><h3><a href="/xiaoqu/andingmen/cro11/">按成交量</a></h3></li></ul></div><div class="filterAgain"><div class="title">筛选：</div><ul><li ><a href="/xiaoqu/andingmen/su1/"><span class="checkbox"></span>近地铁</a></li></ul></div></div><div class="resultDes clear"><h2 class="total fl">共找到<span> 117 </span>个小区</h2><div class="button fr"><div class="clearBtn hide"><a href="/xiaoqu/"><span></span>清空条件</a></div></div></div><ul class="listContent" log-mod="list"><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027380181/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="五道营胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027380181/" target="_blank">五道营胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="五道营胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111027380181/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="五道营胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线雍和宫站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="五道营胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111027380181/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111041463793/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="中绦胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111041463793/" target="_blank">中绦胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="中绦胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111041463793/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="中绦胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /板楼/平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="中绦胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111041463793/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111041121239/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="官书院1号院">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111041121239/" target="_blank">官书院1号院</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="官书院1号院网签"  href="http://bj.lianjia.com/chengjiao/c1111041121239/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="官书院1号院租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /板楼
+            /&nbsp;2003年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线安定门站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="官书院1号院二手房" href="http://bj.lianjia.com/ershoufang/c1111041121239/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027377022/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="箭厂南巷">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027377022/" target="_blank">箭厂南巷</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="箭厂南巷网签"  href="http://bj.lianjia.com/chengjiao/c1111027377022/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="箭厂南巷租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /板楼/平房
+            /&nbsp;1985年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线雍和宫站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="箭厂南巷二手房" href="http://bj.lianjia.com/ershoufang/c1111027377022/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111041951490/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="车辇店胡同32号院">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111041951490/" target="_blank">车辇店胡同32号院</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="车辇店胡同32号院网签"  href="http://bj.lianjia.com/chengjiao/c1111041951490/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="车辇店胡同32号院租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线安定门站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="车辇店胡同32号院二手房" href="http://bj.lianjia.com/ershoufang/c1111041951490/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027377831/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="灵光东巷">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027377831/" target="_blank">灵光东巷</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="灵光东巷网签"  href="http://bj.lianjia.com/chengjiao/c1111027377831/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="灵光东巷租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /未知类型
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="灵光东巷二手房" href="http://bj.lianjia.com/ershoufang/c1111027377831/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027373935/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="东绦胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027373935/" target="_blank">东绦胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="东绦胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111027373935/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="东绦胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="东绦胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111027373935/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027374852/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="国子监街">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027374852/" target="_blank">国子监街</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="国子监街网签"  href="http://bj.lianjia.com/chengjiao/c1111027374852/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="国子监街租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /未知类型
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线安定门站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="国子监街二手房" href="http://bj.lianjia.com/ershoufang/c1111027374852/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027374743/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="国学胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027374743/" target="_blank">国学胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="国学胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111027374743/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="国学胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线雍和宫站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="国学胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111027374743/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027375505/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="花园前巷">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027375505/" target="_blank">花园前巷</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="花园前巷网签"  href="http://bj.lianjia.com/chengjiao/c1111027375505/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="花园前巷租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线安定门站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="花园前巷二手房" href="http://bj.lianjia.com/ershoufang/c1111027375505/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027377848/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="灵光西巷">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027377848/" target="_blank">灵光西巷</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="灵光西巷网签"  href="http://bj.lianjia.com/chengjiao/c1111027377848/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="灵光西巷租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /未知类型
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="灵光西巷二手房" href="http://bj.lianjia.com/ershoufang/c1111027377848/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027378932/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="前肖家胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027378932/" target="_blank">前肖家胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="前肖家胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111027378932/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="前肖家胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线安定门站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="前肖家胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111027378932/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027378888/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="http://image1.ljcdn.com/hdic-resblock/ade13a96-a4cf-4357-9cc6-8a6323eda3c6.jpg.232x174.jpg" alt="青年湖别墅">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027378888/" target="_blank">青年湖别墅</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="青年湖别墅网签"  href="http://bj.lianjia.com/chengjiao/c1111027378888/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="青年湖别墅租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /未知类型
+            /&nbsp;1997年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁8号线安德里北街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="青年湖别墅二手房" href="http://bj.lianjia.com/ershoufang/c1111027378888/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027375461/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="http://image1.ljcdn.com/hdic-resblock/74d9a249-e5ef-4a04-941e-84783763a7c5.jpg.232x174.jpg" alt="花园胡同29号院">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027375461/" target="_blank">花园胡同29号院</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="花园胡同29号院网签"  href="http://bj.lianjia.com/chengjiao/c1111027375461/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="花园胡同29号院租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /板楼
+            /&nbsp;1982年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线安定门站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="花园胡同29号院二手房" href="http://bj.lianjia.com/ershoufang/c1111027375461/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027375446/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="花园东巷">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027375446/" target="_blank">花园东巷</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="花园东巷网签"  href="http://bj.lianjia.com/chengjiao/c1111027375446/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="花园东巷租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线安定门站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="花园东巷二手房" href="http://bj.lianjia.com/ershoufang/c1111027375446/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027380247/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="外馆斜街6号院">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027380247/" target="_blank">外馆斜街6号院</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="外馆斜街6号院网签"  href="http://bj.lianjia.com/chengjiao/c1111027380247/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="外馆斜街6号院租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /塔板结合
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁8号线安华桥站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="外馆斜街6号院二手房" href="http://bj.lianjia.com/ershoufang/c1111027380247/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027382358/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="赵府街">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027382358/" target="_blank">赵府街</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="赵府街网签"  href="http://bj.lianjia.com/chengjiao/c1111027382358/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="赵府街租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /未知类型
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="赵府街二手房" href="http://bj.lianjia.com/ershoufang/c1111027382358/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027377012/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="箭厂胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027377012/" target="_blank">箭厂胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="箭厂胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111027377012/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="箭厂胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线安定门站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="箭厂胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111027377012/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027374733/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="国旺胡同西巷">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027374733/" target="_blank">国旺胡同西巷</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="国旺胡同西巷网签"  href="http://bj.lianjia.com/chengjiao/c1111027374733/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="国旺胡同西巷租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="国旺胡同西巷二手房" href="http://bj.lianjia.com/ershoufang/c1111027374733/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027382353/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="砖儿胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027382353/" target="_blank">砖儿胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="砖儿胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111027382353/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="砖儿胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线雍和宫站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="砖儿胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111027382353/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111043629569/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="箭厂北巷">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111043629569/" target="_blank">箭厂北巷</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="箭厂北巷网签"  href="http://bj.lianjia.com/chengjiao/c1111043629569/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="箭厂北巷租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="箭厂北巷二手房" href="http://bj.lianjia.com/ershoufang/c1111043629569/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111046578976/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="花园北巷">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111046578976/" target="_blank">花园北巷</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="花园北巷网签"  href="http://bj.lianjia.com/chengjiao/c1111046578976/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="花园北巷租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线安定门站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="花园北巷二手房" href="http://bj.lianjia.com/ershoufang/c1111046578976/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027374703/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="国盛胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027374703/" target="_blank">国盛胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="国盛胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111027374703/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="国盛胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="国盛胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111027374703/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027380885/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="西河沿">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027380885/" target="_blank">西河沿</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="西河沿网签"  href="http://bj.lianjia.com/chengjiao/c1111027380885/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="西河沿租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /板楼
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="西河沿二手房" href="http://bj.lianjia.com/ershoufang/c1111027380885/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111042923890/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="国兴胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111042923890/" target="_blank">国兴胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="国兴胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111042923890/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="国兴胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="国兴胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111042923890/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027378848/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="钱粮北巷">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027378848/" target="_blank">钱粮北巷</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="钱粮北巷网签"  href="http://bj.lianjia.com/chengjiao/c1111027378848/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="钱粮北巷租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="钱粮北巷二手房" href="http://bj.lianjia.com/ershoufang/c1111027378848/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027374732/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="国旺胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027374732/" target="_blank">国旺胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="国旺胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111027374732/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="国旺胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="国旺胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111027374732/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111042883408/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="青年湖北街18号院">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111042883408/" target="_blank">青年湖北街18号院</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="青年湖北街18号院网签"  href="http://bj.lianjia.com/chengjiao/c1111042883408/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="青年湖北街18号院租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /塔板结合
+            /&nbsp;1990年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁8号线安德里北街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="青年湖北街18号院二手房" href="http://bj.lianjia.com/ershoufang/c1111042883408/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027378802/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="千福巷">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027378802/" target="_blank">千福巷</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="千福巷网签"  href="http://bj.lianjia.com/chengjiao/c1111027378802/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="千福巷租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线安定门站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="千福巷二手房" href="http://bj.lianjia.com/ershoufang/c1111027378802/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li><li class="clear xiaoquListItem">
+  <a class="img" href="http://bj.lianjia.com/xiaoqu/1111027381660/" target="_blank" rel="nofollow">
+    <img class="lj-lazy" src="http://static1.ljcdn.com/pc/asset/img/blank.gif?_v=20161118202752" data-original="" alt="玉阁胡同">
+  </a>
+  <div class="info">
+    <div class="title">
+      <a href="http://bj.lianjia.com/xiaoqu/1111027381660/" target="_blank">玉阁胡同</a>
+          </div>
+    <div class="houseInfo">
+      <span class="houseIcon"></span>
+            <a title="玉阁胡同网签"  href="http://bj.lianjia.com/chengjiao/c1111027381660/" >30天成交0套</a>
+      <span class="cutLine">|</span><a title="玉阁胡同租房" >0套正在出租</a>
+    </div>
+    <div class="positionInfo">
+      <span class="positionIcon"></span>
+      <a href="http://bj.lianjia.com/xiaoqu/dongcheng/" class="district" title="东城小区">东城</a>
+      &nbsp;<a href="http://bj.lianjia.com/xiaoqu/andingmen/" class="bizcircle" title="安定门小区">安定门</a>&nbsp;
+              /平房
+            /&nbsp;未知年建成
+    </div>
+        <div class="tagList">
+                    <span>近地铁2号线鼓楼大街站</span>
+          </div>
+  </div>
+  <div class="xiaoquListItemRight">
+    <div class="xiaoquListItemPrice">
+            <div class="totalPrice"><span>暂无均价</span></div>
+            <div class="priceDesc">小区均价</div>
+    </div>
+        <div class="xiaoquListItemSellCount">
+      <a title="玉阁胡同二手房" href="http://bj.lianjia.com/ershoufang/c1111027381660/" class="totalSellCount"><span>0</span>套</a>
+      <div class="sellCountDesc">在售二手房</div>
+    </div>
+      </div>
+</li></ul><!-- 无搜索结果 --><div class="contentBottom clear" ><div class="crumbs fl"><a href="/">链家网北京站</a><span >&nbsp;&gt;&nbsp;</span><a href="/xiaoqu/">北京小区</a><span >&nbsp;&gt;&nbsp;</span><a href="/xiaoqu/dongcheng/">东城小区</a><span >&nbsp;&gt;&nbsp;</span><h1><a href="/xiaoqu/andingmen/">安定门小区</a></h1></div><div class="page-box fr"><div class="page-box house-lst-page-box" comp-module='page' page-url="/xiaoqu/andingmen/pg{page}/"page-data='{"totalPage":4,"curPage":3}'></div>
+
+
+</div></div><div style="display:none;"><p>北京小区信息</p><p>链家网北京站安定门小区频道提供真实、时时的安定门小区房源信息，安定门小区目前为117个，全>部由线下经纪人确认核实上传，信息可靠，安定门小区用户可以在链家网安定门小区频道和安定门小区频道移动端最快速、最及时的找到自己想要的真>实、放心房源。链家网安定门小区平台，真房源，如你所见！</p><p>小区均价:48519.6,建成年代:1980,物业费用:0.86,开发商:无开发公司,物业公司:北京融乐物业管理中心,楼栋总数:38,房屋总数:2668</p></div></div><!-- 右侧sidebar --><div class="rightContent"><div class="sideBar_sellHouse" id='sellHouseContainer'>
+  <div class="sellHouseTitle">快速卖房，就在链家</div>
+  <div class="sellHouseDesc">10万+专业经纪人·8000+链家门店·链家倾情服务14年+</div>
+  <a href="/yezhu/" class="sellHoustBtn">委托卖房</a>
+</div>
+<div class="sideBar_price" id='priceSideBarContainer'></div>
+<div class="sideBar_hotResblock" id="hotResblockContainer">
+  <div class="hotResblockTitle">北京热门小区</div>
+  <ul>
+  </ul>
+  <a class="moreResblock_sidebar">查看更多热门小区&nbsp;>></a>
+</div>
+<div class="sideBar_ADSuggest" id="ADSuggestContainer"></div>
+<div class="sideBar_zixun sideBar_wenda" id="pushZixunContainer"></div>
+<div class="sideBar_wenda" id="pushWendaContainer"></div>
+
+<script type="text/template" id="priceSideBarTpl">
+<%if(tag !== 'school'){%>
+  <div class="title"><%=name%>最新参考均价</div>
+  <div class="priceMap" id="priceChartContainer"></div>
+  <a href="<%=fangjia_url%>" class="unitPrice" target="_blank">
+    <span><%=month_trans%></span>元/平米
+  </a>
+  <div class="info">
+    <a href="<%=fangjia_url%>" target="_blank">环比上月均价<%=month_trans_ratio>=0?'上涨':'下降'%> <%=month_trans_ratio%>%</a>
+    <a href="<%=chengjiao_url%>" target="_blank">/ 近90天成交<%=sold_90_day%>套</a>
+    <%if(tag === '小区'){%>
+    <div>
+      <a class="cardMoreDetail" href="<%=url%>" target="_blank">查看小区详情>></a>
+    </div>
+    <%}%>
+  </div>
+<%}else{%>
+  <a class="title" href="<%=url%>" target="_blank"><%=name%></a>
+  <div class="unitPrice school">
+    <span><%=min_unit_price%></span>万元起
+  </div>
+  <div class="info">
+    <a href="<%=url%>" target="_blank">本学区目前有在售二手房<%=sell_num%>套，划片小区<%=resblock_nums%>个</a>
+    <a class="cardMoreDetail" href="<%=url%>"  target="_blank">查看学区详情>></a>
+  </div>
+<%}%>
+</script>
+
+<script type="text/tempalte" id="hotResblockTpl">
+  <div class="hotResblockTitle"><%=name%>成交量排行</div>
+  <ul>
+  <%for(var i = 0; i < rank.length; i++){%>
+    <li class="clear">
+    <%if(i < 3){%>
+      <div class="num top"><%=i+1%></div>
+    <%}else{%>
+      <div class="num"><%=i+1%></div>
+    <%}%>
+      <a href="<%=rank[i].url%>" class="resblockName_sidebar" title="<%=rank[i].resblock_name%>"><%=rank[i].resblock_name%></a>
+      <div class="reblockPrice_sidebar"><%=Math.round(rank[i].trans_price)%>元/㎡</div>
+    </li>
+  <%}%>
+  </ul>
+  <a href="<%=url%>" class="moreResblock_sidebar">查看更多小区成交量&nbsp;>></a>
+</script>
+<script type="text/template" id="pushWendaTpl">
+  <div class="title">热门问答</div>
+  <ul>
+  <%for(var i = 0;i < list.length; i++){%>
+    <li>
+      <a class="info" href="<%=list[i].url%>" target="_blank" data-bl="list" data-log_index="<%=i+1%>"><%=list[i].question_title%></a>
+      <span class="time"><%=list[i].mtime%></span>
+    </li>
+  <%}%>
+  </ul>
+</script>
+<script type="text/template" id="pushZixunTpl">
+  <div class="title">热点精选</div>
+  <ul>
+  <%for(var i = 0;i < list.length; i++){%>
+    <li>
+      <a class="info" href="<%=list[i].url%>" target="_blank" data-bl="list" data-log_index="<%=i+1%>">
+        <i class="opt<%=i%>"><%=i+1%></i>
+        <span><%=list[i].question_title%></span>
+      </a>
+    </li>
+  <%}%>
+  </ul>
+</script>
+<script type="text/template" id="sideBar_ADSuggest_tpl">
+  <a class="img" href="<%=url%>" target="_blank" data-bl="list" data-log_index="<%=index+1%>">
+    <img src="<%=img_url%>" alt="">
+    <div class="cover"></div>
+    <div class="title">
+      <span><%=title%></span>&nbsp;
+    </div>
+  </a>
+  <div class="pointContainer">
+  <%for(var i = 0; i < total; i++){%>
+    <%if(index === i){%>
+      <span data-index="<%=i%>" class="point selected"></span>
+    <%}else{%>
+      <span data-index="<%=i%>" class="point"></span>
+    <%}%>
+  <%}%>
+  </div>
+</script>
+</div></div><div class="footer"><div class="wrapper"><div class="f-title"><div class="fl"><ul><li><a href="http://www.lianjia.com/zhuanti/home/" target="_blank">了解链家网</a></li><li><a href="http://bj.lianjia.com/about/aboutlianjia/" rel="nofollow" target="_blank">关于链家</a></li><li><a href="http://bj.lianjia.com/about/contactus/" rel="nofollow" target="_blank">联系我们</a></li><li><a href="http://join.lianjia.com/" rel="nofollow" target="_blank">加入我们</a></li><li><a href="http://www.lianjia.com/privacy/" rel="nofollow" target="_blank">隐私声明</a></li><li><a href="http://bj.lianjia.com/sitemap/" target="_blank">网站地图</a></li><li><a href="http://www.lianjia.com/notice/7.html" target="_blank">友情链接</a></li><li><a href="http://agent.lianjia.com/" rel="nofollow" target="_blank">经纪人登录</a></li></ul></div><div class="fr">官方客服 1010 9666</div></div><div class="lianjia-link-box"><div class="fl"><div class="tab"><span  class="hover">热门城市小区</span><span >热门城市二手房</span><span >热门城市租房网</span><span >热门城市楼盘</span></div><div class="link-list"><div><dd><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027380612/">星城国际小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027380823/">新华街三里小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027376856/">达富苑小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027380318/">五建小区小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027379037/">润龙家园小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027375874/">八角北路11号院小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027377592/">康城别墅一期小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027375956/">八角中里小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111047622140/">万达广场小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027382411/">中国第一商城小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027377541/">京艺天朗小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027378582/">南三环东路小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027374454/">丰泽居三号院小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111059167363/">国锐金嵿小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027374260/">富锦嘉园二区小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027377495/">建欣苑一里小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027382608/">站前巴黎小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027374011/">大悦城公寓小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027382395/">中关村科技会展中心小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027376464/">城建宿舍小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027377177/">京华苑小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027374872/">豪柏大厦小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027374609/">冠军楼小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027377128/">建工家园小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027379724/">宋庄路甲12号院小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027376235/">北窑地小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027373991/">顶秀欣园东苑小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027377574/">京洲世家小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027380649/">西成忆树小区二手房</a><a target="_blank" href="http://bj.lianjia.com/ershoufang/c1111027380955/">绣江南小区二手房</a></dd></div><div><dd><a target="_blank" href="http://bj.lianjia.com/ershoufang/">北京二手房</a><a target="_blank" href="http://gz.lianjia.com/ershoufang/">广州二手房</a><a target="_blank" href="http://sz.lianjia.com/ershoufang/">深圳二手房</a><a target="_blank" href="http://tj.lianjia.com/ershoufang/">天津二手房</a><a target="_blank" href="http://cd.lianjia.com/ershoufang/">成都二手房</a><a target="_blank" href="http://nj.lianjia.com/ershoufang/">南京二手房</a><a target="_blank" href="http://hz.lianjia.com/ershoufang/">杭州二手房</a><a target="_blank" href="http://qd.lianjia.com/ershoufang/">青岛二手房</a><a target="_blank" href="http://dl.lianjia.com/ershoufang/">大连二手房</a><a target="_blank" href="http://xm.lianjia.com/ershoufang/">厦门二手房</a><a target="_blank" href="http://wh.lianjia.com/ershoufang/">武汉二手房</a><a target="_blank" href="http://cq.lianjia.com/ershoufang/">重庆二手房</a><a target="_blank" href="http://cs.lianjia.com/ershoufang/">长沙二手房</a><a target="_blank" href="http://jn.lianjia.com/ershoufang/">济南二手房</a><a target="_blank" href="http://fs.lianjia.com/ershoufang/">佛山二手房</a></dd></div><div><dd><a target="_blank" href="http://bj.lianjia.com/zufang/">北京租房</a><a target="_blank" href="http://gz.lianjia.com/zufang/">广州租房</a><a target="_blank" href="http://sz.lianjia.com/zufang/">深圳租房</a><a target="_blank" href="http://tj.lianjia.com/zufang/">天津租房</a><a target="_blank" href="http://cd.lianjia.com/zufang/">成都租房</a><a target="_blank" href="http://nj.lianjia.com/zufang/">南京租房</a><a target="_blank" href="http://hz.lianjia.com/zufang/">杭州租房</a><a target="_blank" href="http://qd.lianjia.com/zufang/">青岛租房</a><a target="_blank" href="http://dl.lianjia.com/zufang/">大连租房</a><a target="_blank" href="http://xm.lianjia.com/zufang/">厦门租房</a><a target="_blank" href="http://wh.lianjia.com/zufang/">武汉租房</a><a target="_blank" href="http://cq.lianjia.com/zufang/">重庆租房</a><a target="_blank" href="http://cs.lianjia.com/zufang/">长沙租房</a><a target="_blank" href="http://jn.lianjia.com/zufang/">济南租房</a></dd></div><div><dd><a target="_blank" href="http://sh.fang.lianjia.com/">北京楼盘</a><a target="_blank" href="http://tj.fang.lianjia.com/">天津楼盘</a><a target="_blank" href="http://nj.fang.lianjia.com/">南京楼盘</a><a target="_blank" href="http://cd.fang.lianjia.com/">成都楼盘</a><a target="_blank" href="http://dl.fang.lianjia.com/">大连楼盘</a><a target="_blank" href="http://qd.fang.lianjia.com/">青岛楼盘</a><a target="_blank" href="http://hz.fang.lianjia.com/">杭州楼盘</a><a target="_blank" href="http://wh.fang.lianjia.com/">武汉楼盘</a><a target="_blank" href="http://sz.fang.lianjia.com/">深圳楼盘</a><a target="_blank" href="http://cq.fang.lianjia.com/">重庆楼盘</a><a target="_blank" href="http://cs.fang.lianjia.com/">长沙楼盘</a><a target="_blank" href="http://xa.fang.lianjia.com/">西安楼盘</a><a target="_blank" href="http://jn.fang.lianjia.com/">济南楼盘</a><a target="_blank" href="http://sjz.fang.lianjia.com/">石家庄楼盘</a></dd></div></div></div><div class="clear"></div></div><div class="bottom"><div class="copyright fl">北京链家房地产经纪有限公司 | 网络经营许可证 京ICP备11024601号-12 | © Copyright©2010-2016 链家网Lianjia.com版权所有</div></div></div></div>
+
+<script src="http://static1.ljcdn.com/pc/asset/base/fe.js?_v=20161118202752"></script><script src="http://static1.ljcdn.com/pc/asset/common/common.js?_v=20161118202752"></script><div style="display:none"><script src="http://static1.ljcdn.com/dep/ljanalytics.js?_v=20161118202752"></script></div><div id="only" data-city="bj" data-page="xiaoqu_list"></div>
+<script>var path = 'http://static1.ljcdn.com/pc/asset?_v=20161118202752'.split("?");require.config({baseUrl: path[0],paths: {'echarts' : '../../dep/echarts-1.4.1/build/echarts','echarts/chart/bar' : '../../dep/echarts-1.4.1/build/echarts','echarts/chart/line' : '../../dep/echarts-1.4.1/build/echarts','echarts/chart/pie' : '../../dep/echarts-1.4.1/build/echarts','echarts3' : '../../dep/echarts3/echarts3','common': 'common','jquery-ui': '../../dep/jquery-ui/jquery-ui.min','zeroclipboard': '../../dep/zeroclipboard-2.2.0/ZeroClipboard'},urlArgs:  path[1]});var feData = {"cityName": "北京","getFavHouseUrl":       "/api/gethousefav","setFavHouseUrl":       "/api/sethousefav","getLastSearch":        "/api/getlastsearch","getCommunityHistory":  "/api/getcommunityhistory","verifyHouse":          "/api/verifyHouse","getUser":              "/api/getUser","verifyCode":           "/api/getVerifyCode","complaint":            "/api/complaint","getDecoration":        "/api/getDecoration","trendData" :           "/site/getpicinfo"}</script>
+
+<script type="text/javascript">
+require(['ershoufang/xiaoquList/index'], function (main) {
+  main({
+    sidebar:{"type":"bizcircle","cityId":110000,"uuid":"2cbb5261-f526-48a0-a7b5-5a542e9711cf","ucid":null,"id":"18335647"}
+  });
+});
+require(['common/backtopV3'], function (main) {
+  main({
+    ucid: '',
+    uuid: '2cbb5261-f526-48a0-a7b5-5a542e9711cf',
+    loadingImg: 'http://static1.ljcdn.com/pc/asset/ershoufang/sellDetail/img/loading.gif?_v=20161118202752',
+    qrImg: 'http://static1.ljcdn.com/pc/asset/img/home/sidebar_qr.png?_v=20161118202752'
+  });
+});
+</script>
+<script>require(['common/suggestion'], function (suggestion) {window.defaultSuggest = suggestion.init({requestOptions: {cityId: '110000',cityName: '北京'},url: '/api/headerSearch?channel=xiaoqu&q=',main: '#keyword-box',appendTo: '#suggest-cont',redirect: true});});</script><div class="loninContaner"><div class="overlay_bg"></div><div class="panel_login animated" id="dialog"><div class="panel_info"><div class="panel_tab"><div class="title"><div class="fl">用户登录</div><label class="fr">还没有链家网账号？<a href="http://passport.lianjia.com/register/resources/lianjia/register.html?service=http%3A%2F%2Fbj.lianjia.com%2F">马上注册</a></label></div><div class="clear"></div><div id="con_login_user"><form action="" method="post"><ul><li class="show-error"><dd>用户名或密码错误</dd></li><li class="item userName"><i></i><input type="text" class="the_input users" placeholder="请输入手机号" /></li><li class="item pwd"><i></i><input type="password" class="the_input password"  placeholder="请输入登录密码"/></li><li class="item checkVerimg" style="display:none;"><i></i><input type="text" class="the_input ver-img" maxlength="4"  placeholder="请输入验证码"/><img class="verImg"></li><li class="li_01"><label><input type="checkbox" name="remember" value="1" class="mind-login" checked>下次自动登录</label><a href="https://passport.lianjia.com/register/resources/lianjia/forget.html?service=http://bj.lianjia.com/">找回密码</a></li><li><a class="login-user-btn"  />立即登录</a></li></ul></form></div><div id="con_login_agent" class="undis"><form action="" method="post"><ul><li class="item"><dd></dd><input type="text" class="the_input users" placeholder="输入经纪人ID号码" /></li><li class="item"><input type="password" class="the_input password"  placeholder="登录密码"/></li><li class="li_01"><label><input type="checkbox" name="remember" value="1" class="mind-login">下次自动登录</label><a href="https://passport.lianjia.com/register/resources/lianjia/forget.html?service=http://bj.lianjia.com/">找回密码</a></li><li><input class="login-agent-btn" value="立即登录"/></li></ul></form></div></div></div><div class="registered"></div></div></div><!-- LianjiaIM Style --><link property='stylesheet' rel="stylesheet" href="http://static1.ljcdn.com/pc/asset/lianjiaIM/css/lianjiaIM.css?_v=20161118202752"/><!-- LianjiaIM Script --><!--[if gt IE 8]<!--><script src="http://static1.ljcdn.com/pc/asset/lianjiaIM/leancloud/dist/av-core-mini.js?_v=20161118202752"></script><!--[endif]--><!--[if lt IE 10]><script type="text/javascript" src="http://static1.ljcdn.com/pc/asset/lianjiaIM/leancloud/plugin/web-socket-js/swfobject.js?_v=20161118202752"></script><script type="text/javascript" src="http://static1.ljcdn.com/pc/asset/lianjiaIM/leancloud/plugin/web-socket-js/web_socket.js?_v=20161118202752"></script><script type="text/javascript">window.WEB_SOCKET_SWF_LOCATION = "http://static1.ljcdn.com/pc/asset/lianjiaIM/leancloud/plugin/web-socket-js/WebSocketMainInsecure.swf?_v=20161118202752";</script><![endif]--><script src="http://static1.ljcdn.com/pc/asset/lianjiaIM/leancloud/dist/AV.realtime.min.js?_v=20161118202752"></script><script type="text/javascript">var defaultPicUrl = 'http://static1.ljcdn.com/pc/asset/img/new-version/default_block.png?_v=20161118202752',defaultAvatarUrl = 'http://static1.ljcdn.com/pc/asset/lianjiaIM/img/imgV2/icon_user@2x.png?_v=20161118202752',defaultAgentAvatarUrl = 'http://static1.ljcdn.com/pc/asset/img/jingjiren/noimg.jpg?_v=20161118202752',defaultLianjiaServiceAvatarUrl = 'http://static1.ljcdn.com/pc/asset/lianjiaIM/img/imgV2/icon_serv@2xV2.png?_v=20161118202752',ucid = '',leancloud = {"ajaxroot":"http:\/\/ajax.api.lianjia.com\/","leanCloudAppid":"4e1dh2g3tn08i6swaqtperykbrdas2r8xebmusjeucrptsfd","leanCloudAppkey":"jcd4alcajl0cp4w7vj6gd8zuib7chk5653dy4biffqgynn4n"};
+    $.listener.on('userInfo', function (data) {
+      var userLoginData = null;
+
+      if (data.code == 1) {
+        userLoginData = $.extend(
+            data,
+            {
+              'ucid': ucid
+            }
+        );
+      }
+
+      require(['lianjiaIM/lianjiaIM'], function (LianjiaIM) {
+        window.im = new LianjiaIM({
+          'leancloudConfig': leancloud,
+          'userLoginData': userLoginData,
+          'defaultAvatarUrl': defaultAvatarUrl,
+          'defaultAgentAvatarUrl': defaultAgentAvatarUrl,
+          'defaultLianjiaServiceAvatarUrl': defaultLianjiaServiceAvatarUrl,
+          'defaultPicUrl': defaultPicUrl
+        });
+      });
+
+    });
+    </script><script type="text/javascript">var advert = 'http://static1.ljcdn.com/pc/asset/common/advert.js?_v=20161118202752';
+    $.listener.on('userInfo', function (data) {
+      window.loginData = data;
+    });
+    var mvl = document.createElement('script');
+    mvl.type = 'text/javascript';
+    mvl.async = true;
+    mvl.src = advert;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(mvl, s);
+  </script><script type="text/javascript">(function(){var bp = document.createElement('script');var curProtocol = window.location.protocol.split(':')[0];if (curProtocol === 'https'){bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';} else {bp.src = 'http://push.zhanzhang.baidu.com/push.js';}var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(bp, s);})();</script></body></html>

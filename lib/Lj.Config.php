@@ -13,7 +13,7 @@ Class LjConfig {
     //小区
     const DISTRICT_BASE_URL = 'http://bj.lianjia.com/xiaoqu/';
     //地铁
-    const SUBWAY_BASE_URL = 'http://bj.lianjia.com/ditiezufang/';
+    const LINE_BASE_URL = 'http://bj.lianjia.com/ditiezufang/';
     //数据库用户名
     const DB_USER_NAME = 'root';
     //数据库密码
@@ -27,7 +27,7 @@ Class LjConfig {
      */
     /*const CURL_PROXY_HOST = "0.0.0.0";
     const CURL_PROXY_PORT = 0;*/
-
+    
     /*const CURL_PROXY_HOST = "dGNwOi8vcHJveHkudGVuY2VudC5jb20";
     const CURL_PROXY_PORT = 8080;*/
 }
