@@ -8,7 +8,8 @@
 require_once "../lib/Lj.Craw.php";
 require_once "../lib/Lj.ZDBTool.php";
 
-$result = Craw::crawPage(101);
-print_r($result);
+Craw::crawBuild('2011047640650');
 //echo Craw::crawArea();
 //echo Craw::crawLine();
+/*$result = Craw::crawDistrict();
+echo "----END---total-- = $result <br>";*/
