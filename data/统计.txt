@@ -23,3 +23,15 @@ http://bj.lianjia.com/xiaoqu/dongcheng/
 8.小区租房数量分布top10
 9.小区均价排行top10
 10.建筑年代分布
+
+t_build:
+id、build_no、areaPid、areaid、districtid、url、cover、title、zone、meters、direction、floor、build_year、build_type、lineid、siteid、price、decoration、balcony、bathroom、heating、visit、is_rent、update_time
+
+t_stat_201611_day:
+id、buildid、20161121、20161122...
+
+t_stat_201611_week:
+id、buildid、w1_start、w1_end、w1_low、w1_high、w1_ave、w2_start、w2_end、w2_low、w2_high、w2_ave、w3_start、w3_end、w3_low、w3_high、w3_ave、w4_start、w4_end、w4_low、w4_high、w4_ave
+
+t_stat_201611_month:
+id、buildid、low、high、average、rate

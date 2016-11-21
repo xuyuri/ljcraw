@@ -198,13 +198,13 @@ Class Craw {
                         if(!empty($level)) {
                             switch($level) {
                                 case '高':
-                                    $info['floor'] = 3;
+                                    $info['locate'] = 3;
                                     break;
                                 case '中':
-                                    $info['floor'] = 2;
+                                    $info['locate'] = 2;
                                     break;
                                 case '低':
-                                    $info['floor'] = 1;
+                                    $info['locate'] = 1;
                                     break;
                             }
                         }
