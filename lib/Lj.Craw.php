@@ -21,15 +21,17 @@ Class Craw {
      * @author              yurixu 2016-11-20
      * @example             Craw::crawBuild();
      */
-    public static function crawBuild($district) {
-        $page = Helper::EscapeString($district);
+    public static function crawBuild($district, $areaid, $line) {
+        $district = Helper::EscapeString($district);
+        $areaid = Helper::CheckPlusInt($areaid);
+        $line = is_array($line) && !empty($line) ? $line : array();
         $result = array();
 
-        if(!empty($district)) {
+        if(!empty($district) && $areaid > 0 && !empty($line)) {
             $url = LjConfig::DETAIL_BASE_URL.'/c'.$district;
             $content = Helper::getContents($url);
             if(!empty($content)) {
-                $result = self::parseBuild($content, $district);
+                $result = self::parseBuild($content, $district, $areaid, $line);
             }
         }
         return $result;
@@ -106,11 +108,11 @@ Class Craw {
         return $result;
     }
 
-    public static function parseBuild($content, $district) {
+    public static function parseBuild($content, $district, $areaid, $line) {
         //http://bj.lianjia.com/zufang/pg2c2011047640650/
         $result = 0;
         $page_size = 30;
-        if(!empty($content) && !empty($district)) {
+        if(!empty($content) && !empty($district) && !empty($line) && $areaid > 0) {
             $head_preg = '~<h2>共有<span>(\d+)</span>套北京在租房源~';
             $head = array();
             preg_match($head_preg, $content, $head);
@@ -118,7 +120,7 @@ Class Craw {
                 $total = $head[1];
                 echo "--total--=$total\n";
                 if($total > 0) {
-                    $result = self::parseBuildPage($content);
+                    $result = self::parseBuildPage($content, $areaid, $line);
                     echo "---num--- = $result\n";
                     if($result > 0) {
                         $page = ceil($total / $page_size);
@@ -127,7 +129,7 @@ Class Craw {
                                 $page_url = LjConfig::DETAIL_BASE_URL.'pg'.$i.'/c'.$district;
                                 $contents = Helper::getContents($page_url);
                                 if (!empty($contents)) {
-                                    $num = self::parseBuildPage($contents);
+                                    $num = self::parseBuildPage($contents, $areaid, $line);
                                     echo "---num--- = $num\n";
                                     $result += $num;
                                 }
@@ -146,9 +148,9 @@ Class Craw {
      * @author                  yurixu 2016-11-09
      * @example                 Craw::parsePage();
      */
-    protected static function parseBuildPage($content) {
-        $result = 1;
-        if(!empty($content)) {
+    protected static function parseBuildPage($content, $areaid, $line) {
+        $result = 0;
+        if(!empty($content) && $areaid > 0 && !empty($line)) {
             //@todo 解析一页数据
             $list_preg = '~<li data-index="\d+" data-id="\S+">[\s\S]*?</li>~';
             $list = array();
@@ -181,16 +183,16 @@ Class Craw {
                         preg_match('~<span class="zone">\s*<span>([\s\S]*?)</span>~', $v, $zone);
                         //房屋户型
                         $info['zone'] = $zone ? str_replace('&nbsp;', '', $zone[1]) : '';
-                        preg_match('~<span class="meters">([\s\S]*?)</span>\s*<span>([\s\S]*?)</span>~', $v, $meters);
+                        preg_match('~<span class="meters">(\d+).*?</span>\s*<span>([\s\S]*?)</span>~', $v, $meters);
                         //面积
                         $info['meters'] = $meters ? str_replace('&nbsp;', '', $meters[1]) : '';
                         //朝向
                         $info['direction'] = $meters ? str_replace('&nbsp;', '', $meters[2]) : '';
-                        preg_match('~<div class="con"><a href="http://bj.lianjia.com/zufang/(.*?)/">(.*?)租房</a><span>/</span>(.*?)楼层\(共(\d+)层\)<span>/</span>(.*?)</div>~', $v, $area);
+                        preg_match('~<div class="con"><a href="http://bj.lianjia.com/zufang/(.*?)/">(.*?)租房</a><span>/</span>(.*?)楼层\(共(\d+)层\)<span>/</span>(\d+)年建(.*?)</div>~', $v, $area);
                         //区域ID
-                        $info['areaid'] = $area ? $area[1] : '';
+                        $info['area'] = $area ? $area[1] : '';
                         //区域名称
-                        $info['area'] = $area ? $area[2] : '';
+                        $info['area_name'] = $area ? $area[2] : '';
                         //楼层阶级
                         $level = $area ? $area[3] : '';
                         if(!empty($level)) {
@@ -208,8 +210,10 @@ Class Craw {
                         }
                         //楼层
                         $info['floor'] = $area ? $area[4] : 0;
-                        //板楼
-                        $info['banlou'] = $area ? $area[5] : '';
+                        //建造时间
+                        $info['build_year'] = $area ? $area[5] : '0';
+                        //板楼类型
+                        $info['build_type'] = $area ? $area[6] : '';
                         preg_match('~<span class="fang-subway-ex"><span>距离(\d+号线)(.*?)站.*?</span>~',$v, $subway);
                         //地铁线
                         $info['line'] = $subway ? $subway[1] : 0;
@@ -217,10 +221,16 @@ Class Craw {
                         $info['station'] = $subway ? $subway[2] : '';
                         preg_match('~<span class="decoration-ex"><span>(.*?)</span>~',$v, $decoration);
                         //装修类型
-                        $info['decoration'] = $decoration ? $decoration[1] : 0;
+                        $info['decoration'] = $decoration ? $decoration[1] : '';
+                        preg_match('~<span class="independentBalcony-ex"><span>(.*?)</span>~',$v, $balcony);
+                        //阳台类型
+                        $info['balcony'] = $balcony ? $balcony[1] : '';
+                        preg_match('~<span class="privateBathroom-ex"><span>(.*?)</span>~',$v, $bathroom);
+                        //卫生间类型
+                        $info['bathroom'] = $bathroom ? $bathroom[1] : '';
                         preg_match('~<span class="heating-ex"><span>(.*?)</span>~',$v, $heating);
                         //供暖类型
-                        $info['heating'] = $heating ? $heating[1] : 0;
+                        $info['heating'] = $heating ? $heating[1] : '';
                         preg_match_all('~<span class="num">(\d+)</span>~', $v, $price);
                         //价格
                         $info['price'] = $price ? $price[1][0] : 0;

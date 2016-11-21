@@ -4,7 +4,7 @@
 2.如何获取所有小区
 答：根据区域，抓取所有区域的小区列表
 http://bj.lianjia.com/xiaoqu/dongcheng/
-建立小区信息表：id, lj_no, areaid(区域表ID), lineid(地铁线路表ID), siteid(地铁线路表ID)
+建立小区信息表：id, lj_no, areaid(区域表ID，二级区域), lineid(地铁线路表ID，站点)
 3.运行思路
 小区租房列表，例如青年湖东里：http://bj.lianjia.com/zufang/c1111027378889/
 程序每天抓取所有小区的租房信息一次，写入/更新到租房信息表，设置当前记录的更新时间为当天，并设置“是否成交”字段为“否”。
