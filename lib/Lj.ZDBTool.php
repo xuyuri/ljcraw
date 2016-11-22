@@ -34,7 +34,7 @@ Class ZDBTool {
      * Search single data
      * @param string    $sql        the sql to search
      * @param array     $params     params bind to sql
-     * @return array|CDbDataReader|mixed
+     * @return array    result
      * @author          yurixu 2016-11-15
      * @example         ZDBTool::queryRow()
      */
@@ -47,7 +47,7 @@ Class ZDBTool {
      * Search data set
      * @param string    $sql        the sql to search
      * @param array     $params     params bind to sql
-     * @return array|CDbDataReader|mixed
+     * @return array    result
      * @author          yurixu 2016-11-15
      * @example         ZDBTool::queryAll()
      */
@@ -60,7 +60,7 @@ Class ZDBTool {
      * execute sql
      * @param string    $sql        the sql to execute
      * @param array     $params     params bind to sql
-     * @return array|CDbDataReader|mixed
+     * @return int      影响记录数
      * @author          yurixu 2016-11-15
      * @example         ZDBTool::queryAll()
      */
@@ -70,12 +70,46 @@ Class ZDBTool {
     }
 
     /**
+     * 更新一行记录
+     * @param string $table     数据表名称
+     * @param int    $id        主键ID
+     * @param array  $data      更新字段数组，array('agentid' => 1, 'name' => '清华大学')
+     * @return int   影响记录数
+     * @author       yurixu 2016-11-22
+     * @example      ZDBTool::updateRow()
+     */
+    public static function updateRow($table, $id, $data) {
+        $result = 0;
+        $table = Helper::EscapeString($table);
+        $id = Helper::CheckPlusInt($id);
+        $data = is_array($data) && !empty($data) ? $data : array();
+
+        if(!empty($table) && $id > 0 && !empty($data)) {
+            $params = array();
+            foreach($data as $k => $v) {
+                if($v != '') {
+                    $data[$k] = '`' . $k . '`' . " = :$k ";
+                    $params[":$k"] = $v;
+                }
+            }
+            $data = implode(',', $data);
+            $sql = 'UPDATE '.$table.' SET '. $data. ' WHERE id = :id ';
+            $params[':id'] = $id;
+            /*echo $sql;
+            print_r($params);die;*/
+            $tool = new ZDBTool();
+            $result = $tool->execute($sql, $params);
+        }
+        return $result;
+    }
+
+    /**
      * 批量插入数据
      * @param string $table     数据表名称
      * @param array  $data      插入数据
-     * @return array|CDbDataReader|int|mixed
-     * @author          yurixu 2016-11-17
-     * @example         ZDBTool::multiInsert()
+     * @return int   影响记录数
+     * @author       yurixu 2016-11-17
+     * @example      ZDBTool::multiInsert()
      */
     public static function multiInsert($table, $data=array()) {
         $result = 0;
@@ -83,6 +117,7 @@ Class ZDBTool {
         $values = '';
 
         if(is_array($data) && !empty($data)) {
+            date_default_timezone_set('PRC');
             foreach($data as $k => $v) {
                 $value = '';
                 if(!array_key_exists('create_time', $v)) {

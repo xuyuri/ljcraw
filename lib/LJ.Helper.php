@@ -64,10 +64,10 @@ class Helper
             if (get_magic_quotes_gpc()) {
                 $string = stripslashes($string);
             }
-            // 如果不是数字则加引号
+            /*// 如果不是数字则加引号
             if (!is_numeric($string)) {
                 $string = mysql_real_escape_string($string);
-            }
+            }*/
         }
 
         return $string;

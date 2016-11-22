@@ -169,7 +169,7 @@ Class LjCommand {
      * An empty array is returned if the query results in nothing.
      * @throws CException execution failed
      */
-    public function queryAll($fetchAssociative=true,$params=array())
+    public function queryAll($params=array())
     {
         //return $this->queryInternal('fetchAll',$fetchAssociative ? $this->_fetchMode : PDO::FETCH_NUM, $params);
         return $this->queryInternal('fetchAll',PDO::FETCH_ASSOC, $params);
@@ -189,7 +189,7 @@ Class LjCommand {
      * @return mixed the first row (in terms of an array) of the query result, false if no result.
      * @throws CException execution failed
      */
-    public function queryRow($fetchAssociative=true,$params=array())
+    public function queryRow($params=array())
     {
 //        return $this->queryInternal('fetch',$fetchAssociative ? $this->_fetchMode : PDO::FETCH_NUM, $params);
         return $this->queryInternal('fetch',PDO::FETCH_ASSOC, $params);
