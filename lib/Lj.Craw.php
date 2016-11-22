@@ -90,19 +90,20 @@ Class Craw {
         ini_set('memory_limit', '512M');
         $result = 0;
         $tool = new ZDBTool();
-        $sql = 'SELECT id, name FROM `t_line` WHERE type = 2 AND parentid > 0 ';
+        $sql = 'SELECT id, name FROM `t_line` ';
         $line = $tool->queryAll($sql);
         if(!empty($line)) {
-            $sql = ' SELECT id, lj_no FROM t_area WHERE parentid > 0 ';
+            $sql = ' SELECT id, lj_no, parentid FROM t_area WHERE parentid > 0 ';
             $area = $tool->queryAll($sql);
             foreach ($area as $k => $v) {
                 echo $v['lj_no']."\n";
                 $url = LjConfig::DISTRICT_BASE_URL . $v['lj_no'];
                 $contents = Helper::getContents($url);
                 if (!empty($contents)) {
-                    $result += self::parseDistrict($contents, $line, $v['id'], $url);
+                    $result += self::parseDistrict($contents, $line, $v['parentid'], $v['id'], $url);
                     echo "---result--- = $result ---\n";
                 }
+                sleep(3);
             }
         }
         return $result;
@@ -165,21 +166,25 @@ Class Craw {
                     preg_match('~data-id="(\S+)"~', $v, $buildid);
                     if(!empty($buildid)) {
                         //房源ID
-                        $info['buildid'] = $buildid[1];
+                        $info['build_no'] = $buildid[1];
                         //房源详情页
-                        $info['detail'] = LjConfig::DETAIL_BASE_URL.$info['buildid'].'.html';
+                        $info['url'] = LjConfig::DETAIL_BASE_URL.$info['build_no'].'.html';
                         preg_match('~data-img="(.*?)"~', $v, $cover);
                         //房源封面图
                         $info['cover'] = $cover ? $cover[1] : '';
                         preg_match('~<a target="_blank" href="\S+" title="[\s\S]+?">([\s\S]+?)</a>~', $v, $title);
                         //房源标题
                         $info['title'] = $title ? preg_replace('~\s+~', ' ', $title[1]) : '';
-                        preg_match('~http://bj.lianjia.com/xiaoqu/(\d+)/~', $v, $regionid);
+
+                        /*preg_match('~http://bj.lianjia.com/xiaoqu/(\d+)/~', $v, $regionid);
                         //小区ID
                         $info['district'] = $regionid ? $regionid[1] : 0;
                         preg_match('~<span class="region">([\s\S]*?)</span>~', $v, $region);
                         //小区名称
-                        $info['district_name'] = $region ? str_replace('&nbsp;', '', $region[1]) : '';
+                        $info['district_name'] = $region ? str_replace('&nbsp;', '', $region[1]) : '';*/
+
+
+
                         preg_match('~<span class="zone">\s*<span>([\s\S]*?)</span>~', $v, $zone);
                         //房屋户型
                         $info['zone'] = $zone ? str_replace('&nbsp;', '', $zone[1]) : '';
@@ -326,7 +331,8 @@ Class Craw {
      * @author                  yurixu 2016-11-20
      * @example                 Craw::parseDistrict();
      */
-    public static function parseDistrict($content, $line, $areaid, $url) {
+    public static function parseDistrict($content, $line, $areaPid, $areaid, $url) {
+        $areaPid = Helper::CheckPlusInt($areaPid);
         $areaid = Helper::CheckPlusInt($areaid);
         $result = 0;
         $page_size = 30;
@@ -338,7 +344,7 @@ Class Craw {
                 $total = $head[1];
                 echo "--total--=$total\n";
                 if($total > 0) {
-                    $result = self::parseDistrictPage($content, $line, $areaid);
+                    $result = self::parseDistrictPage($content, $line, $areaPid, $areaid);
                     echo "---num--- = $result\n";
                     if($result > 0) {
                         $page = ceil($total / $page_size);
@@ -347,7 +353,7 @@ Class Craw {
                                 $page_url = $url.'/pg'.$i;
                                 $contents = Helper::getContents($page_url);
                                 if (!empty($contents)) {
-                                    $num = self::parseDistrictPage($contents, $line, $areaid);
+                                    $num = self::parseDistrictPage($contents, $line, $areaPid, $areaid);
                                     echo "---num--- = $num\n";
                                     $result += $num;
                                 }
@@ -370,11 +376,13 @@ Class Craw {
      * @author                  yurixu 2016-11-20
      * @example                 Craw::parseDistrictPage();
      */
-    public static function parseDistrictPage($content, $line, $areaid) {
+    public static function parseDistrictPage($content, $line, $areaPid, $areaid) {
         $areaid = Helper::CheckPlusInt($areaid);
+        $areaPid = Helper::CheckPlusInt($areaPid);
         $result = 0;
         $district = array();
         $lineid = 0;
+        $siteid = 0;
         $table = 't_district';
         /*$file = '../data/district.txt';
         $content = file_get_contents($file);*/
@@ -389,17 +397,23 @@ Class Craw {
                 $district_line = $list[2];
                 foreach($district_no as $k => $v) {
                     if(!empty($district_line[$k])) {
-                        preg_match('~\S*线(\S+)站~', $district_line[$k], $site);
+                        preg_match('~近地铁(\S+线)(\S+)站~', $district_line[$k], $site);
                         if(!empty($site)) {
-                            $site_name = $site[1];
+                            $name = $site[1];
+                            $site_name = $site[2];
+                            if(isset($line_flip[$name])) {
+                                $lineid = $line[$line_flip[$name]]['id'];
+                            }
                             if(isset($line_flip[$site_name])) {
-                                $lineid = $line[$line_flip[$site_name]]['id'];
+                                $siteid = $line[$line_flip[$site_name]]['id'];
                             }
                         }
                     }
                     $district[$k]['lj_no'] = $v;
+                    $district[$k]['areaPid'] = $areaPid;
                     $district[$k]['areaid'] = $areaid;
                     $district[$k]['lineid'] = $lineid;
+                    $district[$k]['siteid'] = $siteid;
                 }
                 $result = ZDBTool::multiInsert($table, $district);
             }
