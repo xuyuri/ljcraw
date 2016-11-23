@@ -25,6 +25,7 @@ Class LjConfig {
      * 这里设置代理机器，只有需要代理的时候才设置，不需要代理，请设置为0.0.0.0和0
      * 默认CURL_PROXY_HOST=0.0.0.0和CURL_PROXY_PORT=0，此时不开启代理（如有需要才设置）
      */
+
     const CURL_PROXY_HOST = "0.0.0.0";
     const CURL_PROXY_PORT = 0;
 
