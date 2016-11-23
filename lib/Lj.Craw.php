@@ -280,7 +280,8 @@ Class Craw {
                             $update = ZDBTool::updateRow('t_build', $build['id'], array("$day_field" => $info['price']));
                         } else {
                             $day_info = array(
-//                                'buildid' =>
+                                'buildid' => '',
+                                
                             );
                             $update = ZDBTool::multiInsert('t_build', array($info));
                         }
