@@ -83,6 +83,7 @@ Class ZDBTool {
      * @example      ZDBTool::updateRow()
      */
     public static function updateRow($table, $id, $data) {
+        date_default_timezone_set('PRC');
         $result = 0;
         $table = Helper::EscapeString($table);
         $id = Helper::CheckPlusInt($id);
@@ -91,10 +92,16 @@ Class ZDBTool {
         if(!empty($table) && $id > 0 && !empty($data)) {
             $params = array();
             foreach($data as $k => $v) {
-                if($v != '') {
+                if($v !== '') {
                     $data[$k] = '`' . $k . '`' . " = :$k ";
                     $params[":$k"] = $v;
+                } else {
+                    unset($data[$k]);
                 }
+            }
+            if(!array_key_exists('operate_time', $data)) {
+                $data['operate_time'] = 'operate_time = :operate_time ';
+                $params[':operate_time'] = date('Y-m-d H:i:s');
             }
             $data = implode(',', $data);
             $sql = 'UPDATE '.$table.' SET '. $data. ' WHERE id = :id ';
@@ -116,12 +123,12 @@ Class ZDBTool {
      * @example      ZDBTool::multiInsert()
      */
     public static function multiInsert($table, $data=array()) {
+        date_default_timezone_set('PRC');
         $result = 0;
         $name = '';
         $values = '';
 
         if(is_array($data) && !empty($data)) {
-            date_default_timezone_set('PRC');
             foreach($data as $k => $v) {
                 $value = '';
                 if(!array_key_exists('create_time', $v)) {
@@ -131,7 +138,7 @@ Class ZDBTool {
                 }
                 foreach ($v as $sk => $sv) {
                     if ($k == 0) {
-                        $name .= $sk . ',';
+                        $name .= '`'.$sk.'`' . ',';
                     }
                     $value .= "'".$sv . "',";
                 }
@@ -141,6 +148,7 @@ Class ZDBTool {
             $name = substr($name, 0, strlen($name) - 1);
             $values = substr($values, 0, strlen($values) - 1);
             $sql = "INSERT INTO $table ($name) VALUES $values ";
+//            echo $sql;die;
             $tool = new ZDBTool();
             $result = $tool->execute($sql);
         }
@@ -173,15 +181,17 @@ Class ZDBTool {
     }
 
     /**
-     *
-     * @param $table
-     * @param array $fields
-     * @param string $condition
-     * @param array $params
-     * @param int $type
-     * @return array
+     * 查询
+     * @param string $table         数据表名
+     * @param array  $fields        查询字段
+     * @param string $condition     查询条件
+     * @param array  $params        查询条件参数
+     * @param int    $type          0：单条记录；1：数据集合
+     * @return array                查询结果
+     * @author       yurixu 2016-11-23
+     * @example      ZDBTool::getQuery()
      */
-    public function getQuery($table, $fields=array(), $condition='', $params=array(), $type=0) {
+    public static function getQuery($table, $fields=array(), $condition='', $params=array(), $type=0) {
         $type = Helper::CheckPlusInt($type);
         $table = Helper::EscapeString($table);
         $fields = !empty($fields) && is_array($fields) ? $fields : array();

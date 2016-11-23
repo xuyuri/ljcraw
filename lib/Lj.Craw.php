@@ -14,25 +14,32 @@ Class Craw {
         $this->tool = new ZDBTool();
     }*/
 
+    public static function initTable() {
+        //@todo 每天自动为day添加字段
+        //@toso 每月1日新建数据表
+    }
+
     /**
-     * 抓取页码数据
-     * @param int $page     小区编码
+     * 抓取房源数据
      * @return array        解析后数据集
      * @author              yurixu 2016-11-20
      * @example             Craw::crawBuild();
      */
-    public static function crawBuild($district, $districtid, $areaPid, $areaid, $line) {
-        $district = Helper::EscapeString($district);
-        $districtid = Helper::CheckPlusInt($districtid);
-        $areaPid = Helper::CheckPlusInt($areaPid);
-        $line = is_array($line) && !empty($line) ? $line : array();
-        $result = array();
-
-        if(!empty($district) && $districtid > 0 && $areaPid > 0 && $areaid > 0 && !empty($line)) {
-            $url = LjConfig::DETAIL_BASE_URL.'/c'.$district;
-            $content = Helper::getContents($url);
-            if(!empty($content)) {
-                $result = self::parseBuild($content, $district, $districtid, $areaPid, $areaid, $line);
+    public static function crawBuild() {
+        $result = 0;
+        $tool = new ZDBTool();
+        $sql = 'SELECT id, name FROM `t_line` ';
+        $line = $tool->queryAll($sql);
+        $sql = ' SELECT id, lj_no, areaPid, areaid, lineid, siteid FROM t_district ORDER BY id ';
+        $sql .= ' LIMIT 1 ';
+        $data = $tool->queryAll($sql);
+        if(!empty($data)) {
+            foreach($data as $k => $v) {
+                $url = LjConfig::DETAIL_BASE_URL.'/c'.$v['lj_no'];
+                $content = Helper::getContents($url);
+                if(!empty($content)) {
+                    $result += self::parseBuild($content, $v['lj_no'], $v['id'], $v['areaPid'], $v['areaid'], $line);
+                }
             }
         }
         return $result;
@@ -143,6 +150,7 @@ Class Craw {
                 }
             }
         }
+        return $result;
     }
     /**
      * 解析房源页面数据
@@ -254,9 +262,9 @@ Class Craw {
                         $info['price'] = $price ? $price[1][0] : 0;
                         //看房认识
                         $info['visit'] = $price ? $price[1][1] : 0;
-                        preg_match('~<div class="price-pre">(.*?)更新</div>~', $v, $update);
+                        preg_match('~<div class="price-pre">(.*?)更新</div>~', $v, $update_time);
                         //更新日期
-                        $info['update_time'] = $update ? $update[1] : '';
+                        $info['update_time'] = $update_time ? $update_time[1] : '';
                         $info['is_rent'] = 0;
                         print_r($info);
                     }
@@ -265,28 +273,46 @@ Class Craw {
                         $params = array(':build_no' => $info['build_no']);
                         $build = $tool->queryRow($sql, $params);
                         if(!empty($build)) {
+                            echo "--update--build--\n";
                             $update = ZDBTool::updateRow('t_build', $build['id'], $info);
                         } else {
+                            echo "--create--build--\n";
                             $update = ZDBTool::multiInsert('t_build', array($info));
                         }
                         echo "---update-- = $update ";
-                        //@todo 向day表写入价格数据
-                        $day_table = 't_stat_'.date('Ym').'_day';
-                        $day_field = date('Ymd');
-                        $sql = ' SELECT id FROM '.$day_table.' WHERE build_no = :build_no LIMIT 1 ';
-                        $params = array(':build_no' => $info['build_no']);
-                        $build = $tool->queryRow($sql, $params);
-                        if(!empty($build)) {
-                            $update = ZDBTool::updateRow('t_build', $build['id'], array("$day_field" => $info['price']));
-                        } else {
-                            $day_info = array(
-                                'buildid' => '',
-                                
-                            );
-                            $update = ZDBTool::multiInsert('t_build', array($info));
+                        if($update > 0) {
+                            //向day表写入价格数据
+                            $day_table = 't_stat_'. date('Ym'). '_day';
+                            $day_field = date('Ymd');
+                            $sql = ' SELECT id FROM ' . $day_table . ' WHERE build_no = :build_no LIMIT 1 ';
+                            $params = array(':build_no' => $info['build_no']);
+                            $build_day = $tool->queryRow($sql, $params);
+                            print_r($build_day);
+                            if (!empty($build_day)) {
+                                $result += ZDBTool::updateRow("$day_table", $build_day['id'], array("$day_field" => $info['price']));
+                                echo "---day-update-- result = $result \n";
+                            } else {
+                                echo "---day--create---\n";
+                                $fields = array('id');
+                                $condition = ' WHERE build_no = :build_no ';
+                                $params = array(':build_no' => $info['build_no']);
+                                $build_info = ZDBTool::getQuery('t_build', $fields, $condition, $params, 1);
+                                print_r($build_info);
+                                if (!empty($build_info)) {
+                                    $day_info = array(
+                                        'buildid' => $build_info['id'],
+                                        'build_no' => $info['build_no'],
+                                        "$day_field" => $info['price'],
+                                    );
+                                    print_r($day_info);
+                                    $result += ZDBTool::multiInsert("$day_table", array($day_info));
+                                    echo "--result--= $result\n";
+                                }
+                            }
                         }
                     }
                     //print_r($buildid);
+                    //die;
                 }
             }
         }
