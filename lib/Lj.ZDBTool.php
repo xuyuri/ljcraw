@@ -30,6 +30,10 @@ Class ZDBTool {
         return $this->conn;
     }
 
+    function __construct() {
+        $this->conn = null;
+    }
+
     /**
      * Search single data
      * @param string    $sql        the sql to search
@@ -140,6 +144,58 @@ Class ZDBTool {
             $tool = new ZDBTool();
             $result = $tool->execute($sql);
         }
+        return $result;
+    }
+
+    /**
+     * 获取单条数据记录
+     * @param string $table     数据表名
+     * @param int    $id        主键ID
+     * @param array $fields     查询的字段数组
+     * @return array            单条数据
+     * @author       yurixu 2016-11-23
+     * @example      ZDBTool::getInfoByid()
+     */
+    public static function getInfoByid($table, $id, $fields=array()) {
+        $result = array();
+        $table = Helper::EscapeString($table);
+        $id = Helper::CheckPlusInt($id);
+        $fields = is_array($fields) ? $fields : array();
+
+        if(!empty($table) && $id > 0) {
+            $select = empty($fields) ? '*' : implode(',', $fields);
+            $sql = "SELECT $select FROM $table WHERE id = :id ";
+            $params = array(':id' => $id);
+            $tool = new ZDBTool();
+            $result = $tool->queryRow($sql, $params);
+        }
+        return $result;
+    }
+
+    /**
+     *
+     * @param $table
+     * @param array $fields
+     * @param string $condition
+     * @param array $params
+     * @param int $type
+     * @return array
+     */
+    public function getQuery($table, $fields=array(), $condition='', $params=array(), $type=0) {
+        $type = Helper::CheckPlusInt($type);
+        $table = Helper::EscapeString($table);
+        $fields = !empty($fields) && is_array($fields) ? $fields : array();
+        $params = !empty($params) && is_array($params) ? $params : array();
+        $condition = (is_string($condition) && !empty($condition)) ? $condition : '';
+        $result = array();
+
+        $select = empty($fields) ? '*' : implode(',', $fields);
+        $sql = "SELECT $select FROM $table ";
+        if(!empty($condition)) {
+            $sql .= $condition;
+        }
+        $tool = new ZDBTool();
+        $result = $type ? $tool->queryRow($sql, $params) :$tool->queryAll($sql, $params) ;
         return $result;
     }
 

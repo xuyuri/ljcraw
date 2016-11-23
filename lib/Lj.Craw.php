@@ -46,7 +46,7 @@ Class Craw {
      */
     public static function crawArea() {
         $result = 0;
-        $sql = ' SELECT id, name, lj_no FROM t_area WHERE parentid = 0  ';
+        $sql = ' SELECT id, name, lj_no FROM t_area WHERE parentid = 0 ';
         $tool = new ZDBTool();
         $area = $tool->queryAll($sql);
         foreach($area as $k => $v) {
@@ -54,6 +54,7 @@ Class Craw {
             $contents = Helper::getContents($url);
             if(!empty($contents)) {
                 $result += self::parseArea($contents, $v['id']);
+                sleep(2);
             }
         }
         return $result;
@@ -268,8 +269,21 @@ Class Craw {
                         } else {
                             $update = ZDBTool::multiInsert('t_build', array($info));
                         }
-                        echo "---update-- = $update ";die;
+                        echo "---update-- = $update ";
                         //@todo 向day表写入价格数据
+                        $day_table = 't_stat_'.date('Ym').'_day';
+                        $day_field = date('Ymd');
+                        $sql = ' SELECT id FROM '.$day_table.' WHERE build_no = :build_no LIMIT 1 ';
+                        $params = array(':build_no' => $info['build_no']);
+                        $build = $tool->queryRow($sql, $params);
+                        if(!empty($build)) {
+                            $update = ZDBTool::updateRow('t_build', $build['id'], array("$day_field" => $info['price']));
+                        } else {
+                            $day_info = array(
+//                                'buildid' =>
+                            );
+                            $update = ZDBTool::multiInsert('t_build', array($info));
+                        }
                     }
                     //print_r($buildid);
                 }
@@ -295,7 +309,7 @@ Class Craw {
             $head = array();
             preg_match($head_preg, $content, $head);
             if (!empty($head)) {
-                preg_match_all('~<a href="/zufang/(\S+?)/">(\S+?)</a>~', $head[0], $list);
+                preg_match_all('~<a href="/zufang/(\S+?)/">(\S+?)</a>~', $head[1], $list);
                 if(!empty($list)) {
                     $area_no = $list[1];
                     $area_name = $list[2];
