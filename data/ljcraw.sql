@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2016 at 12:17 PM
+-- Generation Time: Nov 24, 2016 at 12:42 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -402,14 +402,25 @@ CREATE TABLE IF NOT EXISTS `t_build` (
   `operate_time` datetime NOT NULL COMMENT '最后操作时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `build_no` (`build_no`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='房源信息表' AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='房源信息表' AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `t_build`
 --
 
 INSERT INTO `t_build` (`id`, `build_no`, `areaPid`, `areaid`, `districtid`, `url`, `cover`, `title`, `zone`, `meters`, `direction`, `locate`, `floor`, `build_year`, `build_type`, `lineid`, `siteid`, `price`, `decoration`, `balcony`, `bathroom`, `heating`, `visit`, `is_rent`, `update_time`, `create_time`, `operate_time`) VALUES
-(1, '101100777630', 1, 1, 1, 'http://bj.lianjia.com/zufang/101100777630.html', 'http://image1.ljcdn.com/110000-inspection/3ab60811-0d83-4243-b7cf-592aa568f646.jpg.280x210.jpg', '远洋山水 2室1厅 7200元', '2室1厅', 97, '南', 1, 26, 2007, '板塔结合', 0, 0, '7200.00', '', '', '', '集中供暖', 6, 0, '2016-11-18', '2016-11-23 09:45:22', '2016-11-23 09:45:22');
+(1, '101100772372', 1, 19, 1, 'http://bj.lianjia.com/zufang/101100772372.html', 'http://image1.ljcdn.com/110000-inspection/010769c6-478e-4c59-9b5c-2eb7ad06b5ad.jpg.280x210.jpg', '西营房 1室1厅 4600元', '1室1厅', 36, '北', 2, 17, 2006, '塔楼', 2, 44, '4600.00', '', '', '', '自供暖', 20, 0, '2016-11-15', '2016-11-24 17:08:44', '2016-11-24 17:08:44'),
+(2, '101100842402', 1, 19, 1, 'http://bj.lianjia.com/zufang/101100842402.html', 'http://image1.ljcdn.com/110000-inspection/ab33d410-aa59-46d5-a7e0-62e616ffbb06.jpg.280x210.jpg', '西营房 1室0厅 4500元', '1室0厅', 37, '北', 3, 17, 2006, '塔楼', 2, 44, '4500.00', '', '', '', '自供暖', 5, 0, '2016-11-17', '2016-11-24 17:08:44', '2016-11-24 17:08:44'),
+(3, '101100848528', 1, 19, 1, 'http://bj.lianjia.com/zufang/101100848528.html', 'http://image1.ljcdn.com/110000-inspection/0281c665-753b-4581-8e39-85bbe8d87651.jpg.280x210.jpg', '西营房 1室0厅 4400元', '1室0厅', 39, '北', 1, 17, 2006, '塔楼', 2, 44, '4400.00', '', '', '', '自供暖', 2, 0, '2016-11-17', '2016-11-24 17:08:44', '2016-11-24 17:08:44'),
+(4, 'BJ0001336573', 1, 19, 1, 'http://bj.lianjia.com/zufang/BJ0001336573.html', 'http://image1.ljcdn.com/lianjia-data-sync/ziroom/14798489014059_1.jpg.280x210.jpg', '西营房2居室 01卧', '2室1厅', 17, '东南', 2, 19, 2006, '塔楼', 2, 44, '3830.00', '自如3.0木棉', '独立阳台', '', '自供暖', 1, 0, '2016-11-22', '2016-11-24 17:08:44', '2016-11-24 17:08:44'),
+(5, '101100700605', 1, 19, 1, 'http://bj.lianjia.com/zufang/101100700605.html', 'http://image1.ljcdn.com/110000-inspection/cf7f4d17-d71a-44d8-8257-a96017681d54.jpg.280x210.jpg', '西营房 1室0厅 4600元', '1室0厅', 37, '北', 2, 17, 2006, '塔楼', 2, 44, '4600.00', '', '', '', '自供暖', 13, 0, '2016-11-19', '2016-11-24 17:08:44', '2016-11-24 17:08:44'),
+(6, 'BJ0001336574', 1, 19, 1, 'http://bj.lianjia.com/zufang/BJ0001336574.html', 'http://image1.ljcdn.com/lianjia-data-sync/ziroom/14798489021607_1.jpg.280x210.jpg', '西营房2居室 02卧', '2室1厅', 17, '东', 2, 19, 2006, '塔楼', 2, 44, '3590.00', '自如3.0木棉', '独立阳台', '', '自供暖', 0, 0, '2016-11-22', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(7, '101100811232', 1, 19, 1, 'http://bj.lianjia.com/zufang/101100811232.html', 'http://image1.ljcdn.com/110000-inspection/a885726e-5fd1-4bf6-b1b5-52061c790d57.jpg.280x210.jpg', '西营房 1室0厅 4600元', '1室0厅', 36, '北', 2, 17, 2006, '塔楼', 2, 44, '4600.00', '精装修', '', '', '自供暖', 0, 0, '2016-11-23', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(8, '101100737104', 1, 19, 1, 'http://bj.lianjia.com/zufang/101100737104.html', 'http://image1.ljcdn.com/110000-inspection/4870cd19-48ee-4978-b184-2790017e929a.jpg.280x210.jpg', '西营房 1室1厅 5500元', '1室1厅', 55, '西', 2, 19, 2006, '塔楼', 2, 44, '5500.00', '', '', '', '自供暖', 8, 0, '2016-11-20', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(9, '101100670650', 1, 19, 1, 'http://bj.lianjia.com/zufang/101100670650.html', 'http://image1.ljcdn.com/110000-inspection/1210222e-4331-4013-b3f2-ae394b3401b0.jpg.280x210.jpg', '西营房 2室1厅 9500元', '2室1厅', 98, '南', 2, 19, 2006, '塔楼', 2, 44, '9500.00', '精装修', '', '', '自供暖', 2, 0, '2016-11-24', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(10, '101100792668', 1, 19, 1, 'http://bj.lianjia.com/zufang/101100792668.html', 'http://image1.ljcdn.com/110000-inspection/d49f656c-5d57-462c-b952-e8f1d5bd523f.jpg.280x210.jpg', '西营房 1室0厅 4500元', '1室0厅', 36, '北', 2, 17, 2006, '塔楼', 2, 44, '4500.00', '', '', '', '自供暖', 0, 0, '2016-11-24', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(11, '101100739864', 1, 19, 1, 'http://bj.lianjia.com/zufang/101100739864.html', 'http://image1.ljcdn.com/110000-inspection/d6ae85cb-ebc4-4c1b-b0c4-618beae4f6bf.jpg.280x210.jpg', '西营房 2室1厅 8000元', '2室1厅', 85, '西', 3, 19, 2006, '塔楼', 2, 44, '8000.00', '', '', '', '自供暖', 2, 0, '2016-11-23', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(12, '101100726275', 1, 19, 1, 'http://bj.lianjia.com/zufang/101100726275.html', 'http://image1.ljcdn.com/110000-inspection/32d3372a-b2ce-4f0e-840d-4be8b43990c2.jpg.280x210.jpg', '西营房 1室0厅 5300元', '1室0厅', 36, '北', 2, 17, 2006, '塔楼', 2, 44, '5300.00', '精装修', '', '', '自供暖', 0, 0, '2016-11-12', '2016-11-24 17:08:45', '2016-11-24 17:08:45');
 
 -- --------------------------------------------------------
 
@@ -13332,13 +13343,31 @@ CREATE TABLE IF NOT EXISTS `t_stat_201611_day` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `buildid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '房源ID，对应t_build表ID',
   `build_no` varchar(50) NOT NULL DEFAULT '' COMMENT '链家房源编码',
-  `20161122` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '20161122日价格',
+  `20161124` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '20161124日价格',
   `create_time` datetime NOT NULL COMMENT '创建时间',
   `operate_time` datetime NOT NULL COMMENT '最后操作时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `buildid_2` (`buildid`),
   KEY `buildid` (`buildid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='房源价格日统计表' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='房源价格日统计表' AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `t_stat_201611_day`
+--
+
+INSERT INTO `t_stat_201611_day` (`id`, `buildid`, `build_no`, `20161124`, `create_time`, `operate_time`) VALUES
+(1, 1, '101100772372', '4600.00', '2016-11-24 17:08:44', '2016-11-24 17:08:44'),
+(2, 2, '101100842402', '4500.00', '2016-11-24 17:08:44', '2016-11-24 17:08:44'),
+(3, 3, '101100848528', '4400.00', '2016-11-24 17:08:44', '2016-11-24 17:08:44'),
+(4, 4, 'BJ0001336573', '3830.00', '2016-11-24 17:08:44', '2016-11-24 17:08:44'),
+(5, 5, '101100700605', '4600.00', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(6, 6, 'BJ0001336574', '3590.00', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(7, 7, '101100811232', '4600.00', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(8, 8, '101100737104', '5500.00', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(9, 9, '101100670650', '9500.00', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(10, 10, '101100792668', '4500.00', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(11, 11, '101100739864', '8000.00', '2016-11-24 17:08:45', '2016-11-24 17:08:45'),
+(12, 12, '101100726275', '5300.00', '2016-11-24 17:08:45', '2016-11-24 17:08:45');
 
 -- --------------------------------------------------------
 
@@ -13351,7 +13380,9 @@ CREATE TABLE IF NOT EXISTS `t_stat_201611_month` (
   `buildid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '房源ID，对应t_build表ID',
   `build_no` varchar(50) NOT NULL DEFAULT '' COMMENT '链家房源编码',
   `low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '本月最低价格',
+  `low_date` date NOT NULL COMMENT '最低价格日期',
   `high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '本月最高价格',
+  `high_date` date NOT NULL COMMENT '最高价格日期',
   `average` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '本月均价',
   `rate` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT '本月价格升/降率',
   `create_time` datetime NOT NULL COMMENT '创建时间',
@@ -13397,6 +13428,81 @@ CREATE TABLE IF NOT EXISTS `t_stat_201611_week` (
   UNIQUE KEY `buildid_2` (`buildid`),
   KEY `buildid` (`buildid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='房源价格周统计表' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t_stat_201612_day`
+--
+
+CREATE TABLE IF NOT EXISTS `t_stat_201612_day` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `buildid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '房源ID，对应t_build表ID',
+  `build_no` varchar(50) NOT NULL DEFAULT '' COMMENT '链家房源编码',
+  `create_time` datetime NOT NULL COMMENT '创建时间',
+  `operate_time` datetime NOT NULL COMMENT '最后操作时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `buildid_2` (`buildid`),
+  KEY `buildid` (`buildid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='房源价格201612每日统计表' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t_stat_201612_month`
+--
+
+CREATE TABLE IF NOT EXISTS `t_stat_201612_month` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `buildid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '房源ID，对应t_build表ID',
+  `build_no` varchar(50) NOT NULL DEFAULT '' COMMENT '链家房源编码',
+  `low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '本月最低价格',
+  `high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '本月最高价格',
+  `average` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '本月均价',
+  `rate` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT '本月价格升/降率',
+  `create_time` datetime NOT NULL COMMENT '创建时间',
+  `operate_time` datetime NOT NULL COMMENT '最后操作时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `buildid_2` (`buildid`),
+  KEY `buildid` (`buildid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='房源价格201612每月统计表' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t_stat_201612_week`
+--
+
+CREATE TABLE IF NOT EXISTS `t_stat_201612_week` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `buildid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '房源ID，对应t_build表ID',
+  `build_no` varchar(50) NOT NULL DEFAULT '' COMMENT '链家房源编码',
+  `w1_start` date NOT NULL COMMENT '第一周开始日期',
+  `w1_end` date NOT NULL COMMENT '第一周结束日期',
+  `w1_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第一周最低价格',
+  `w1_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第一周最高价格',
+  `w1_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第一周均价',
+  `w2_start` date NOT NULL COMMENT '第二周开始日期',
+  `w2_end` date NOT NULL COMMENT '第二周结束日期',
+  `w2_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第二周最低价格',
+  `w2_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第二周最高价格',
+  `w2_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第二周均价',
+  `w3_start` date NOT NULL COMMENT '第三周开始日期',
+  `w3_end` date NOT NULL COMMENT '第三周结束日期',
+  `w3_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第三周最低价格',
+  `w3_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第三周最高价格',
+  `w3_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第三周均价',
+  `w4_start` date NOT NULL COMMENT '第四周开始日期',
+  `w4_end` date NOT NULL COMMENT '第四周结束日期',
+  `w4_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周最低价格',
+  `w4_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周最高价格',
+  `w4_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周均价',
+  `create_time` datetime NOT NULL COMMENT '创建时间',
+  `operate_time` datetime NOT NULL COMMENT '最后操作时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `buildid_2` (`buildid`),
+  KEY `buildid` (`buildid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='房源价格201612每周统计表' AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
