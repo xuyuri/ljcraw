@@ -14,10 +14,110 @@ Class Craw {
         $this->tool = new ZDBTool();
     }*/
 
+    /**
+     * 每日执行数据表检测/初始化
+     * @author              yurixu 2016-11-24
+     * @example             Craw::initTable();
+     */
     public static function initTable() {
-        //@todo 每天自动为day添加字段
-        //@toso 每月1日新建数据表
+        $month = date('Ym');
+        $day = date('d');
+        $date = date('Ymd');
+        $tool = new ZDBTool();
+        //每月1号新建日、周、月统计表
+        if($day == 1) {
+            $stat_day_sql = "
+                CREATE TABLE `t_stat_".$month."_day` (
+                  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                  `buildid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '房源ID，对应t_build表ID',
+                  `build_no` varchar(50) NOT NULL DEFAULT '' COMMENT '链家房源编码',
+                  `".$date."` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '".$date."日价格',
+                  `create_time` datetime NOT NULL COMMENT '创建时间',
+                  `operate_time` datetime NOT NULL COMMENT '最后操作时间',
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `buildid_2` (`buildid`),
+                  KEY `buildid` (`buildid`)
+                ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='房源价格".$month."每日统计表';";
+            $stat_week_sql = "
+                CREATE TABLE `t_stat_".$month."_week` (
+                  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                  `buildid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '房源ID，对应t_build表ID',
+                  `build_no` varchar(50) NOT NULL DEFAULT '' COMMENT '链家房源编码',
+                  `w1_start` date NOT NULL COMMENT '第一周开始日期',
+                  `w1_end` date NOT NULL COMMENT '第一周结束日期',
+                  `w1_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第一周最低价格',
+                  `w1_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第一周最高价格',
+                  `w1_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第一周均价',
+                  `w2_start` date NOT NULL COMMENT '第二周开始日期',
+                  `w2_end` date NOT NULL COMMENT '第二周结束日期',
+                  `w2_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第二周最低价格',
+                  `w2_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第二周最高价格',
+                  `w2_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第二周均价',
+                  `w3_start` date NOT NULL COMMENT '第三周开始日期',
+                  `w3_end` date NOT NULL COMMENT '第三周结束日期',
+                  `w3_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第三周最低价格',
+                  `w3_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第三周最高价格',
+                  `w3_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第三周均价',
+                  `w4_start` date NOT NULL COMMENT '第四周开始日期',
+                  `w4_end` date NOT NULL COMMENT '第四周结束日期',
+                  `w4_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周最低价格',
+                  `w4_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周最高价格',
+                  `w4_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周均价',
+                  `create_time` datetime NOT NULL COMMENT '创建时间',
+                  `operate_time` datetime NOT NULL COMMENT '最后操作时间',
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `buildid_2` (`buildid`),
+                  KEY `buildid` (`buildid`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='房源价格".$month."每周统计表';";
+            $stat_month_sql = "
+                CREATE TABLE `t_stat_".$month."_month` (
+                  `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+                  `buildid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '房源ID，对应t_build表ID',
+                  `build_no` varchar(50) NOT NULL DEFAULT '' COMMENT '链家房源编码',
+                  `low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '本月最低价格',
+                  `low_date` DATE NOT NULL COMMENT '最低价格日期',
+                  `high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '本月最高价格',
+                  `high_date` DATE NOT NULL COMMENT '最高价格日期',
+                  `average` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '本月均价',
+                  `rate` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT '本月价格升/降率',
+                  `create_time` datetime NOT NULL COMMENT '创建时间',
+                  `operate_time` datetime NOT NULL COMMENT '最后操作时间',
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `buildid_2` (`buildid`),
+                  KEY `buildid` (`buildid`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='房源价格".$month."每月统计表';";
+            $tool->execute($stat_day_sql);
+            $tool->execute($stat_week_sql);
+            $tool->execute($stat_month_sql);
+        }
+        //每日向日统计表中添加当天日期的字段
+        $stat_day_table = 't_stat_'.$month.'_day';
+        $sql = 'SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE table_name = :table_name ;';
+        $params = array(':table_name' => $stat_day_table);
+        $columns = $tool->queryAll($sql, $params);
+        if(!empty($columns)) {
+            $column = array_column($columns, 'COLUMN_NAME');
+            if(!in_array($date, $column)) {
+                $column_sql = "
+                ALTER TABLE `".$stat_day_table."`
+                ADD COLUMN `".$date."`  decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '".$date."日价格' AFTER `build_no`;";
+                $tool->execute($column_sql);
+            }
+        }
     }
+
+    /**
+     * 每月1日执行上月房源价格统计
+     * @author              yurixu 2016-11-24
+     * @example             Craw::statMonth();
+     */
+    public static function statMonth() {
+        $day = date('d');
+        if($day == 1) {
+
+        }
+    }
+
 
     /**
      * 抓取房源数据
