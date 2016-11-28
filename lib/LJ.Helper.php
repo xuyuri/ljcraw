@@ -81,7 +81,7 @@ class Helper
      * @param int $type             0：对整个数组获取value组成新数组；1：获取某一列value，返回一维数组
      * @param string $columnName    列名
      * @return array
-     * @author      yurixu 2015-8-15
+     * @author      yurixu 2016-11-16
      * @example     Helper::arrayColumn();
      */
     public static function  arrayColumn(array $array, $columnName='', $type=1) {
@@ -112,6 +112,25 @@ class Helper
             } else {
                 $result = file_get_contents($url);
             }
+        }
+        return $result;
+    }
+
+    /**
+     * 计算两个日期之间的所有日期
+     * @param string $start     开始日期
+     * @param string $end       结束日期
+     * @return array            key为年月，value为日期集合
+     * @author      yurixu 2016-11-28
+     * @example     Helper::getDateList();
+     */
+    public static function getDateList($start, $end) {
+        $result = array();
+        $start = strtotime($start);
+        $end = strtotime($end);
+        while ($start <= $end) {
+            $result[date('Ym',$start)][] = date('Ymd',$start);
+            $start = strtotime('+1 day',$start);
         }
         return $result;
     }

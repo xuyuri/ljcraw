@@ -112,50 +112,98 @@ Class Craw {
      * @example             Craw::statMonth();
      */
     public static function statMonth() {
+        $result = 0;
         $day = 1;//date('d');
         if($day == 1) {
             $tool = new ZDBTool();
             //上一月
-            $pre_month = '201611';//date('Ym', strtotime('-1 month'));
-            $pre_table = 't_stat_'.$pre_month.'_day';
+            $month = '201611';//date('Ym', strtotime('-1 month'));
+            $pre_day = 't_stat_'.$month.'_day';
+            $pre_month = 't_stat_'.$month.'_month';
             $exclude = array('id', 'buildid', 'build_no', 'create_time', 'operate_time');
             $sql = 'SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE table_name = :table_name ;';
-            $params = array(':table_name' => $pre_table);
+            $params = array(':table_name' => $pre_day);
             $columns = $tool->queryAll($sql, $params);
             if(!empty($columns)) {
                 $column = array_column($columns, 'COLUMN_NAME');
                 $column = array_diff($column, $exclude);
                 if(!empty($column)) {
-                    //$column_str = implode(',', $column);
                     $column[] = 'buildid';
                     $column[] = 'build_no';
-                    $data = $tool->getQuery($pre_table, $column);
-                    if(!empty($data)) {
-                        foreach($data as $k => $v) {
-                            $tmp = $v;
-                            unset($tmp['buildid']);
-                            unset($tmp['build_no']);
-                            $tmp = array_filter($tmp, function($e){
-                                $e = (float)$e;
-                                return !empty($e);
-                            });
-                            if(!empty($tmp)) {
-                                print_r($tmp);
-                                asort($tmp);
-                                list($low_key, $low) = (reset($tmp) ? each($tmp) : each($tmp));
-                                list($high_key, $high) = (end($tmp) ? each($tmp) : each($tmp));
-                                echo $low_key . '--' . $low . "\n";
-                                echo $high_key . '--' . $high. "\n";
-                                $count = count($tmp);
-                                $sum = array_sum($tmp);
-                                $average = $sum / $count;
-                                echo "--count = $count, sum = $sum \n";
-                                die;
+                    $sql = ' SELECT MAX( id ) AS maxid FROM '.$pre_day;
+                    $total = $tool->queryRow($sql);
+                    if(!empty($total)) {
+                        $maxid = $total['maxid'];
+                        $pernum = 500;  //每次执行的条数
+                        $pages = ceil($maxid / $pernum);
+                        for ($i = 0; $i < $pages; $i++) {
+                            echo "---i--- = $i\n";
+                            $condition = ' WHERE id BETWEEN :start AND :end ';
+                            $params = array(':start'=>$i * 500 + 1,':end'=>($i + 1) * 500);
+                            $data = $tool->getQuery($pre_day, $column, $condition, $params);
+                            if(!empty($data)) {
+                                foreach($data as $k => $v) {
+                                    $info = array();
+                                    $tmp = $v;
+                                    unset($tmp['buildid']);
+                                    unset($tmp['build_no']);
+                                    $tmp = array_filter($tmp, function($e){
+                                        $e = (float)$e;
+                                        return !empty($e);
+                                    });
+                                    if(!empty($tmp)) {
+                                        asort($tmp);
+                                        list($low_key, $low) = (reset($tmp) ? each($tmp) : each($tmp));
+                                        list($high_key, $high) = (end($tmp) ? each($tmp) : each($tmp));
+                                        $count = count($tmp);
+                                        $sum = array_sum($tmp);
+                                        $average = number_format($sum / $count, 2, '.' ,'');
+                                        $rate = ($high-$low) / $low;
+                                        $rate = $low_key <= $high_key ? $rate : '-'.$rate;
+                                        $rate = number_format($rate, 2, '.', '');
+                                        $info['buildid'] = $v['buildid'];
+                                        $info['build_no'] = $v['build_no'];
+                                        $info['low'] = $low;
+                                        $info['high'] = $high;
+                                        $info['low_date'] = $low_key;
+                                        $info['high_date'] = $high_key;
+                                        $info['average'] = $average;
+                                        $info['rate'] = $rate;
+                                        print_r($info);
+                                        $result += ZDBTool::multiInsert("$pre_month", array($info));
+                                        echo "--result--= $result\n";
+                                        //die;
+                                    }
+                                }
                             }
                         }
+
                     }
+
                 }
             }
+        }
+        return $result;
+    }
+
+    public static function statWeek() {
+        $result = 0;
+        $week = date('w');
+        //每周日执行
+        if($week == 0) {
+            $last_week = date('Ymd', strtotime('-1 week'));
+            $month = date('Ym');
+            //$pre_day = 't_stat_'.$month.'_day';
+            $pre_week = 't_stat_'.$month.'_week';
+            $day_list = Helper::getDateList($last_week, date('Ymd'));
+            if(!empty($day_list)) {
+
+                foreach($day_list as $k => $v) {
+                    $pre_day = 't_stat_'.$k.'_day';
+
+                }
+            }
+
         }
     }
 

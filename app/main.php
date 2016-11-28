@@ -18,6 +18,7 @@ require_once "../lib/Lj.ZDBTool.php";
 
 Craw::statMonth();
 
+//print_r(Helper::getDateList('20161028', '20161105'));
 //echo Craw::crawArea();
 //echo Craw::crawLine();
 /*$result = Craw::crawDistrict();
