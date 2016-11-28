@@ -127,21 +127,31 @@ Class Craw {
                 $column = array_diff($column, $exclude);
                 if(!empty($column)) {
                     //$column_str = implode(',', $column);
+                    $column[] = 'buildid';
+                    $column[] = 'build_no';
                     $data = $tool->getQuery($pre_table, $column);
                     if(!empty($data)) {
                         foreach($data as $k => $v) {
                             $tmp = $v;
+                            unset($tmp['buildid']);
+                            unset($tmp['build_no']);
                             $tmp = array_filter($tmp, function($e){
                                 $e = (float)$e;
                                 return !empty($e);
                             });
-                            print_r($tmp);
-                            asort($tmp);
-                            list($low_key, $low) = (reset($tmp) ? each($tmp) : each($tmp));
-                            list($high_key, $high) = (end($tmp) ? each($tmp) : each($tmp));
-                            echo $low_key.'--'.$low."\n";
-                            echo $high_key.'--'.$high;
-                            die;
+                            if(!empty($tmp)) {
+                                print_r($tmp);
+                                asort($tmp);
+                                list($low_key, $low) = (reset($tmp) ? each($tmp) : each($tmp));
+                                list($high_key, $high) = (end($tmp) ? each($tmp) : each($tmp));
+                                echo $low_key . '--' . $low . "\n";
+                                echo $high_key . '--' . $high. "\n";
+                                $count = count($tmp);
+                                $sum = array_sum($tmp);
+                                $average = $sum / $count;
+                                echo "--count = $count, sum = $sum \n";
+                                die;
+                            }
                         }
                     }
                 }
