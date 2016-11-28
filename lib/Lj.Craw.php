@@ -131,7 +131,11 @@ Class Craw {
                     if(!empty($data)) {
                         foreach($data as $k => $v) {
                             $tmp = $v;
-                            $tmp = array_filter($tmp);
+                            $tmp = array_filter($tmp, function($e){
+                                $e = (float)$e;
+                                return !empty($e);
+                            });
+                            print_r($tmp);
                             asort($tmp);
                             list($low_key, $low) = (reset($tmp) ? each($tmp) : each($tmp));
                             list($high_key, $high) = (end($tmp) ? each($tmp) : each($tmp));

@@ -10,9 +10,11 @@ require_once "../lib/Lj.ZDBTool.php";
 
 //Craw::crawBuild('2011047640650');
 
-//echo Craw::crawBuild();
+
 
 //Craw::initTable();
+
+//echo Craw::crawBuild();
 
 Craw::statMonth();
 
