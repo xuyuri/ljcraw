@@ -112,9 +112,36 @@ Class Craw {
      * @example             Craw::statMonth();
      */
     public static function statMonth() {
-        $day = date('d');
+        $day = 1;//date('d');
         if($day == 1) {
-
+            $tool = new ZDBTool();
+            //上一月
+            $pre_month = '201611';//date('Ym', strtotime('-1 month'));
+            $pre_table = 't_stat_'.$pre_month.'_day';
+            $exclude = array('id', 'buildid', 'build_no', 'create_time', 'operate_time');
+            $sql = 'SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE table_name = :table_name ;';
+            $params = array(':table_name' => $pre_table);
+            $columns = $tool->queryAll($sql, $params);
+            if(!empty($columns)) {
+                $column = array_column($columns, 'COLUMN_NAME');
+                $column = array_diff($column, $exclude);
+                if(!empty($column)) {
+                    //$column_str = implode(',', $column);
+                    $data = $tool->getQuery($pre_table, $column);
+                    if(!empty($data)) {
+                        foreach($data as $k => $v) {
+                            $tmp = $v;
+                            $tmp = array_filter($tmp);
+                            asort($tmp);
+                            list($low_key, $low) = (reset($tmp) ? each($tmp) : each($tmp));
+                            list($high_key, $high) = (end($tmp) ? each($tmp) : each($tmp));
+                            echo $low_key.'--'.$low."\n";
+                            echo $high_key.'--'.$high;
+                            die;
+                        }
+                    }
+                }
+            }
         }
     }
 

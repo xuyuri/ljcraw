@@ -171,7 +171,7 @@ Class ZDBTool {
         $fields = is_array($fields) ? $fields : array();
 
         if(!empty($table) && $id > 0) {
-            $select = empty($fields) ? '*' : implode(',', $fields);
+            $select = empty($fields) ? '*' : '`'.implode('`,`', $fields).'`';
             $sql = "SELECT $select FROM $table WHERE id = :id ";
             $params = array(':id' => $id);
             $tool = new ZDBTool();
@@ -186,7 +186,7 @@ Class ZDBTool {
      * @param array  $fields        查询字段
      * @param string $condition     查询条件
      * @param array  $params        查询条件参数
-     * @param int    $type          0：单条记录；1：数据集合
+     * @param int    $type          0：数据集合; 1：单条记录
      * @return array                查询结果
      * @author       yurixu 2016-11-23
      * @example      ZDBTool::getQuery()
@@ -199,11 +199,12 @@ Class ZDBTool {
         $condition = (is_string($condition) && !empty($condition)) ? $condition : '';
         $result = array();
 
-        $select = empty($fields) ? '*' : implode(',', $fields);
+        $select = empty($fields) ? '*' : '`'.implode('`,`', $fields).'`';
         $sql = "SELECT $select FROM $table ";
         if(!empty($condition)) {
             $sql .= $condition;
         }
+        //echo $sql;die;
         $tool = new ZDBTool();
         $result = $type ? $tool->queryRow($sql, $params) :$tool->queryAll($sql, $params) ;
         return $result;

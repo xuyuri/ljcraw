@@ -26,6 +26,7 @@ http://bj.lianjia.com/xiaoqu/dongcheng/
 8.小区租房数量分布top10
 9.小区均价排行top10
 10.建筑年代分布
+11.每天新增/减少的房源数量
 
 t_build:
 id、build_no、areaPid、areaid、districtid、url、cover、title、zone、meters、direction、floor、build_year、build_type、lineid、siteid、price、decoration、balcony、bathroom、heating、visit、is_rent、update_time
