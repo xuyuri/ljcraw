@@ -197,12 +197,31 @@ Class Craw {
             $pre_week = 't_stat_'.$month.'_week';
             $day_list = Helper::getDateList($last_week, date('Ymd'));
             if(!empty($day_list)) {
-
+                if(count($day_list) > 1) {
+                    //当前周跨月
+                    $result = self::passMonth();
+                } else {
+                    //当前周不跨月
+                    $result = self::nopassMonth($day_list);
+                }
                 foreach($day_list as $k => $v) {
                     $pre_day = 't_stat_'.$k.'_day';
 
                 }
             }
+
+        }
+    }
+
+    public static function passMonth() {
+
+    }
+
+    public static function noPassMonth($dayList) {
+        if(!empty($dayList)) {
+            $month = date('Ym');
+            $pre_day = 't_stat_'.$month.'_day';
+            $pre_week = 't_stat_'.$month.'_week';
 
         }
     }

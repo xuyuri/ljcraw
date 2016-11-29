@@ -12,11 +12,11 @@ require_once "../lib/Lj.ZDBTool.php";
 
 
 
-//Craw::initTable();
+Craw::initTable();
 
-//echo Craw::crawBuild();
+echo Craw::crawBuild();
 
-Craw::statMonth();
+//Craw::statMonth();
 
 //print_r(Helper::getDateList('20161028', '20161105'));
 //echo Craw::crawArea();

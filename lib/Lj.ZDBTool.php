@@ -155,6 +155,28 @@ Class ZDBTool {
         return $result;
     }
 
+    public static function insert($table, $data=array()) {
+        date_default_timezone_set('PRC');
+        $result = 0;
+
+        if(is_array($data) && !empty($data)) {
+            if(!array_key_exists('create_time', $data)) {
+                $time = date('Y-m-d H:i:s');
+                $data['create_time'] = $time;
+                $data['operate_time'] = $time;
+            }
+            $fields = array_keys($data);
+            $fields_str = '`'.implode('`,`', $fields).'`';
+            $values = array_values($data);
+            $values_str = "('".implode("','", $values)."')";
+            $sql = "INSERT INTO $table ($fields_str) VALUES $values_str ";
+            echo $sql;die;
+            $tool = new ZDBTool();
+            $result = $tool->execute($sql);
+        }
+        return $result;
+    }
+
     /**
      * 获取单条数据记录
      * @param string $table     数据表名
