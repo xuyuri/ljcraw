@@ -10,9 +10,10 @@ require_once "../lib/Lj.ZDBTool.php";
 
 //Craw::crawBuild('2011047640650');
 
+ini_set('max_execution_time', 0);
+ini_set('memory_limit', '512M');
 
-
-Craw::initTable();
+//Craw::initTable();
 
 echo Craw::crawBuild();
 
