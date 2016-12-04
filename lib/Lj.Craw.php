@@ -236,12 +236,12 @@ Class Craw {
     public static function crawBuild() {
         ini_set('max_execution_time', 0);
         ini_set('memory_limit', '512M');
-        $result = 0;
+        $result = 12584;
         $tool = new ZDBTool();
         $sql = 'SELECT id, name FROM `t_line` ';
         $line = $tool->queryAll($sql);
         $sql = ' SELECT id, lj_no, areaPid, areaid, lineid, siteid FROM t_district ';
-        //$sql .= ' WHERE id > 999 ';
+        $sql .= ' WHERE id > 6574 ';
         $sql .= ' ORDER BY id ';
         $data = $tool->queryAll($sql);
         $num = 0;
@@ -255,8 +255,8 @@ Class Craw {
                     $result += self::parseBuild($content, $v['lj_no'], $v['id'], $v['areaPid'], $v['areaid'], $line);
                 }
                 echo "--end, id=".$v['id'].", result = $result, count = $num\n";
-                if($num % 100) {
-                    sleep(1);
+                if($num % 20) {
+                    sleep(3);
                 }
             }
         }
@@ -501,7 +501,7 @@ Class Craw {
                         if($update > 0) {
                             //向day表写入价格数据
                             $day_table = 't_stat_'. date('Ym'). '_day';
-                            $day_field = date('Ymd');
+                            $day_field = '20161203';//date('Ymd');
                             $sql = ' SELECT id FROM ' . $day_table . ' WHERE build_no = :build_no LIMIT 1 ';
                             $params = array(':build_no' => $info['build_no']);
                             $build_day = $tool->queryRow($sql, $params);
