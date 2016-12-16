@@ -7,13 +7,8 @@
  */
 require_once "Lj.Config.php";
 require_once "Lj.Helper.php";
+require_once "Lj.crawThread.php";
 Class Craw {
-    /*private $tool = null;
-
-    public function init() {
-        $this->tool = new ZDBTool();
-    }*/
-
     /**
      * 每日执行数据表检测/初始化
      * @author              yurixu 2016-11-24
@@ -23,7 +18,7 @@ Class Craw {
         $month = date('Ym');
         $day = date('d');
         $date = date('Ymd');
-        $tool = new ZDBTool();
+        
         //每月1号新建日、周、月统计表
         if($day == 1) {
             $stat_day_sql = "
@@ -86,22 +81,22 @@ Class Craw {
                   UNIQUE KEY `build_no` (`build_no`),
                   KEY `buildid` (`buildid`)
                 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='房源价格".$month."每月统计表';";
-            $tool->execute($stat_day_sql);
-            $tool->execute($stat_week_sql);
-            $tool->execute($stat_month_sql);
+            ZDBTool::execute($stat_day_sql);
+            ZDBTool::execute($stat_week_sql);
+            ZDBTool::execute($stat_month_sql);
         }
         //每日向日统计表中添加当天日期的字段
         $stat_day_table = 't_stat_'.$month.'_day';
         $sql = 'SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE table_name = :table_name ;';
         $params = array(':table_name' => $stat_day_table);
-        $columns = $tool->queryAll($sql, $params);
+        $columns = ZDBTool::queryAll($sql, $params);
         if(!empty($columns)) {
             $column = array_column($columns, 'COLUMN_NAME');
             if(!in_array($date, $column)) {
                 $column_sql = "
                 ALTER TABLE `".$stat_day_table."`
                 ADD COLUMN `".$date."`  decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '".$date."日价格' AFTER `build_no`;";
-                $tool->execute($column_sql);
+                ZDBTool::execute($column_sql);
             }
         }
     }
@@ -115,7 +110,7 @@ Class Craw {
         $result = 0;
         $day = 1;//date('d');
         if($day == 1) {
-            $tool = new ZDBTool();
+            
             //上一月
             $month = '201611';//date('Ym', strtotime('-1 month'));
             $pre_day = 't_stat_'.$month.'_day';
@@ -123,7 +118,7 @@ Class Craw {
             $exclude = array('id', 'buildid', 'build_no', 'create_time', 'operate_time');
             $sql = 'SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE table_name = :table_name ;';
             $params = array(':table_name' => $pre_day);
-            $columns = $tool->queryAll($sql, $params);
+            $columns = ZDBTool::queryAll($sql, $params);
             if(!empty($columns)) {
                 $column = array_column($columns, 'COLUMN_NAME');
                 $column = array_diff($column, $exclude);
@@ -131,7 +126,7 @@ Class Craw {
                     $column[] = 'buildid';
                     $column[] = 'build_no';
                     $sql = ' SELECT MAX( id ) AS maxid FROM '.$pre_day;
-                    $total = $tool->queryRow($sql);
+                    $total = ZDBTool::queryRow($sql);
                     if(!empty($total)) {
                         $maxid = $total['maxid'];
                         $pernum = 500;  //每次执行的条数
@@ -140,7 +135,7 @@ Class Craw {
                             echo "---i--- = $i\n";
                             $condition = ' WHERE id BETWEEN :start AND :end ';
                             $params = array(':start'=>$i * 500 + 1,':end'=>($i + 1) * 500);
-                            $data = $tool->getQuery($pre_day, $column, $condition, $params);
+                            $data = ZDBTool::getQuery($pre_day, $column, $condition, $params);
                             if(!empty($data)) {
                                 foreach($data as $k => $v) {
                                     $info = array();
@@ -233,31 +228,26 @@ Class Craw {
      * @author              yurixu 2016-11-20
      * @example             Craw::crawBuild();
      */
-    public static function crawBuild() {
+    public static function crawBuild($distinct, $line) {
         ini_set('max_execution_time', 0);
         ini_set('memory_limit', '512M');
-        $result = 12584;
-        $tool = new ZDBTool();
-        $sql = 'SELECT id, name FROM `t_line` ';
-        $line = $tool->queryAll($sql);
-        $sql = ' SELECT id, lj_no, areaPid, areaid, lineid, siteid FROM t_district ';
-        $sql .= ' WHERE id > 6574 ';
+        $result = 0;
+        
+        /*$sql = 'SELECT id, name FROM `t_line` ';
+        $line = ZDBTool::queryAll($sql);*/
+        /*$sql = ' SELECT id, lj_no, areaPid, areaid, lineid, siteid FROM t_district ';
         $sql .= ' ORDER BY id ';
-        $data = $tool->queryAll($sql);
-        $num = 0;
-        if(!empty($data)) {
-            foreach($data as $k => $v) {
-                $num ++;
-                echo "--start, id=".$v['id'].",count = $num\n";
-                $url = LjConfig::DETAIL_BASE_URL.'/c'.$v['lj_no'];
+        $data = ZDBTool::queryAll($sql);*/
+        if($distinct > 0 && !empty($line)) {
+            $data = ZDBTool::getInfoByid('t_district', $distinct, array('id','lj_no','areaPid','areaid','lineid','siteid'));
+            if (!empty($data)) {
+                echo "--start, id=" . $data['id'] . "\n";
+                $url = LjConfig::DETAIL_BASE_URL . '/c' . $data['lj_no'];
                 $content = Helper::getContents($url);
-                if(!empty($content)) {
-                    $result += self::parseBuild($content, $v['lj_no'], $v['id'], $v['areaPid'], $v['areaid'], $line);
+                if (!empty($content)) {
+                    $result += self::parseBuild($content, $data['lj_no'], $data['id'], $data['areaPid'], $data['areaid'], $line);
                 }
-                echo "--end, id=".$v['id'].", result = $result, count = $num\n";
-                if($num % 20) {
-                    sleep(3);
-                }
+                echo "--end, id=" . $data['id'] . ", result = $result \n";
             }
         }
         return $result;
@@ -272,8 +262,8 @@ Class Craw {
     public static function crawArea() {
         $result = 0;
         $sql = ' SELECT id, name, lj_no FROM t_area WHERE parentid = 0 ';
-        $tool = new ZDBTool();
-        $area = $tool->queryAll($sql);
+        
+        $area = ZDBTool::queryAll($sql);
         foreach($area as $k => $v) {
             $url = $url = LjConfig::DETAIL_BASE_URL.$v['lj_no'];
             $contents = Helper::getContents($url);
@@ -294,8 +284,8 @@ Class Craw {
     public static function crawLine() {
         $result = 0;
         $sql = ' SELECT id, name, lj_no FROM t_line WHERE parentid = 0 ';
-        $tool = new ZDBTool();
-        $line = $tool->queryAll($sql);
+        
+        $line = ZDBTool::queryAll($sql);
         foreach($line as $k => $v) {
             $url = $url = LjConfig::LINE_BASE_URL.$v['lj_no'];
             $contents = Helper::getContents($url);
@@ -316,12 +306,12 @@ Class Craw {
         ini_set('max_execution_time', 0);
         ini_set('memory_limit', '512M');
         $result = 0;
-        $tool = new ZDBTool();
+        
         $sql = 'SELECT id, name FROM `t_line` ';
-        $line = $tool->queryAll($sql);
+        $line = ZDBTool::queryAll($sql);
         if(!empty($line)) {
             $sql = ' SELECT id, lj_no, parentid FROM t_area WHERE parentid > 0 ';
-            $area = $tool->queryAll($sql);
+            $area = ZDBTool::queryAll($sql);
             foreach ($area as $k => $v) {
                 echo $v['lj_no']."\n";
                 $url = LjConfig::DISTRICT_BASE_URL . $v['lj_no'];
@@ -388,7 +378,7 @@ Class Craw {
                 $list = $list[0];
                 $line_name = array_column($line, 'name');
                 $line_flip = array_flip($line_name);
-                $tool = new ZDBTool();
+                
                 foreach($list as $k => $v) {
                     $info = array();
                     preg_match('~data-id="(\S+)"~', $v, $buildid);
@@ -489,7 +479,7 @@ Class Craw {
                     if(!empty($info)) {
                         $sql = ' SELECT id FROM t_build WHERE build_no = :build_no LIMIT 1 ';
                         $params = array(':build_no' => $info['build_no']);
-                        $build = $tool->queryRow($sql, $params);
+                        $build = ZDBTool::queryRow($sql, $params);
                         if(!empty($build)) {
 //                            echo "--update--build--\n";
                             $update = ZDBTool::updateRow('t_build', $build['id'], $info);
@@ -501,10 +491,10 @@ Class Craw {
                         if($update > 0) {
                             //向day表写入价格数据
                             $day_table = 't_stat_'. date('Ym'). '_day';
-                            $day_field = '20161203';//date('Ymd');
+                            $day_field = date('Ymd');
                             $sql = ' SELECT id FROM ' . $day_table . ' WHERE build_no = :build_no LIMIT 1 ';
                             $params = array(':build_no' => $info['build_no']);
-                            $build_day = $tool->queryRow($sql, $params);
+                            $build_day = ZDBTool::queryRow($sql, $params);
 //                            print_r($build_day);
                             if (!empty($build_day)) {
                                 $result += ZDBTool::updateRow("$day_table", $build_day['id'], array("$day_field" => $info['price']));
@@ -701,5 +691,23 @@ Class Craw {
             }
         }
         return $result;
+    }
+
+    public function craw() {
+        $sql = 'SELECT id, name FROM `t_line` ';
+        $line = ZDBTool::queryAll($sql);
+        $sql = ' SELECT id FROM t_district ';
+        $sql .= ' ORDER BY id ';
+        $sql .= ' LIMIT 10 ';
+        $data = ZDBTool::queryAll($sql);
+        if(!empty($line) && !empty($data)) {
+            $data = array_column($data, 'id');
+            foreach(range(0, 3) as $k => $v) {
+                $craw = new CrawThread($data, $line);
+                $craw->start();
+                $craw->join();
+            }
+
+        }
     }
 }

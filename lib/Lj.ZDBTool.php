@@ -6,32 +6,23 @@
 require_once "Lj.ZDBTool.php";
 require_once "Lj.Connection.php";
 Class ZDBTool {
-    private $connectionString;
-    /**
-     * @var string the username for establishing DB connection. Defaults to empty string.
-     */
-    private $username='';
-    /**
-     * @var string the password for establishing DB connection. Defaults to empty string.
-     */
-    private $password='';
     /**
      * @var object  the object of LjConnection
      */
-    private $conn = null;
+    protected static $conn;
 
-    public function connect() {
-        if($this->conn === null) {
-            $this->connectionString = LjConfig::BD_CONNECTION;
-            $this->username = LjConfig::DB_USER_NAME;
-            $this->password = LjConfig::DB_PASSWORD;
-            $this->conn = new LjConnection($this->connectionString, $this->username, $this->password);
+    /**
+     * get the object of LjConnection
+     * @return bool|LjConnection|object
+     */
+    public static function getConnection() {
+        if(!isset(self::$conn)) {
+            self::$conn = new LjConnection(LjConfig::BD_CONNECTION, LjConfig::DB_USER_NAME, LjConfig::DB_PASSWORD);
         }
-        return $this->conn;
-    }
-
-    function __construct() {
-        $this->conn = null;
+        if(self::$conn === false) {
+            return false;
+        }
+        return self::$conn;
     }
 
     /**
@@ -42,8 +33,8 @@ Class ZDBTool {
      * @author          yurixu 2016-11-15
      * @example         ZDBTool::queryRow()
      */
-    public function queryRow($sql, $params=array()) {
-        $result = $this->connect()->createCommand($sql)->queryRow($params);
+    public static function queryRow($sql, $params=array()) {
+        $result = self::getConnection()->createCommand($sql)->queryRow($params);
         return $result ? $result : array();
     }
 
@@ -55,8 +46,8 @@ Class ZDBTool {
      * @author          yurixu 2016-11-15
      * @example         ZDBTool::queryAll()
      */
-    public function queryAll($sql, $params=array()) {
-        $result = $this->connect()->createCommand($sql)->queryAll($params);
+    public static function queryAll($sql, $params=array()) {
+        $result = self::getConnection()->createCommand($sql)->queryAll($params);
         return $result ? $result : array();
     }
 
@@ -68,8 +59,8 @@ Class ZDBTool {
      * @author          yurixu 2016-11-15
      * @example         ZDBTool::queryAll()
      */
-    public function execute($sql, $params=array()) {
-        $result = $this->connect()->createCommand($sql)->execute($params);
+    public static function execute($sql, $params=array()) {
+        $result = self::getConnection()->createCommand($sql)->execute($params);
         return $result ? $result : 0;
     }
 
@@ -108,8 +99,7 @@ Class ZDBTool {
             $params[':id'] = $id;
             /*echo $sql;
             print_r($params);die;*/
-            $tool = new ZDBTool();
-            $result = $tool->execute($sql, $params);
+            $result = self::execute($sql, $params);
         }
         return $result;
     }
@@ -149,8 +139,7 @@ Class ZDBTool {
             $values = substr($values, 0, strlen($values) - 1);
             $sql = "INSERT INTO $table ($name) VALUES $values ";
 //            echo $sql;die;
-            $tool = new ZDBTool();
-            $result = $tool->execute($sql);
+            $result = self::execute($sql);
         }
         return $result;
     }
@@ -171,8 +160,7 @@ Class ZDBTool {
             $values_str = "('".implode("','", $values)."')";
             $sql = "INSERT INTO $table ($fields_str) VALUES $values_str ";
             echo $sql;die;
-            $tool = new ZDBTool();
-            $result = $tool->execute($sql);
+            $result = self::execute($sql);
         }
         return $result;
     }
@@ -196,8 +184,7 @@ Class ZDBTool {
             $select = empty($fields) ? '*' : '`'.implode('`,`', $fields).'`';
             $sql = "SELECT $select FROM $table WHERE id = :id ";
             $params = array(':id' => $id);
-            $tool = new ZDBTool();
-            $result = $tool->queryRow($sql, $params);
+            $result = self::queryRow($sql, $params);
         }
         return $result;
     }
@@ -227,8 +214,7 @@ Class ZDBTool {
             $sql .= $condition;
         }
         //echo $sql;die;
-        $tool = new ZDBTool();
-        $result = $type ? $tool->queryRow($sql, $params) :$tool->queryAll($sql, $params) ;
+        $result = $type ? self::queryRow($sql, $params) :self::queryAll($sql, $params) ;
         return $result;
     }
 

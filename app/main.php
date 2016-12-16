@@ -13,10 +13,13 @@ require_once "../lib/Lj.ZDBTool.php";
 ini_set('max_execution_time', 0);
 ini_set('memory_limit', '512M');
 
+
 //Craw::initTable();
 
 //echo Craw::crawBuild();
-
+$thread = new Craw();
+$thread->craw();
+die;
 //Craw::statMonth();
 
 //print_r(Helper::getDateList('20161028', '20161105'));
