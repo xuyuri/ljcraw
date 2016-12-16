@@ -29,6 +29,12 @@ http://bj.lianjia.com/xiaoqu/dongcheng/
 11.每天新增/减少的房源数量
 12.以北京市地图的方式展示，点击某个区域可以查看当前区域的相关数据
 
+
+后续功能：
+个人关注/收藏小区（详情、房源数、价格排行）
+个人关注/收藏房源（详情、价格走势）
+
+
 t_build:
 id、build_no、areaPid、areaid、districtid、url、cover、title、zone、meters、direction、floor、build_year、build_type、lineid、siteid、price、decoration、balcony、bathroom、heating、visit、is_rent、update_time
 
