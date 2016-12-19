@@ -20,6 +20,12 @@ Class LjConfig {
     const DB_PASSWORD = 'xyw';
     //数据库连接
     const BD_CONNECTION = 'mysql:host=localhost;dbname=ljCraw';
+    //Redis host
+    const REDIS_HOST = '127.0.0.1';
+    //Redis端口号
+    const REDIS_PORT = '6379';
+    //小区Redis
+    const REDIS_KEY = 'lj:district';
 
     /**
      * 这里设置代理机器，只有需要代理的时候才设置，不需要代理，请设置为0.0.0.0和0

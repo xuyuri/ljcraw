@@ -1,0 +1,3 @@
+先下载一个php_redis.dll的拓展文件，php_redis.dll下载地址：http://windows.php.net/downloads/pecl/snaps/redis/2.2.5/（得对应php版本，不然有可能会不好使的）。将它放在php扩展目录ext里面，然后再php.ini中添加
+extension=php_redis.dll
+（不要将先后顺序调换）。然后再重启服务器。在php文件里面访问phpinfo()

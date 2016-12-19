@@ -11,9 +11,13 @@ Class ZDBTool {
      */
     protected static $conn;
 
+    protected static $redis;
+
     /**
      * get the object of LjConnection
      * @return bool|LjConnection|object
+     * @author          yurixu 2016-11-19
+     * @example         ZDBTool::getConnection()
      */
     public static function getConnection() {
         if(!isset(self::$conn)) {
@@ -23,6 +27,23 @@ Class ZDBTool {
             return false;
         }
         return self::$conn;
+    }
+
+    /**
+     *  get the object of Redis
+     * @return bool|Redis
+     * @author          yurixu 2016-12-19
+     * @example         ZDBTool::redis()
+     */
+    public static function redis() {
+        if(!isset(self::$redis)) {
+            self::$redis = new Redis();
+            self::$redis->pconnect(LjConfig::REDIS_HOST, LjConfig::REDIS_PORT);
+        }
+        if(self::$redis === false) {
+            return false;
+        }
+        return self::$redis;
     }
 
     /**

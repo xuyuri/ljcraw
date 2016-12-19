@@ -693,21 +693,31 @@ Class Craw {
         return $result;
     }
 
-    public function craw() {
+    public static function crawData() {
         $sql = 'SELECT id, name FROM `t_line` ';
         $line = ZDBTool::queryAll($sql);
         $sql = ' SELECT id FROM t_district ';
         $sql .= ' ORDER BY id ';
-        $sql .= ' LIMIT 10 ';
+        $sql .= ' LIMIT 60 ';
         $data = ZDBTool::queryAll($sql);
         if(!empty($line) && !empty($data)) {
             $data = array_column($data, 'id');
-            foreach(range(0, 3) as $k => $v) {
-                $craw = new CrawThread($data, $line);
+            $redis = ZDBTool::redis();
+            $redis->delete(LjConfig::REDIS_KEY);
+            foreach($data as $k => $v) {
+                $redis->lPush(LjConfig::REDIS_KEY, $v);
+            }
+            echo "-----hhhhhh---\n";
+            print_r($redis->lRange(LjConfig::REDIS_KEY, 0, -1));
+            foreach(range(0, 1) as $k => $v) {
+                echo "--v = $v---\n";
+                $craw = new CrawThread($redis, $line);
                 $craw->start();
-                $craw->join();
+//                $craw->join();
             }
 
+            /*$craw = new CrawThread($line);
+            $craw->start();*/
         }
     }
 }
