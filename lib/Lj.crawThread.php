@@ -18,13 +18,14 @@ class CrawThread extends Thread {
         $size = ZDBTool::redis()->lSize(LjConfig::REDIS_KEY);
         echo "---size = $size \n";
         if($size > 0) {
-            while ($data = ZDBTool::redis()->rPop(LjConfig::REDIS_KEY)) {
+            $data = ZDBTool::redis()->rPop(LjConfig::REDIS_KEY);
+            if (!empty($data)) {
                 $num++;
                 echo "threadid=" . $this->getCurrentThreadId() . ", parentThread = ".$this->getCreatorId(). ", distinct=$data, num=$num \n";
                 //Craw::crawBuild($distinct, $this->line);
-                if ($num % 5 == 0) {
+                /*if ($num % 5 == 0) {
                     sleep(3);
-                }
+                }*/
             }
         }
     }

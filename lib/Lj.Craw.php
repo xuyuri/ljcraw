@@ -709,11 +709,18 @@ Class Craw {
             }
             echo "-----hhhhhh---\n";
             print_r($redis->lRange(LjConfig::REDIS_KEY, 0, -1));
-            foreach(range(0, 1) as $k => $v) {
-                echo "--v = $v---\n";
-                $craw = new CrawThread($redis, $line);
-                $craw->start();
+            $size = 0;
+            while($redis->lSize(LjConfig::REDIS_KEY) > 0) {
+                foreach (range(0, 1) as $k => $v) {
+                    echo "--v = $v---\n";
+                    $craw = new CrawThread($redis, $line);
+                    $craw->start();
 //                $craw->join();
+                }
+                if($redis->lSize(LjConfig::REDIS_KEY) % 5 == 0) {
+                    echo "---sleep---\n";
+                    sleep(5);
+                }
             }
 
             /*$craw = new CrawThread($line);
