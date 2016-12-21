@@ -13,6 +13,11 @@ require_once "../lib/Lj.ZDBTool.php";
 ini_set('max_execution_time', 0);
 ini_set('memory_limit', '512M');
 //ini_set('default_socket_timeout', -1);
+//echo Helper::getWeekNumber(time());
+echo ceil(101 / 10);
+/*$last_week = date('Ymd', strtotime('-1 week'));
+$day_list = Helper::getDateList($last_week, date('Ymd'));
+echo implode('`,`', $day_list) ;die;*/
 
 /*ZDBTool::redis()->set('sc:user', 'xyw');
 $name = ZDBTool::redis()->get('sc:user');
@@ -21,8 +26,8 @@ echo $name;
 /*Craw::initTable();
 die;*/
 //echo Craw::crawBuild();
-Craw::crawData();
-die;
+/*Craw::crawData();
+die;*/
 //Craw::statMonth();
 
 //print_r(Helper::getDateList('20161028', '20161105'));

@@ -129,8 +129,75 @@ class Helper
         $start = strtotime($start);
         $end = strtotime($end);
         while ($start <= $end) {
-            $result[date('Ym',$start)][] = date('Ymd',$start);
+            $result[] = date('Ymd',$start);
             $start = strtotime('+1 day',$start);
+        }
+        return $result;
+    }
+
+    /**
+     * 获取某天是当月的第几周
+     * @param string $timestamp     时间戳
+     * @return string               第N周
+     * @author      yurixu 2016-12-21
+     * @example     Helper::getWeekNumber();
+     */
+    public static function getWeekNumber($timestamp) {
+        return !empty($timestamp) ? date("W", $timestamp) - date("W", strtotime(date("Y-m-01", $timestamp))) + 1 : 0;
+    }
+
+    /**
+     * 数组分页
+     * @param array $array  待分页数组
+     * @param int   $count  每页记录数
+     * @param int   $page   页码
+     * @param int   $order  分页顺序，0：正序；1：倒序
+     * @return array        分页后的数据
+     * @author      yurixu 2016-12-21
+     * @example     Helper::arrayPage();
+     */
+    public static function arrayPage($array, $count, $page=1, $order=0) {
+        $result = array();
+        if(is_array($array) && !empty($array) && $count > 0) {
+            $page = empty($page) ? '1' : $page;
+            $start = ($page - 1) * $count; //计算每次分页的开始位置
+            if ($order == 1) {
+                $array = array_reverse($array);
+            }
+            $result = array_slice($array, $start, $count);
+        }
+        return $result;
+    }
+
+    /**
+     * 数组转换
+     * @param array $array      二维数组
+     * @param string $key       作为目标键的键名
+     * @param string|array $val 作为值的键名
+     * @return array            目标数组
+     * @author      yurixu 2016-12-21
+     * @example     Helper::arrayKeyVal();
+     * @example string          原数组：array(0 => array('id' => 1, 'name' = 'aa')),
+     *                          调用Helper::arrayKeyVal(array, 'id', 'name')返回数组array(1 => 'name')
+     * @example array           原数组：array(array('id' => 1, 'name' => 'yurixu', 'age' => 23)),
+     *                          调用Helper::arrayKeyVal(array, 'id', array('name', 'age'))返回数组array(1=>array('name' => 'yurixu', 'age' => 23))
+     */
+    public static function arrayKeyVal($array=array(), $key='', $val='') {
+        $result = array();
+        $key = Helper::EscapeString($key);
+        if (!empty($array)) {
+            if (is_array($val) && !empty($val)) {
+                foreach ($array as $item) {
+                    foreach ($val as $v) {
+                        $result[$item[$key]][$v] = $item[$v];
+                    }
+                }
+            } else {
+                $val = Helper::EscapeString($val);
+                foreach ($array as $item) {
+                    $result[$item[$key]] = $item[$val];
+                }
+            }
         }
         return $result;
     }

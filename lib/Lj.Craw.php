@@ -58,6 +58,11 @@ Class Craw {
                   `w4_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周最低价格',
                   `w4_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周最高价格',
                   `w4_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周均价',
+                  `w5_start` date NOT NULL COMMENT '第五周开始日期',
+                  `w5_end` date NOT NULL COMMENT '第五周结束日期',
+                  `w5_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第五周最低价格',
+                  `w5_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第五周最高价格',
+                  `w5_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第五周均价',
                   `create_time` datetime NOT NULL COMMENT '创建时间',
                   `operate_time` datetime NOT NULL COMMENT '最后操作时间',
                   PRIMARY KEY (`id`),
@@ -183,22 +188,34 @@ Class Craw {
 
     public static function statWeek() {
         $result = 0;
+        $page_count = 1000;
         $week = date('w');
         //每周日执行
         if($week == 0) {
             $last_week = date('Ymd', strtotime('-1 week'));
             $month = date('Ym');
-            //$pre_day = 't_stat_'.$month.'_day';
-            $pre_week = 't_stat_'.$month.'_week';
+            $now_day = 't_stat_'.$month.'_day';
+            $now_week = 't_stat_'.$month.'_week';
             $day_list = Helper::getDateList($last_week, date('Ymd'));
+            $week_num = Helper::getWeekNumber(time());
             if(!empty($day_list)) {
-                if(count($day_list) > 1) {
-                    //当前周跨月
-                    $result = self::passMonth();
-                } else {
-                    //当前周不跨月
-                    $result = self::nopassMonth($day_list);
+                $sql = ' SELECT a.buildid, a.build_no, ';
+                $sql .= '`'.implode('`,`', $day_list).'`';
+                $sql .= ' FROM '.$now_day.' a ';
+                if($month > date('Ym', strtotime($day_list[0]))) {      //周跨月
+                    $pre_month = date('Ym', strtotime($day_list[0]));
+                    $pre_day = 't_stat_'.$pre_month.'_day';
+                    $sql .= ' LEFT JOIN '.$pre_day.' b ON a.buildid = b.buildid ';
                 }
+                $data = ZDBTool::queryAll($sql);
+                if(!empty($data)) {
+                    $total_page = ceil(count($data) / $page_count);
+                    foreach(range(1, $total_page) as $k => $v) {
+                        $slice = Helper::arrayPage($data, $page_count, $v);
+                        $slice_data = Helper::arrayKeyVal($slice, 'buildid', $day_list);
+                    }
+                }
+
                 foreach($day_list as $k => $v) {
                     $pre_day = 't_stat_'.$k.'_day';
 
@@ -697,8 +714,9 @@ Class Craw {
         $sql = 'SELECT id, name FROM `t_line` ';
         $line = ZDBTool::queryAll($sql);
         $sql = ' SELECT id FROM t_district ';
+        $sql .= ' WHERE id > 100 ';
         $sql .= ' ORDER BY id ';
-        $sql .= ' LIMIT 60 ';
+        //$sql .= ' LIMIT 20 ';
         $data = ZDBTool::queryAll($sql);
         if(!empty($line) && !empty($data)) {
             $data = array_column($data, 'id');
@@ -707,20 +725,15 @@ Class Craw {
             foreach($data as $k => $v) {
                 $redis->lPush(LjConfig::REDIS_KEY, $v);
             }
-            echo "-----hhhhhh---\n";
-            print_r($redis->lRange(LjConfig::REDIS_KEY, 0, -1));
-            $size = 0;
+//            print_r($redis->lRange(LjConfig::REDIS_KEY, 0, -1));
             while($redis->lSize(LjConfig::REDIS_KEY) > 0) {
-                foreach (range(0, 1) as $k => $v) {
+                foreach (range(1, 5) as $k => $v) {
                     echo "--v = $v---\n";
-                    $craw = new CrawThread($redis, $line);
+                    $craw = new CrawThread($line);
                     $craw->start();
 //                $craw->join();
                 }
-                if($redis->lSize(LjConfig::REDIS_KEY) % 5 == 0) {
-                    echo "---sleep---\n";
-                    sleep(5);
-                }
+                sleep(4);
             }
 
             /*$craw = new CrawThread($line);

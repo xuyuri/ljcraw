@@ -22,7 +22,7 @@ class CrawThread extends Thread {
             if (!empty($data)) {
                 $num++;
                 echo "threadid=" . $this->getCurrentThreadId() . ", parentThread = ".$this->getCreatorId(). ", distinct=$data, num=$num \n";
-                //Craw::crawBuild($distinct, $this->line);
+                Craw::crawBuild($data, $this->line);
                 /*if ($num % 5 == 0) {
                     sleep(3);
                 }*/
