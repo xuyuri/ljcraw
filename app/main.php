@@ -14,7 +14,21 @@ ini_set('max_execution_time', 0);
 ini_set('memory_limit', '512M');
 //ini_set('default_socket_timeout', -1);
 //echo Helper::getWeekNumber(time());
-echo ceil(101 / 10);
+/*$info = array(
+    'buildid' => '1',
+    'build_no' => 'a',
+    'w1_start' => '20161201',
+    'w1_end' => '20161207',
+    'w1_low' => '100',
+    'w1_high' => '200',
+    'w1_ave' => '150',
+);
+
+$a = ZDBTool::multiInsert('t_stat_201611_week', array($info));
+print_r($a);
+die;*/
+
+
 /*$last_week = date('Ymd', strtotime('-1 week'));
 $day_list = Helper::getDateList($last_week, date('Ymd'));
 echo implode('`,`', $day_list) ;die;*/
@@ -26,8 +40,8 @@ echo $name;
 /*Craw::initTable();
 die;*/
 //echo Craw::crawBuild();
-/*Craw::crawData();
-die;*/
+Craw::crawData();
+die;
 //Craw::statMonth();
 
 //print_r(Helper::getDateList('20161028', '20161105'));

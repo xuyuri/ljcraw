@@ -212,7 +212,24 @@ Class Craw {
                     $total_page = ceil(count($data) / $page_count);
                     foreach(range(1, $total_page) as $k => $v) {
                         $slice = Helper::arrayPage($data, $page_count, $v);
+                        $slice_build = array_column($slice, 'buildid');
+                        $slice_flip = array_flip($slice_build);
                         $slice_data = Helper::arrayKeyVal($slice, 'buildid', $day_list);
+                        foreach($slice_data as $sk => $sv) {
+                            $info = array();
+                            $tmp = array_filter($sv);
+                            if(!empty($tmp)) {
+                                asort($tmp);
+                            }
+                            $info['w'.$week_num.'_start'] = reset($sv);
+                            $info['w'.$week_num.'_end'] = end($sv);
+                            $info['w'.$week_num.'_low'] = empty($tmp) ? 0 : reset($tmp);
+                            $info['w'.$week_num.'_high'] = empty($tmp) ? 0 : end($tmp);
+                            $info['w'.$week_num.'_ave'] = empty($tmp) ? 0 : number_format(array_sum($tmp) / count($tmp), 2, '.' ,'');
+                            $info['buildid'] = $sk;
+                            $info['build_no'] = $slice[$slice_flip[$sk]]['build_no'];
+
+                        }
                     }
                 }
 
@@ -508,7 +525,7 @@ Class Craw {
                         if($update > 0) {
                             //向day表写入价格数据
                             $day_table = 't_stat_'. date('Ym'). '_day';
-                            $day_field = date('Ymd');
+                            $day_field = '20161221';//date('Ymd');
                             $sql = ' SELECT id FROM ' . $day_table . ' WHERE build_no = :build_no LIMIT 1 ';
                             $params = array(':build_no' => $info['build_no']);
                             $build_day = ZDBTool::queryRow($sql, $params);
@@ -714,7 +731,7 @@ Class Craw {
         $sql = 'SELECT id, name FROM `t_line` ';
         $line = ZDBTool::queryAll($sql);
         $sql = ' SELECT id FROM t_district ';
-        $sql .= ' WHERE id > 100 ';
+//        $sql .= ' WHERE id > 100 ';
         $sql .= ' ORDER BY id ';
         //$sql .= ' LIMIT 20 ';
         $data = ZDBTool::queryAll($sql);
@@ -733,7 +750,7 @@ Class Craw {
                     $craw->start();
 //                $craw->join();
                 }
-                sleep(4);
+                sleep(3);
             }
 
             /*$craw = new CrawThread($line);
