@@ -21,7 +21,8 @@ class CrawThread extends Thread {
             $data = ZDBTool::redis()->rPop(LjConfig::REDIS_KEY);
             if (!empty($data)) {
                 $num++;
-                echo "threadid=" . $this->getCurrentThreadId() . ", parentThread = ".$this->getCreatorId(). ", distinct=$data, num=$num \n";
+                $time = date('Y-m-d H:i:s');
+                echo "Time:".$time.",threadid=" . $this->getCurrentThreadId() . ", parentThread = ".$this->getCreatorId(). ", distinct=$data, num=$num \n";
                 Craw::crawBuild($data, $this->line);
                 /*if ($num % 5 == 0) {
                     sleep(3);
