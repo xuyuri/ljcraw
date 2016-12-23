@@ -159,7 +159,7 @@ Class ZDBTool {
             $name = substr($name, 0, strlen($name) - 1);
             $values = substr($values, 0, strlen($values) - 1);
             $sql = "INSERT INTO $table ($name) VALUES $values ";
-            echo $sql;die;
+//            echo $sql;die;
             $result = self::execute($sql);
         }
         return $result;
@@ -180,7 +180,7 @@ Class ZDBTool {
             $values = array_values($data);
             $values_str = "('".implode("','", $values)."')";
             $sql = "INSERT INTO $table ($fields_str) VALUES $values_str ";
-            echo $sql;die;
+//            echo $sql;die;
             $result = self::execute($sql);
         }
         return $result;
