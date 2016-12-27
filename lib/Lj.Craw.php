@@ -525,7 +525,7 @@ Class Craw {
                         if($update > 0) {
                             //向day表写入价格数据
                             $day_table = 't_stat_'. date('Ym'). '_day';
-                            $day_field = '20161222';//date('Ymd');
+                            $day_field = '20161224';//date('Ymd');
                             $sql = ' SELECT id FROM ' . $day_table . ' WHERE build_no = :build_no LIMIT 1 ';
                             $params = array(':build_no' => $info['build_no']);
                             $build_day = ZDBTool::queryRow($sql, $params);
@@ -750,7 +750,7 @@ Class Craw {
                     $craw->start();
 //                $craw->join();
                 }
-                sleep(3);
+                sleep(5);
             }
 
             /*$craw = new CrawThread($line);
