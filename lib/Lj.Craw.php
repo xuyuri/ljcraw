@@ -223,13 +223,13 @@ Class Craw {
                             }
                             $info['w'.$week_num.'_start'] = reset($sv);
                             $info['w'.$week_num.'_end'] = end($sv);
-                            $info['w'.$week_num.'_low'] = empty($tmp) ? 0 : reset($tmp);
-                            $info['w'.$week_num.'_high'] = empty($tmp) ? 0 : end($tmp);
-                            $info['w'.$week_num.'_ave'] = empty($tmp) ? 0 : number_format(array_sum($tmp) / count($tmp), 2, '.' ,'');
+                            $info['w'.$week_num.'_low'] = empty($tmp) ? '0.00' : reset($tmp);
+                            $info['w'.$week_num.'_high'] = empty($tmp) ? '0.00' : end($tmp);
+                            $info['w'.$week_num.'_ave'] = empty($tmp) ? '0.00' : number_format(array_sum($tmp) / count($tmp), 2, '.' ,'');
                             $info['buildid'] = $sk;
                             $info['build_no'] = $slice[$slice_flip[$sk]]['build_no'];
-
                         }
+                        //插入数据表
                     }
                 }
 
