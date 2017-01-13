@@ -40,32 +40,45 @@ echo $name;
 /*Craw::initTable();
 die;*/
 //echo Craw::crawBuild();
-Craw::crawData();
-die;
+
+
+
+
+/*Craw::crawData();
+die;*/
+
+//Craw::statMonth();
+
+
 //Craw::statMonth();
 
 //print_r(Helper::getDateList('20161028', '20161105'));
 //echo Craw::crawArea();
 //echo Craw::crawLine();
-/*$result = Craw::crawDistrict();
-echo "----END---total-- = $result <br>";*/
-/*$info = array(
-    'buildid' => 1,
-    '20161122' => '100',
-);
-echo ZDBTool::updateRow('t_stat_201611_day', 1, $info);*/
 
-/*class AsyncOperation extends Thread {
-    public function __construct($arg){
-        $this->arg = $arg;
-    }
-    public function run(){
-        if($this->arg){
-            printf("Hello %s\n", $this->arg);
-        }
-    }
+
+////////////////////////////正式程序开始//////////////////////
+
+
+//主抓取程序
+function main() {
+    Craw::initTable();      //初始化表结构
 }
-$thread = new AsyncOperation("World");
-if($thread->start())
-    $thread->join();*/
 
+//抓取地铁线路
+function crawLine() {
+    $result = Craw::crawLine();
+    echo "--- crawLine update: $result \n";
+}
+
+//抓取区域
+function crawArea() {
+    $result = Craw::crawArea();
+    echo "--- crawArea update: $result \n";
+}
+
+//抓取小区
+function crawDistrict() {
+    $result = Craw::crawDistrict();
+    echo "--- crawDistrict update: $result \n";
+}

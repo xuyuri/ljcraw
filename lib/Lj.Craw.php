@@ -26,7 +26,7 @@ Class Craw {
                   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
                   `buildid` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '房源ID，对应t_build表ID',
                   `build_no` varchar(50) NOT NULL DEFAULT '' COMMENT '链家房源编码',
-                  `".$date."` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '".$date."日价格',
+                  `".$date."` decimal(10,2) UNSIGNED NOT NULL DEFAULT '0.00' COMMENT '".$date."日价格',
                   `create_time` datetime NOT NULL COMMENT '创建时间',
                   `operate_time` datetime NOT NULL COMMENT '最后操作时间',
                   PRIMARY KEY (`id`),
@@ -43,26 +43,31 @@ Class Craw {
                   `w1_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第一周最低价格',
                   `w1_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第一周最高价格',
                   `w1_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第一周均价',
+                  `w1_rate` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT '第一周价格升/降率',
                   `w2_start` date NOT NULL COMMENT '第二周开始日期',
                   `w2_end` date NOT NULL COMMENT '第二周结束日期',
                   `w2_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第二周最低价格',
                   `w2_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第二周最高价格',
                   `w2_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第二周均价',
+                  `w2_rate` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT '第二周价格升/降率',
                   `w3_start` date NOT NULL COMMENT '第三周开始日期',
                   `w3_end` date NOT NULL COMMENT '第三周结束日期',
                   `w3_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第三周最低价格',
                   `w3_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第三周最高价格',
                   `w3_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第三周均价',
+                  `w3_rate` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT '第三周价格升/降率',
                   `w4_start` date NOT NULL COMMENT '第四周开始日期',
                   `w4_end` date NOT NULL COMMENT '第四周结束日期',
                   `w4_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周最低价格',
                   `w4_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周最高价格',
                   `w4_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第四周均价',
+                  `w4_rate` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT '第四周价格升/降率',
                   `w5_start` date NOT NULL COMMENT '第五周开始日期',
                   `w5_end` date NOT NULL COMMENT '第五周结束日期',
                   `w5_low` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第五周最低价格',
                   `w5_high` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第五周最高价格',
                   `w5_ave` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '第五周均价',
+                  `w5_rate` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT '第五周价格升/降率',
                   `create_time` datetime NOT NULL COMMENT '创建时间',
                   `operate_time` datetime NOT NULL COMMENT '最后操作时间',
                   PRIMARY KEY (`id`),
@@ -112,12 +117,14 @@ Class Craw {
      * @example             Craw::statMonth();
      */
     public static function statMonth() {
-        $result = 0;
-        $day = 1;//date('d');
-        if($day == 1) {
-            
+        $result = false;
+        $total = 0;
+        $insert = 0;
+        $update = 0;
+        $day = date('d');
+        if($day == 13) {
             //上一月
-            $month = '201611';//date('Ym', strtotime('-1 month'));
+            $month = date('Ym', strtotime('-1 month'));
             $pre_day = 't_stat_'.$month.'_day';
             $pre_month = 't_stat_'.$month.'_month';
             $exclude = array('id', 'buildid', 'build_no', 'create_time', 'operate_time');
@@ -131,9 +138,9 @@ Class Craw {
                     $column[] = 'buildid';
                     $column[] = 'build_no';
                     $sql = ' SELECT MAX( id ) AS maxid FROM '.$pre_day;
-                    $total = ZDBTool::queryRow($sql);
-                    if(!empty($total)) {
-                        $maxid = $total['maxid'];
+                    $max = ZDBTool::queryRow($sql);
+                    if(!empty($max)) {
+                        $maxid = $max['maxid'];
                         $pernum = 500;  //每次执行的条数
                         $pages = ceil($maxid / $pernum);
                         for ($i = 0; $i < $pages; $i++) {
@@ -141,18 +148,20 @@ Class Craw {
                             $condition = ' WHERE id BETWEEN :start AND :end ';
                             $params = array(':start'=>$i * 500 + 1,':end'=>($i + 1) * 500);
                             $data = ZDBTool::getQuery($pre_day, $column, $condition, $params);
+//                            print_r($data);die;
                             if(!empty($data)) {
                                 foreach($data as $k => $v) {
                                     $info = array();
                                     $tmp = $v;
                                     unset($tmp['buildid']);
                                     unset($tmp['build_no']);
-                                    $tmp = array_filter($tmp, function($e){
-                                        $e = (float)$e;
-                                        return !empty($e);
-                                    });
+                                    $tmp = array_map(function ($e) {return floatval($e);}, $tmp);
+                                    $tmp = array_filter($tmp);
                                     if(!empty($tmp)) {
-                                        asort($tmp);
+                                        $tmp_key = array_keys($tmp);
+                                        array_multisort($tmp, $tmp_key);
+                                        $tmp = array_combine($tmp_key, $tmp);
+
                                         list($low_key, $low) = (reset($tmp) ? each($tmp) : each($tmp));
                                         list($high_key, $high) = (end($tmp) ? each($tmp) : each($tmp));
                                         $count = count($tmp);
@@ -169,17 +178,30 @@ Class Craw {
                                         $info['high_date'] = $high_key;
                                         $info['average'] = $average;
                                         $info['rate'] = $rate;
-                                        print_r($info);
-                                        $result += ZDBTool::multiInsert("$pre_month", array($info));
-                                        echo "--result--= $result\n";
-                                        //die;
+//                                        print_r($info);die;
+
+                                        $fields = array('id');
+                                        $condition = ' WHERE buildid = :buildid AND build_no = :build_no ';
+                                        $params = array(':buildid' => $v['buildid'], ':build_no' => $v['build_no']);
+                                        $exists = ZDBTool::getQuery($pre_month, $fields, $condition, $params, 1);
+                                        if(!empty($exists)) {       //更新
+                                            ZDBTool::updateRow($pre_month, $exists['id'], $info);
+                                            $update ++;
+                                        } else {                    //插入
+                                            ZDBTool::insert($pre_month, $info);
+                                            $insert ++;
+                                        }
+                                        $total = $insert + $update;
+                                        if($total % 100 == 0) {
+                                            echo "statMonth -- total: $total, insert: $insert, update: $update\n";
+                                        }
                                     }
                                 }
                             }
                         }
-
+                        echo "-- END -- statMonth -- total: $total, insert: $insert, update: $update\n";
+                        $result = $total > 0 ? true : false;
                     }
-
                 }
             }
         }
@@ -187,7 +209,10 @@ Class Craw {
     }
 
     public static function statWeek() {
-        $result = 0;
+        $result = false;
+        $insert = 0;
+        $update = 0;
+        $total = 0;
         $page_count = 1000;
         $week = date('w');
         //每周日执行
@@ -207,7 +232,10 @@ Class Craw {
                     $pre_day = 't_stat_'.$pre_month.'_day';
                     $sql .= ' LEFT JOIN '.$pre_day.' b ON a.buildid = b.buildid ';
                 }
+                $sql .= ' ORDER BY a.buildid ';
+//                $sql .= ' LIMIT 5 ';       //@todo test
                 $data = ZDBTool::queryAll($sql);
+//                print_r($data);die;
                 if(!empty($data)) {
                     $total_page = ceil(count($data) / $page_count);
                     foreach(range(1, $total_page) as $k => $v) {
@@ -215,45 +243,60 @@ Class Craw {
                         $slice_build = array_column($slice, 'buildid');
                         $slice_flip = array_flip($slice_build);
                         $slice_data = Helper::arrayKeyVal($slice, 'buildid', $day_list);
+
                         foreach($slice_data as $sk => $sv) {
                             $info = array();
+                            $sv = array_map(function ($e) {return floatval($e);}, $sv);
                             $tmp = array_filter($sv);
                             if(!empty($tmp)) {
-                                asort($tmp);
+//                                asort($tmp);
+                                $tmp_key = array_keys($tmp);
+                                array_multisort($tmp, $tmp_key);
+                                $tmp = array_combine($tmp_key, $tmp);
                             }
-                            $info['w'.$week_num.'_start'] = reset($sv);
-                            $info['w'.$week_num.'_end'] = end($sv);
+                            $sv_key = array_keys($sv);
+                            $tmp_key = array_keys($tmp);
+                            $low_date = reset($tmp_key);
+                            $high_date = end($tmp_key);
+                            $rate = 0;
+                            $info['w'.$week_num.'_start'] = reset($sv_key);
+                            $info['w'.$week_num.'_end'] = end($sv_key);
                             $info['w'.$week_num.'_low'] = empty($tmp) ? '0.00' : reset($tmp);
                             $info['w'.$week_num.'_high'] = empty($tmp) ? '0.00' : end($tmp);
                             $info['w'.$week_num.'_ave'] = empty($tmp) ? '0.00' : number_format(array_sum($tmp) / count($tmp), 2, '.' ,'');
+                            if($info['w'.$week_num.'_low'] > 0 ) {
+                                $rate = ($info['w' . $week_num . '_high'] - $info['w' . $week_num . '_low']) / $info['w' . $week_num . '_low'];
+                                $rate = $low_date <= $high_date ? $rate : '-' . $rate;
+                                $rate = number_format($rate, 2, '.', '');
+                            }
+                            $info['w'.$week_num.'_rate'] = $rate;
                             $info['buildid'] = $sk;
                             $info['build_no'] = $slice[$slice_flip[$sk]]['build_no'];
+                            $fields = array('id');
+                            $condition = ' WHERE buildid = :buildid AND build_no = :build_no ';
+                            $params = array(':buildid' => $sk, ':build_no' => $slice[$slice_flip[$sk]]['build_no']);
+                            $exists = ZDBTool::getQuery($now_week, $fields, $condition, $params, 1);
+                            if(!empty($exists)) {       //更新
+                                ZDBTool::updateRow($now_week, $exists['id'], $info);
+                                $update ++;
+                            } else {                    //插入
+                                ZDBTool::insert($now_week, $info);
+                                $insert ++;
+                            }
+                            $total = $insert + $update;
+                            if($total % 100 == 0) {
+                                echo "statWeek -- total: $total, insert: $insert, update: $update\n";
+                            }
                         }
-                        //插入数据表
                     }
-                }
-
-                foreach($day_list as $k => $v) {
-                    $pre_day = 't_stat_'.$k.'_day';
-
+                    echo "-- END -- statWeek -- total: $total, insert: $insert, update: $update\n";
+                    $result = $total > 0 ? true : false;
                 }
             }
-
         }
+        return $result;
     }
 
-    public static function passMonth() {
-
-    }
-
-    public static function noPassMonth($dayList) {
-        if(!empty($dayList)) {
-            $month = date('Ym');
-            $pre_day = 't_stat_'.$month.'_day';
-            $pre_week = 't_stat_'.$month.'_week';
-
-        }
-    }
 
 
     /**
@@ -288,7 +331,7 @@ Class Craw {
     }
 
     /**
-     * 抓取区域数据（仅运行一次）
+     * 抓取区域数据
      * @return array        插入数据表t_area记录数
      * @author              yurixu 2016-11-17
      * @example             Craw::crawArea();
@@ -310,7 +353,7 @@ Class Craw {
     }
 
     /**
-     * 抓取地铁数据（仅运行一次）
+     * 抓取地铁数据
      * @return array        插入数据表t_line记录数
      * @author              yurixu 2016-11-17
      * @example             Craw::crawLine();
@@ -325,13 +368,14 @@ Class Craw {
             $contents = Helper::getContents($url);
             if(!empty($contents)) {
                 $result += self::parseLine($contents, $v['id']);
+                sleep(2);
             }
         }
         return $result;
     }
 
     /**
-     * 抓取小区数据（仅运行一次）
+     * 抓取小区数据
      * @return array        插入小区数据表t_district记录数
      * @author              yurixu 2016-11-20
      * @example             Craw::crawDistrict();
@@ -525,7 +569,7 @@ Class Craw {
                         if($update > 0) {
                             //向day表写入价格数据
                             $day_table = 't_stat_'. date('Ym'). '_day';
-                            $day_field = '20161224';//date('Ymd');
+                            $day_field = date('Ymd');
                             $sql = ' SELECT id FROM ' . $day_table . ' WHERE build_no = :build_no LIMIT 1 ';
                             $params = array(':build_no' => $info['build_no']);
                             $build_day = ZDBTool::queryRow($sql, $params);
@@ -571,7 +615,6 @@ Class Craw {
     public static function parseArea($content, $parentid) {
         $parentid = Helper::CheckPlusInt($parentid);
         $result = 0;
-        $area = array();
         $table = 't_area';
         if(!empty($content)) {
             $head_preg = '~<div class="option-list sub-option-list">([\s\S]*?)</div>~';
@@ -583,11 +626,23 @@ Class Craw {
                     $area_no = $list[1];
                     $area_name = $list[2];
                     foreach($area_name as $k => $v) {
-                        $area[$k]['lj_no'] = $area_no[$k];
-                        $area[$k]['name'] = $v;
-                        $area[$k]['parentid'] = $parentid;
+                        $area = array();
+                        $area['lj_no'] = $area_no[$k];
+                        $area['name'] = $v;
+                        $area['parentid'] = $parentid;
+
+                        $fields = array('id');
+                        $condition = ' WHERE lj_no = :lj_no ';
+                        $params = array(':lj_no' => $area_no[$k]);
+                        $exists = ZDBTool::getQuery($table, $fields, $condition, $params, 1);
+                        if(empty($exists)) {       //插入
+                            $nret = ZDBTool::insert($table, $area);
+                            if($nret) {
+                                $result ++ ;
+                            }
+                        }
+                        echo "--- parseArea -> lj_no: ".$area_no[$k].", result: $result \n";
                     }
-                    $result = ZDBTool::multiInsert($table, $area);
                 }
             }
         }
@@ -604,7 +659,6 @@ Class Craw {
     public static function parseLine($content, $parentid) {
         $parentid = Helper::CheckPlusInt($parentid);
         $result = 0;
-        $line = array();
         $table = 't_line';
         if(!empty($content)) {
             $head_preg = '~<div class="option-list sub-option-list">([\s\S]*?)</div>~';
@@ -616,12 +670,24 @@ Class Craw {
                     $subway_no = $list[1];
                     $subway_name = $list[2];
                     foreach($subway_name as $k => $v) {
-                        $line[$k]['type'] = 2;
-                        $line[$k]['lj_no'] = $subway_no[$k];
-                        $line[$k]['name'] = $v;
-                        $line[$k]['parentid'] = $parentid;
+                        $line = array();
+                        $line['type'] = 2;
+                        $line['lj_no'] = $subway_no[$k];
+                        $line['name'] = $v;
+                        $line['parentid'] = $parentid;
+
+                        $fields = array('id');
+                        $condition = ' WHERE lj_no = :lj_no ';
+                        $params = array(':lj_no' => $subway_no[$k]);
+                        $exists = ZDBTool::getQuery($table, $fields, $condition, $params, 1);
+                        if(empty($exists)) {       //插入
+                            $nret = ZDBTool::insert($table, $line);
+                            if($nret) {
+                                $result ++ ;
+                            }
+                        }
+                        echo "--- parseLine -> lj_no: ".$subway_no[$k].", result: $result \n";
                     }
-                    $result = ZDBTool::multiInsert($table, $line);
                 }
             }
         }
@@ -702,6 +768,7 @@ Class Craw {
                 $district_no = $list[1];
                 $district_line = $list[2];
                 foreach($district_no as $k => $v) {
+                    $info = array();
                     if(!empty($district_line[$k])) {
                         preg_match('~近地铁(\S+线)(\S+)站~', $district_line[$k], $site);
                         if(!empty($site)) {
@@ -715,18 +782,40 @@ Class Craw {
                             }
                         }
                     }
-                    $district[$k]['lj_no'] = $v;
+                    /*$district[$k]['lj_no'] = $v;
                     $district[$k]['areaPid'] = $areaPid;
                     $district[$k]['areaid'] = $areaid;
                     $district[$k]['lineid'] = $lineid;
-                    $district[$k]['siteid'] = $siteid;
+                    $district[$k]['siteid'] = $siteid;*/
+                    //modify by yurixu 2017-1-13
+                    $info['lj_no'] = $v;
+                    $info['areaPid'] = $areaPid;
+                    $info['areaid'] = $areaid;
+                    $info['lineid'] = $lineid;
+                    $info['siteid'] = $siteid;
+
+                    $fields = array('id');
+                    $condition = ' WHERE lj_no = :lj_no ';
+                    $params = array(':lj_no' => $v);
+                    $exists = ZDBTool::getQuery($table, $fields, $condition, $params, 1);
+                    if(empty($exists)) {       //插入
+                        $nret = ZDBTool::insert($table, $info);
+                        if($nret) {
+                            $result ++ ;
+                        }
+                    }/* else {                    //更新
+                        ZDBTool::updateRow($table, $exists['id'], $info);
+                    }*/
                 }
-                $result = ZDBTool::multiInsert($table, $district);
+//                $result = ZDBTool::multiInsert($table, $district);
             }
         }
         return $result;
     }
 
+    /**
+     * 多线程抓取房源数据
+     */
     public static function crawData() {
         $sql = 'SELECT id, name FROM `t_line` ';
         $line = ZDBTool::queryAll($sql);
