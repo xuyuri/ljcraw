@@ -165,6 +165,14 @@ Class ZDBTool {
         return $result;
     }
 
+    /**
+     * 插入单条记录
+     * @param string $table     数据表名称
+     * @param array  $data      插入数据
+     * @return int   影响记录数
+     * @author       yurixu 2016-11-17
+     * @example      ZDBTool::insert()
+     */
     public static function insert($table, $data=array()) {
         date_default_timezone_set('PRC');
         $result = 0;
@@ -236,6 +244,36 @@ Class ZDBTool {
         }
         //echo $sql;die;
         $result = $type ? self::queryRow($sql, $params) :self::queryAll($sql, $params) ;
+        return $result;
+    }
+
+    /**
+     * 查询满足条件的数据条数
+     * @param string $table         数据表名
+     * @param array  $fields        查询字段
+     * @param string $condition     查询条件
+     * @param array  $params        查询条件参数
+     * @return int                  数据条数
+     * @author       yurixu 2017-01-17
+     * @example      ZDBTool::getQueryCount()
+     */
+    public static function getQueryCount($table, $condition='', $params=array(), $fields='id') {
+        $fields = !empty($fields) ? $fields : 'id';
+        $condition = (is_string($condition) && !empty($condition)) ? $condition : '';
+        $params = !empty($params) && is_array($params) ? $params : array();
+        $result = 0;
+
+        if(!empty($fields)) {
+            $sql = ' SELECT COUNT('.$fields.') AS num FROM '.$table;
+            if(!empty($condition)) {
+                $sql .= $condition;
+            }
+//            echo $sql;die;
+            $data = self::queryRow($sql, $params);
+            if(!empty($data)) {
+                $result = (int)$data['num'];
+            }
+        }
         return $result;
     }
 

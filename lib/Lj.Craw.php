@@ -7,7 +7,8 @@
  */
 require_once "Lj.Config.php";
 require_once "Lj.Helper.php";
-require_once "Lj.crawThread.php";
+require_once "Lj.ZDBTool.php";
+require_once "Lj.CrawThread.php";
 Class Craw {
     /**
      * 每日执行数据表检测/初始化
@@ -109,6 +110,7 @@ Class Craw {
                 ZDBTool::execute($column_sql);
             }
         }
+        echo "--- initTable success ---\n";
     }
 
     /**
@@ -488,7 +490,8 @@ Class Craw {
                         $info['meters'] = $meters ? str_replace('&nbsp;', '', $meters[1]) : '';
                         //朝向
                         $info['direction'] = $meters ? str_replace('&nbsp;', '', $meters[2]) : '';
-                        preg_match('~<div class="con"><a href="http://bj.lianjia.com/zufang/(.*?)/">(.*?)租房</a><span>/</span>(.*?)楼层\(共(\d+)层\)<span>/</span>(\d+)年建(.*?)</div>~', $v, $area);
+//                        preg_match('~<div class="con"><a href="http://bj.lianjia.com/zufang/(.*?)/">(.*?)租房</a><span>/</span>(.*?)楼层\(共(\d+)层\)<span>/</span>(\d+)年建(.*?)</div>~', $v, $area);
+                        preg_match('~<div class="con"><a href="http://bj.lianjia.com/zufang/(.*?)/">(.*?)租房</a><span>/</span>(.*?)楼层\(共(\d+)层\)<span>/</span>(.*?)</div>~', $v, $area);
                         /*//区域ID
                         $info['area'] = $area ? $area[1] : '';
                         //区域名称
@@ -510,10 +513,18 @@ Class Craw {
                         }
                         //楼层
                         $info['floor'] = $area ? $area[4] : 0;
-                        //建造时间
-                        $info['build_year'] = $area ? $area[5] : '0';
-                        //板楼类型
-                        $info['build_type'] = $area ? $area[6] : '';
+                        preg_match('~(\d+)年建(.*)~', $area[5], $build_type);
+                        if(!empty($build_type)) {
+                            //建造时间
+                            $info['build_year'] = !empty($build_type[1]) ? $build_type[1] : '0';
+                            //板楼类型
+                            $info['build_type'] = !empty($build_type[2]) ? $build_type[2] : '';
+                        } else {
+                            //建造时间
+                            $info['build_year'] = '0';
+                            //板楼类型
+                            $info['build_type'] = $area ? $area[5] : '';
+                        }
                         preg_match('~<span class="fang-subway-ex"><span>距离(\d+号线)(.*?)站.*?</span>~',$v, $subway);
                         /*//地铁线
                         $info['line'] = $subway ? $subway[1] : 0;
@@ -552,7 +563,7 @@ Class Craw {
                         //更新日期
                         $info['update_time'] = $update_time ? $update_time[1] : '';
                         $info['is_rent'] = 0;
-//                        print_r($info);
+                        print_r($info); die;
                     }
                     if(!empty($info)) {
                         $sql = ' SELECT id FROM t_build WHERE build_no = :build_no LIMIT 1 ';
@@ -761,12 +772,14 @@ Class Craw {
         if(!empty($content) && !empty($line) && $areaid > 0) {
             $line_name = array_column($line, 'name');
             $line_flip = array_flip($line_name);
-            $head_preg = '~<div class="title">\s*<a href="http://bj.lianjia.com/xiaoqu/(\d+)/" target="_blank">\S+</a>\s*</div>[\s\S]*?<div class="tagList">([\s\S]*?)</div>~';
+            $head_preg = '~<div class="title">\s*<a href="http://bj.lianjia.com/xiaoqu/(\d+)/" target="_blank">(\S+)</a>\s*</div>[\s\S]*?<div class="tagList">([\s\S]*?)</div>~';
             $list = array();
             preg_match_all($head_preg, $content, $list);
+//            print_r($list);die;
             if (!empty($list)) {
                 $district_no = $list[1];
-                $district_line = $list[2];
+                $district_name = $list[2];
+                $district_line = $list[3];
                 foreach($district_no as $k => $v) {
                     $info = array();
                     if(!empty($district_line[$k])) {
@@ -789,6 +802,7 @@ Class Craw {
                     $district[$k]['siteid'] = $siteid;*/
                     //modify by yurixu 2017-1-13
                     $info['lj_no'] = $v;
+                    $info['name'] = !empty($district_name[$k]) ? $district_name[$k] : '';
                     $info['areaPid'] = $areaPid;
                     $info['areaid'] = $areaid;
                     $info['lineid'] = $lineid;
@@ -803,9 +817,9 @@ Class Craw {
                         if($nret) {
                             $result ++ ;
                         }
-                    }/* else {                    //更新
+                    } else {                    //更新
                         ZDBTool::updateRow($table, $exists['id'], $info);
-                    }*/
+                    }
                 }
 //                $result = ZDBTool::multiInsert($table, $district);
             }
@@ -815,6 +829,8 @@ Class Craw {
 
     /**
      * 多线程抓取房源数据
+     * @author                  yurixu 2016-12-20
+     * @example                 Craw::crawData();
      */
     public static function crawData() {
         $sql = 'SELECT id, name FROM `t_line` ';
@@ -831,7 +847,8 @@ Class Craw {
             foreach($data as $k => $v) {
                 $redis->lPush(LjConfig::REDIS_KEY, $v);
             }
-//            print_r($redis->lRange(LjConfig::REDIS_KEY, 0, -1));
+            /*print_r($redis->lRange(LjConfig::REDIS_KEY, 0, -1));
+            die;*/
             while($redis->lSize(LjConfig::REDIS_KEY) > 0) {
                 foreach (range(1, 5) as $k => $v) {
                     echo "--v = $v---\n";
@@ -841,9 +858,7 @@ Class Craw {
                 }
                 sleep(5);
             }
-
-            /*$craw = new CrawThread($line);
-            $craw->start();*/
         }
     }
+
 }
