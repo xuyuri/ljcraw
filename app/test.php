@@ -18,5 +18,5 @@ if($thread->start())
     $thread->join();
 */
 //$num = Parse::getLine(array('id', 'name'), 1);
-$num = Parse::getAreaBuild();
+$num = Parse::getPriceBuild();
 print_r($num);

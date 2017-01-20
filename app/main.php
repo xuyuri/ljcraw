@@ -6,6 +6,7 @@
  * Time: 22:45
  */
 require_once "../lib/Lj.Craw.php";
+require_once "../lib/Lj.Parse.php";
 require_once "../lib/Lj.ZDBTool.php";
 
 //Craw::crawBuild('2011047640650');
@@ -59,13 +60,14 @@ die;*/
 
 ////////////////////////////正式程序开始//////////////////////
 
-//main();
-crawDistrict();
+main();
+//crawDistrict();
 
 //主抓取程序
 function main() {
-    Craw::initTable();      //初始化表结构
-    Craw::crawData();       //抓取房源数据
+    Craw::initTable();          //初始化表结构
+    Craw::crawData();           //抓取房源数据
+    Parse::updateRentState();   //更新房源租赁状态
 
 
 }

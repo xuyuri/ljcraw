@@ -396,6 +396,7 @@ Class Craw {
                 echo $v['lj_no']."\n";
                 $url = LjConfig::DISTRICT_BASE_URL . $v['lj_no'];
                 $contents = Helper::getContents($url);
+//                echo $contents;die;
                 if (!empty($contents)) {
                     $result += self::parseDistrict($contents, $line, $v['parentid'], $v['id'], $url);
                     echo "---result--- = $result ---\n";
@@ -563,7 +564,7 @@ Class Craw {
                         //更新日期
                         $info['update_time'] = $update_time ? $update_time[1] : '';
                         $info['is_rent'] = 0;
-                        print_r($info); die;
+//                        print_r($info); die;
                     }
                     if(!empty($info)) {
                         $sql = ' SELECT id FROM t_build WHERE build_no = :build_no LIMIT 1 ';
@@ -772,14 +773,16 @@ Class Craw {
         if(!empty($content) && !empty($line) && $areaid > 0) {
             $line_name = array_column($line, 'name');
             $line_flip = array_flip($line_name);
-            $head_preg = '~<div class="title">\s*<a href="http://bj.lianjia.com/xiaoqu/(\d+)/" target="_blank">(\S+)</a>\s*</div>[\s\S]*?<div class="tagList">([\s\S]*?)</div>~';
+//            $head_preg = '~<div class="title">\s*<a href="http://bj.lianjia.com/xiaoqu/(\d+)/" target="_blank">(\S+)</a>\s*</div>([\s\S]*?)<div class="tagList">([\s\S]*?)</div>~';
+            $head_preg = '~<div class="title">\s*<a href="http://bj.lianjia.com/xiaoqu/(\d+)/" target="_blank">(\S+)</a>\s*</div>[\s\S]*?(\d+)套正在出租[\s\S]*?<div class="tagList">([\s\S]*?)</div>~';
             $list = array();
             preg_match_all($head_preg, $content, $list);
-//            print_r($list);die;
+
             if (!empty($list)) {
-                $district_no = $list[1];
-                $district_name = $list[2];
-                $district_line = $list[3];
+                $district_no = $list[1];        //小区编号
+                $district_name = $list[2];      //小区名称
+                $district_rent = $list[3];      //小区正在出租房源数量
+                $district_line = $list[4];      //位置信息
                 foreach($district_no as $k => $v) {
                     $info = array();
                     if(!empty($district_line[$k])) {
@@ -803,11 +806,14 @@ Class Craw {
                     //modify by yurixu 2017-1-13
                     $info['lj_no'] = $v;
                     $info['name'] = !empty($district_name[$k]) ? $district_name[$k] : '';
+                    $info['house'] = !empty($district_rent[$k]) ? $district_rent[$k] : '0';
                     $info['areaPid'] = $areaPid;
                     $info['areaid'] = $areaid;
                     $info['lineid'] = $lineid;
                     $info['siteid'] = $siteid;
+                    $info['is_rent'] = (int)$info['house'] > 0 ? 1 : 0;
 
+//                    print_r($info);die;
                     $fields = array('id');
                     $condition = ' WHERE lj_no = :lj_no ';
                     $params = array(':lj_no' => $v);
@@ -835,7 +841,7 @@ Class Craw {
     public static function crawData() {
         $sql = 'SELECT id, name FROM `t_line` ';
         $line = ZDBTool::queryAll($sql);
-        $sql = ' SELECT id FROM t_district ';
+        $sql = ' SELECT id FROM t_district WHERE is_rent = 1 ';
 //        $sql .= ' WHERE id > 100 ';
         $sql .= ' ORDER BY id ';
         //$sql .= ' LIMIT 20 ';
@@ -856,7 +862,7 @@ Class Craw {
                     $craw->start();
 //                $craw->join();
                 }
-                sleep(5);
+                sleep(4);
             }
         }
     }

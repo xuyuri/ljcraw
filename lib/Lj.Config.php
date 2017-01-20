@@ -34,6 +34,6 @@ Class LjConfig {
     /*const CURL_PROXY_HOST = "0.0.0.0";
     const CURL_PROXY_PORT = 0;*/
 
-    const CURL_PROXY_HOST = "tcp://proxy.tencent.com";
+    const CURL_PROXY_HOST = "dGNwOi8vcHJveHkudGVuY2VudC5jb20=";
     const CURL_PROXY_PORT = 8080;
 }
