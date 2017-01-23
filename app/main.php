@@ -60,8 +60,9 @@ die;*/
 
 ////////////////////////////正式程序开始//////////////////////
 
+crawDistrict();
+sleep(10);
 main();
-//crawDistrict();
 
 //主抓取程序
 function main() {
