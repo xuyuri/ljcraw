@@ -842,7 +842,7 @@ Class Craw {
         $sql = 'SELECT id, name FROM `t_line` ';
         $line = ZDBTool::queryAll($sql);
         $sql = ' SELECT id FROM t_district WHERE is_rent = 1 ';
-//        $sql .= ' WHERE id > 100 ';
+        $sql .= ' AND id > 8140 ';
         $sql .= ' ORDER BY id ';
         //$sql .= ' LIMIT 20 ';
         $data = ZDBTool::queryAll($sql);
@@ -860,7 +860,9 @@ Class Craw {
                     echo "--v = $v---\n";
                     $craw = new CrawThread($line);
                     $craw->start();
-//                $craw->join();
+               		// $craw->join();
+               		$craw->kill();
+               		unset($craw);
                 }
                 sleep(4);
             }
