@@ -1,24 +1,29 @@
 <?php
 /**
- * Created by PhpStorm.
+ * 主要为U租程序提供功能
  * User: Eliot
- * Date: 2016/11/9
- * Time: 22:45
+ * Date: 2018/4/22
+ * Time: 9:41
  */
 require_once "../lib/Lj.Craw.php";
 require_once "../lib/Lj.ZDBTool.php";
 
-//Craw::crawBuild('2011047640650');
 ini_set('max_execution_time', 0);
 ini_set('memory_limit', '512M');
 
+//抓取区域
 //Craw::crawArea();
+
+//抓取地铁线路
 //Craw::crawLine();
+
+//抓取地铁站点与区域的关系
 getSiteArea();
 
 //获取地铁站点对应的行政区
-function getSiteArea() {
-    $file = 'site_area.txt';
+function getSiteArea()
+{
+    $file = 'site_area_' . LjConfig::CITY . '.txt';
     echo "------- START --------";
     $fields = array('name', 'lj_no');
     $condition = ' WHERE type = 2 ';
@@ -29,10 +34,10 @@ function getSiteArea() {
     }
     $num = 0;
     $result = array();
-    foreach($data as $k => $v) {
-        $num ++;
+    foreach ($data as $k => $v) {
+        $num++;
         $parse_data = array();
-        $url = 'https://sh.lianjia.com/ditiezufang/'.$v['lj_no'];
+        $url = 'http://' . LjConfig::CITY . LjConfig::LINE_BASE_URL . $v['lj_no'];
         $content = Helper::getContents($url);
         if (!empty($content)) {
             $parse_data = parseBuild($content, $v['lj_no']);
@@ -42,7 +47,7 @@ function getSiteArea() {
         } elseif ($parse_data) {
             sleep(3);
         }
-        echo "----- NUM: $num [".$v['name']."] total = ".count($parse_data)."-----\n\n";
+        echo "----- NUM: $num [" . $v['name'] . "] total = " . count($parse_data) . "-----\n\n";
         $result[$v['name']] = $parse_data;
     }
 
@@ -51,14 +56,15 @@ function getSiteArea() {
     echo "------- END --------";
 }
 
-function parseBuild($content, $lj_no) {
+function parseBuild($content, $lj_no)
+{
     $result = array();
     $page_size = 30;
     if (empty($content)) {
         echo "[parseBuild] content is empty\n";
         return $result;
     }
-    $head_preg = '~<h2>共有<span>(\d+)</span>套上海在租房源~';
+    $head_preg = '~<h2>共有<span>(\d+)</span>套' . LjConfig::CITY_NAME . '在租房源~';
     $head = array();
     preg_match($head_preg, $content, $head);
     if (empty($head)) {
@@ -67,7 +73,7 @@ function parseBuild($content, $lj_no) {
     }
     $total = $head[1];
     echo "[parseBuild] total = $total\n";
-    if($total > 0 && $total < 10000) {      //添加小于1万的逻辑，因为http://bj.lianjia.com/zufang/c1112900488982796/，小区不存在，返回的是所有房源
+    if ($total > 0 && $total < 10000) {      //添加小于1万的逻辑，因为http://bj.lianjia.com/zufang/c1112900488982796/，小区不存在，返回的是所有房源
         $result = parseBuildPage($content);
         if (empty($result)) {
             echo "[parseBuild] parseBuildPage is empty \n";
@@ -75,9 +81,9 @@ function parseBuild($content, $lj_no) {
         }
         $page = ceil($total / $page_size);
 //        echo "[parseBuild] total page = $page \n";
-        if($page > 1) {
-            for($i=2; $i<=$page; $i++) {
-                $page_url = "https://sh.lianjia.com/ditiezufang/$lj_no/pg$i/";
+        if ($page > 1) {
+            for ($i = 2; $i <= $page; $i++) {
+                $page_url = 'http://' . LjConfig::CITY . LjConfig::LINE_BASE_URL . "$lj_no/pg$i/";
                 $contents = Helper::getContents($page_url);
                 if (!empty($contents)) {
                     $page_data = parseBuildPage($contents);
@@ -95,7 +101,8 @@ function parseBuild($content, $lj_no) {
     return $result;
 }
 
-function parseBuildPage($content) {
+function parseBuildPage($content)
+{
     $result = array();
     if (empty($content)) {
         echo "[parseBuildPage] content is empty\n";
@@ -111,74 +118,13 @@ function parseBuildPage($content) {
     }
     $list = $list[0];
 
-    foreach($list as $k => $v) {
+    foreach ($list as $k => $v) {
         preg_match('~data-id="(\S+)"~', $v, $buildid);
-//        echo "--- buildid --- = ".json_encode($buildid);
-        if(!empty($buildid)) {
-            preg_match('~<div class="con"><a href="https://sh.lianjia.com/zufang/.*?/">(.*?)租房</a>~', $v, $area);
+        if (!empty($buildid)) {
+            preg_match('~<div class="con"><a href="https://' . LjConfig::CITY . '.lianjia.com/zufang/.*?/">(.*?)租房</a>~', $v, $area);
             $result[] = $area ? $area[1] : '';
         }
     }
     $result = array_unique($result);
     return $result;
 }
-
-
-
-
-//ini_set('default_socket_timeout', -1);
-//echo Helper::getWeekNumber(time());
-/*$info = array(
-    'buildid' => '1',
-    'build_no' => 'a',
-    'w1_start' => '20161201',
-    'w1_end' => '20161207',
-    'w1_low' => '100',
-    'w1_high' => '200',
-    'w1_ave' => '150',
-);
-
-$a = ZDBTool::multiInsert('t_stat_201611_week', array($info));
-print_r($a);
-die;*/
-
-
-/*$last_week = date('Ymd', strtotime('-1 week'));
-$day_list = Helper::getDateList($last_week, date('Ymd'));
-echo implode('`,`', $day_list) ;die;*/
-
-/*ZDBTool::redis()->set('sc:user', 'xyw');
-$name = ZDBTool::redis()->get('sc:user');
-echo $name;
-//ZDBTool::redis()->close();*/
-/*Craw::initTable();
-die;*/
-//echo Craw::crawBuild();
-//Craw::crawData();
-//Craw::statMonth();
-
-//print_r(Helper::getDateList('20161028', '20161105'));
-//echo Craw::crawArea();
-//echo Craw::crawLine();
-/*$result = Craw::crawDistrict();
-echo "----END---total-- = $result <br>";*/
-/*$info = array(
-    'buildid' => 1,
-    '20161122' => '100',
-);
-echo ZDBTool::updateRow('t_stat_201611_day', 1, $info);*/
-
-/*class AsyncOperation extends Thread {
-    public function __construct($arg){
-        $this->arg = $arg;
-    }
-    public function run(){
-        if($this->arg){
-            printf("Hello %s\n", $this->arg);
-        }
-    }
-}
-$thread = new AsyncOperation("World");
-if($thread->start())
-    $thread->join();*/
-

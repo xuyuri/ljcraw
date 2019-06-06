@@ -19,11 +19,12 @@ Class ZDBTool {
      * @author          yurixu 2016-11-19
      * @example         ZDBTool::getConnection()
      */
-    public static function getConnection() {
-        if(!isset(self::$conn)) {
-            self::$conn = new LjConnection(LjConfig::BD_CONNECTION, LjConfig::DB_USER_NAME, LjConfig::DB_PASSWORD);
+    public static function getConnection()
+    {
+        if (!isset(self::$conn)) {
+            self::$conn = new LjConnection(LjConfig::CITY . LjConfig::DB_NAME . LjConfig::BD_CONNECTION, LjConfig::DB_USER_NAME, LjConfig::DB_PASSWORD);
         }
-        if(self::$conn === false) {
+        if (self::$conn === false) {
             return false;
         }
         return self::$conn;

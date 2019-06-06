@@ -6,20 +6,26 @@
  * Time: 22:43
  */
 Class LjConfig {
+    //城市
+    const CITY = 'sh';
+    //城市名称
+    const CITY_NAME = '上海';
     //房源列表
-    const PAGE_BASE_URL = 'http://bj.lianjia.com/zufang/pg';
+    const PAGE_BASE_URL = '.lianjia.com/zufang/pg';
     //房源详情
-    const DETAIL_BASE_URL = 'http://bj.lianjia.com/zufang/';
+    const DETAIL_BASE_URL = '.lianjia.com/zufang/';
     //小区
-    const DISTRICT_BASE_URL = 'http://bj.lianjia.com/xiaoqu/';
+    const DISTRICT_BASE_URL = '.lianjia.com/xiaoqu/';
     //地铁
-    const LINE_BASE_URL = 'http://bj.lianjia.com/ditiezufang/';
+    const LINE_BASE_URL = '.lianjia.com/ditiezufang/';
+    //数据库后缀名称（需用CITY拼接）
+    const DB_NAME = '_ljcraw';
     //数据库用户名
     const DB_USER_NAME = 'root';
     //数据库密码
     const DB_PASSWORD = 'xyw';
     //数据库连接
-    const BD_CONNECTION = 'mysql:host=localhost;dbname=ljCraw';
+    const BD_CONNECTION = 'mysql:host=localhost;dbname=';
     //Redis host
     const REDIS_HOST = '127.0.0.1';
     //Redis端口号
