@@ -22,7 +22,7 @@ Class ZDBTool {
     public static function getConnection()
     {
         if (!isset(self::$conn)) {
-            self::$conn = new LjConnection(LjConfig::CITY . LjConfig::DB_NAME . LjConfig::BD_CONNECTION, LjConfig::DB_USER_NAME, LjConfig::DB_PASSWORD);
+            self::$conn = new LjConnection(LjConfig::BD_CONNECTION.LjConfig::CITY . LjConfig::DB_NAME, LjConfig::DB_USER_NAME, LjConfig::DB_PASSWORD);
         }
         if (self::$conn === false) {
             return false;

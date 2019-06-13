@@ -7,9 +7,9 @@
  */
 Class LjConfig {
     //城市
-    const CITY = 'sh';
+    const CITY = 'sz';
     //城市名称
-    const CITY_NAME = '上海';
+    const CITY_NAME = '深圳';
     //房源列表
     const PAGE_BASE_URL = '.lianjia.com/zufang/pg';
     //房源详情
@@ -21,9 +21,9 @@ Class LjConfig {
     //数据库后缀名称（需用CITY拼接）
     const DB_NAME = '_ljcraw';
     //数据库用户名
-    const DB_USER_NAME = 'root';
+    const DB_USER_NAME = '';
     //数据库密码
-    const DB_PASSWORD = 'xyw';
+    const DB_PASSWORD = '';
     //数据库连接
     const BD_CONNECTION = 'mysql:host=localhost;dbname=';
     //Redis host

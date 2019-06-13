@@ -588,7 +588,8 @@ Class Craw
         $area = array();
         $table = 't_area';
         if (!empty($content)) {
-            $head_preg = '~<div class="option-list sub-option-list">([\s\S]*?)</div>~';
+            //$head_preg = '~<div class="option-list sub-option-list">([\s\S]*?)</div>~';
+            $head_preg = '~<ul data-target="area">([\s\S]*?)</ul>~';
             $head = array();
             preg_match($head_preg, $content, $head);
             if (!empty($head)) {
@@ -623,8 +624,9 @@ Class Craw
         $line = array();
         $table = 't_line';
         if (!empty($content)) {
-            $head_preg = '~<div class="option-list sub-option-list">([\s\S]*?)</div>~';
-            $head = array();
+//            $head_preg = '~<div class="option-list sub-option-list">([\s\S]*?)</div>~';
+			$head_preg = '~<ul data-target="station">([\s\S]*?)</ul>~';
+			$head = array();
             preg_match($head_preg, $content, $head);
             if (!empty($head)) {
                 preg_match_all('~<a href="/ditiezufang/(\S+?)/">(\S+?)</a>~', $head[0], $list);
