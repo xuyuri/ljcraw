@@ -308,6 +308,7 @@ Class Craw
         $area = ZDBTool::queryAll($sql);
         foreach ($area as $k => $v) {
             $url = $url = 'http://' . LjConfig::CITY . LjConfig::DETAIL_BASE_URL . $v['lj_no'];
+            echo $url."\n";
             $contents = Helper::getContents($url);
             if (!empty($contents)) {
                 $result += self::parseArea($contents, $v['id']);
@@ -331,6 +332,7 @@ Class Craw
         $line = ZDBTool::queryAll($sql);
         foreach ($line as $k => $v) {
             $url = 'http://'.LjConfig::CITY.LjConfig::LINE_BASE_URL . $v['lj_no'];
+            echo $url."\n";
             $contents = Helper::getContents($url);
             if (!empty($contents)) {
                 $result += self::parseLine($contents, $v['id']);
@@ -598,12 +600,17 @@ Class Craw
                     $area_no = $list[1];
                     $area_name = $list[2];
                     foreach ($area_name as $k => $v) {
+                    	if ('不限' == $v) {
+                    		continue;
+	                    }
+	                    echo "lj_no=".$area_no[$k].", name=$v, parentid=$parentid\n";
                         $area[$k]['lj_no'] = $area_no[$k];
                         $area[$k]['name'] = $v;
                         $area[$k]['parentid'] = $parentid;
                     }
+	                $area = array_values($area);
                     $result = ZDBTool::multiInsert($table, $area);
-//                    echo " ---- result = $result \n";
+                    echo " ---- result = $result \n";
                 }
             }
         }
@@ -634,12 +641,18 @@ Class Craw
                     $subway_no = $list[1];
                     $subway_name = $list[2];
                     foreach ($subway_name as $k => $v) {
+	                    if ('不限' == $v) {
+		                    continue;
+	                    }
+	                    echo "lj_no=".$subway_no[$k].", name=$v, parentid=$parentid\n";
                         $line[$k]['type'] = 2;
                         $line[$k]['lj_no'] = $subway_no[$k];
                         $line[$k]['name'] = $v;
                         $line[$k]['parentid'] = $parentid;
                     }
+	                $line = array_values($line);
                     $result = ZDBTool::multiInsert($table, $line);
+	                echo " ---- result = $result \n";
                 }
             }
         }

@@ -101,7 +101,7 @@ Class LjConnection {
             }
             catch(PDOException $e)
             {
-                throw new Exception('LjConnection failed to open the DB connection.',(int)$e->getCode(),$e->errorInfo);
+                throw new Exception('LjConnection failed to open the DB connection.'.(int)$e->getCode().', info='.$e->errorInfo,(int)$e->getCode(),$e->errorInfo);
             }
         }
     }

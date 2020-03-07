@@ -7,9 +7,9 @@
  */
 Class LjConfig {
     //城市
-    const CITY = 'sz';
+    const CITY = 'gz';
     //城市名称
-    const CITY_NAME = '深圳';
+    const CITY_NAME = '广州';
     //房源列表
     const PAGE_BASE_URL = '.lianjia.com/zufang/pg';
     //房源详情
@@ -37,8 +37,8 @@ Class LjConfig {
      * 这里设置代理机器，只有需要代理的时候才设置，不需要代理，请设置为0.0.0.0和0
      * 默认CURL_PROXY_HOST=0.0.0.0和CURL_PROXY_PORT=0，此时不开启代理（如有需要才设置）
      */
-    /*const CURL_PROXY_HOST = "0.0.0.0";
-    const CURL_PROXY_PORT = 0;*/
+    const CURL_PROXY_HOST = "0.0.0.0";
+    const CURL_PROXY_PORT = 0;
 
     /*const CURL_PROXY_HOST = "dGNwOi8vcHJveHkudGVuY2VudC5jb20=";
     const CURL_PROXY_PORT = 8080;*/
