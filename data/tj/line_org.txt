@@ -1,0 +1,18 @@
+<li data-id="1220036457029788" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li1220036457029788/" >5号线</a>
+        </li>
+              <li data-id="110458001" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li110458001/" >1号线</a>
+        </li>
+              <li data-id="110458002" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li110458002/" >2号线</a>
+        </li>
+              <li data-id="110458003" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li110458003/" >3号线</a>
+        </li>
+              <li data-id="1213444528222088" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li1213444528222088/" >6号线</a>
+        </li>
+              <li data-id="110458004" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li110458004/" >9号线</a>
+        </li>

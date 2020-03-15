@@ -315,6 +315,7 @@ Class Craw
                 sleep(2);
             }
         }
+        echo __FUNCTION__." done.\n\n";
         return $result;
     }
 
@@ -338,7 +339,8 @@ Class Craw
                 $result += self::parseLine($contents, $v['id']);
             }
         }
-        return $result;
+	    echo __FUNCTION__." done.\n\n";
+	    return $result;
     }
 
     /**

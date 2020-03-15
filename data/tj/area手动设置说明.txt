@@ -1,0 +1,28 @@
+区域：
+1. area_org.txt 至 area_filter.txt
+使用grep命令：grep -E '<a.*?a>' area_org.txt > area_filter.txt
+把包含区域和代码的行写入area_filter.txt文件
+
+2. area_filter 至 area_wide.txt
+在sublime下使用查找替换功能，
+查找：<a href=\"\/zufang\/([a-z0-9]+)/\"  >([\s\S]+?)<\/a>
+替换：INSERT INTO `t_area` VALUES (1, '$2', '$1', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+
+3. 修改area_wide.txt的ID列
+
+
+地铁线路：
+1. line_org.txt 至 line_filter.txt
+使用grep命令：grep -E '<a.*?a>' line_org.txt > line_filter.txt
+把包含区域和代码的行写入line_filter.txt文件
+
+2. line_filter 至 line_wide.txt
+在sublime下使用查找替换功能，
+查找：<a href=\"\/ditiezufang\/([0-9a-z]+?)\/\" >([\w\-\(\)]+?)<\/a>
+替换：INSERT INTO `t_line` VALUES (1, 1, '$2', '$1', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+
+3. 修改line_wide.txt的ID列
+
+
+grep -E '<a.*?a>' area_org.txt > area_filter.txt
+grep -E '<a.*?a>' line_org.txt > line_filter.txt

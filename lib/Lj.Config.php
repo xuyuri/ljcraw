@@ -7,9 +7,9 @@
  */
 Class LjConfig {
     //城市
-    const CITY = 'gz';
+    const CITY = 'cd';
     //城市名称
-    const CITY_NAME = '广州';
+    const CITY_NAME = '成都';
     //房源列表
     const PAGE_BASE_URL = '.lianjia.com/zufang/pg';
     //房源详情
@@ -19,7 +19,8 @@ Class LjConfig {
     //地铁
     const LINE_BASE_URL = '.lianjia.com/ditiezufang/';
     //数据库后缀名称（需用CITY拼接）
-    const DB_NAME = '_ljcraw';
+//    const DB_NAME = '_ljcraw';
+    const DB_NAME = '_uz';
     //数据库用户名
     const DB_USER_NAME = '';
     //数据库密码

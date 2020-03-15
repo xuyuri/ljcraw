@@ -1,0 +1,18 @@
+          INSERT INTO `t_area` VALUES (1, '和平', 'heping', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '南开', 'nankai', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '河西', 'hexi', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '河北', 'hebei', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '河东', 'hedong', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '红桥', 'hongqiao', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '西青', 'xiqing', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '北辰', 'beichen', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '东丽', 'dongli', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '津南', 'jinnan', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '塘沽', 'tanggu', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '开发区', 'kaifaqutj', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '武清', 'wuqing', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '滨海新区', 'binhaixinqu', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '宝坻', 'baodi', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '蓟州', 'jizhou', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_area` VALUES (1, '海河教育园区', 'haihejiaoyuyuanqu', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+

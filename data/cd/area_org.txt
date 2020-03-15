@@ -1,0 +1,51 @@
+<li data-id="510104" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jinjiang/"  >锦江</a>
+        </li>
+              <li data-id="510105" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/qingyang/"  >青羊</a>
+        </li>
+              <li data-id="510107" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/wuhou/"  >武侯</a>
+        </li>
+              <li data-id="990002" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/gaoxin7/"  >高新</a>
+        </li>
+              <li data-id="510108" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/chenghua/"  >成华</a>
+        </li>
+              <li data-id="510106" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jinniu/"  >金牛</a>
+        </li>
+              <li data-id="23008850" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/tianfuxinqu/"  >天府新区</a>
+        </li>
+              <li data-id="23009121" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/gaoxinxi1/"  >高新西</a>
+        </li>
+              <li data-id="510122" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/shuangliu/"  >双流</a>
+        </li>
+              <li data-id="510115" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/wenjiang/"  >温江</a>
+        </li>
+              <li data-id="510124" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/pidou/"  >郫都</a>
+        </li>
+              <li data-id="510112" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/longquanyi/"  >龙泉驿</a>
+        </li>
+              <li data-id="510114" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xindou/"  >新都</a>
+        </li>
+              <li data-id="510182" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/pengzhou/"  >彭州</a>
+        </li>
+              <li data-id="23009119" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jianyang/"  >简阳</a>
+        </li>
+              <li data-id="510113" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/qingbaijiang/"  >青白江</a>
+        </li>
+              <li data-id="510181" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/doujiangyan/"  >都江堰</a>
+        </li>

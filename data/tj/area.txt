@@ -1,0 +1,51 @@
+<li data-id="120101" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/heping/"  >和平</a>
+        </li>
+              <li data-id="120104" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/nankai/"  >南开</a>
+        </li>
+              <li data-id="120103" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/hexi/"  >河西</a>
+        </li>
+              <li data-id="120105" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/hebei/"  >河北</a>
+        </li>
+              <li data-id="120102" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/hedong/"  >河东</a>
+        </li>
+              <li data-id="120106" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/hongqiao/"  >红桥</a>
+        </li>
+              <li data-id="120111" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xiqing/"  >西青</a>
+        </li>
+              <li data-id="120113" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/beichen/"  >北辰</a>
+        </li>
+              <li data-id="120110" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/dongli/"  >东丽</a>
+        </li>
+              <li data-id="120112" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jinnan/"  >津南</a>
+        </li>
+              <li data-id="120107" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/tanggu/"  >塘沽</a>
+        </li>
+              <li data-id="120119" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/kaifaqutj/"  >开发区</a>
+        </li>
+              <li data-id="120114" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/wuqing/"  >武清</a>
+        </li>
+              <li data-id="120116" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/binhaixinqu/"  >滨海新区</a>
+        </li>
+              <li data-id="120215" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/baodi/"  >宝坻</a>
+        </li>
+              <li data-id="120225" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jizhou/"  >蓟州</a>
+        </li>
+              <li data-id="23011847" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/haihejiaoyuyuanqu/"  >海河教育园区</a>
+        </li>

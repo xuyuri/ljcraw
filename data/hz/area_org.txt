@@ -1,0 +1,33 @@
+<li data-id="330106" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xihu/"  >西湖</a>
+        </li>
+              <li data-id="330103" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xiacheng/"  >下城</a>
+        </li>
+              <li data-id="330104" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jianggan/"  >江干</a>
+        </li>
+              <li data-id="330105" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/gongshu/"  >拱墅</a>
+        </li>
+              <li data-id="330102" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/shangcheng/"  >上城</a>
+        </li>
+              <li data-id="330108" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/binjiang/"  >滨江</a>
+        </li>
+              <li data-id="330110" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/yuhang/"  >余杭</a>
+        </li>
+              <li data-id="330109" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xiaoshan/"  >萧山</a>
+        </li>
+              <li data-id="330183" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/fuyang/"  >富阳</a>
+        </li>
+              <li data-id="330185" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/linan/"  >临安</a>
+        </li>
+              <li data-id="23011864" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/qiantangxinqu/"  >钱塘新区</a>
+        </li>
