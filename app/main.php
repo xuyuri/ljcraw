@@ -11,11 +11,13 @@ require_once "../lib/Lj.ZDBTool.php";
 ini_set('max_execution_time', 0);
 ini_set('memory_limit', '512M');
 
+// 先跑crawArea和crawLine
+// 跑完后注释掉再跑getSiteArea
 Craw::crawArea();
 sleep(2);
 Craw::crawLine();
-sleep(2);
-getSiteArea();
+//sleep(2);
+//getSiteArea();
 
 //获取地铁站点对应的行政区
 function getSiteArea() {
@@ -33,12 +35,12 @@ function getSiteArea() {
     foreach($data as $k => $v) {
         $num ++;
         $parse_data = array();
-        $url = 'https://'.LjConfig::CITY.'.lianjia.com/ditiezufang/'.$v['lj_no'];
+        $url = 'http://'.LjConfig::CITY.'.lianjia.com/ditiezufang/'.$v['lj_no'];
         $content = Helper::getContents($url);
         if (!empty($content)) {
             $parse_data = parseBuild($content, $v['lj_no']);
         }
-        if ($num % 50 == 0) {
+        if ($num % 20 == 0) {
             sleep(5);
         } elseif ($parse_data) {
             sleep(3);
@@ -70,7 +72,7 @@ function parseBuild($content, $lj_no) {
     }
     $total = $head[1];
     echo "[parseBuild-$lj_no] total = $total\n";
-    if($total > 0 && $total < 10000) {      //添加小于1万的逻辑，因为http://bj.lianjia.com/zufang/c1112900488982796/，小区不存在，返回的是所有房源
+    if($total > 0 && $total < 20000) {      //添加小于2k的逻辑，因为http://bj.lianjia.com/zufang/c1112900488982796/，小区不存在，返回的是所有房源
         $result = parseBuildPage($content);
         if (empty($result)) {
             echo "[parseBuild] parseBuildPage is empty \n";
@@ -80,7 +82,7 @@ function parseBuild($content, $lj_no) {
 //        echo "[parseBuild] total page = $page \n";
         if($page > 1) {
             for($i=2; $i<=$page; $i++) {
-                $page_url = "https://".LjConfig::CITY.".lianjia.com/ditiezufang/$lj_no/pg$i/";
+                $page_url = "http://".LjConfig::CITY.".lianjia.com/ditiezufang/$lj_no/pg$i/";
                 $contents = Helper::getContents($page_url);
                 if (!empty($contents)) {
                     $page_data = parseBuildPage($contents);

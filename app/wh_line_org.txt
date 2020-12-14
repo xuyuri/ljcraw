@@ -1,0 +1,30 @@
+<li data-id="37000001564659" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li37000001564659/" >8号线三期</a>
+        </li>
+              <li data-id="110460697" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li110460697/" >1号线</a>
+        </li>
+              <li data-id="110460698" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li110460698/" >2号线</a>
+        </li>
+              <li data-id="378417258779536" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li378417258779536/" >3号线</a>
+        </li>
+              <li data-id="110460699" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li110460699/" >4号线</a>
+        </li>
+              <li data-id="3716931114463690" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li3716931114463690/" >6号线</a>
+        </li>
+              <li data-id="3720035603108572" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li3720035603108572/" >7号线</a>
+        </li>
+              <li data-id="3720026611943514" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li3720026611943514/" >8号线</a>
+        </li>
+              <li data-id="3720035776225140" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li3720035776225140/" >11号线</a>
+        </li>
+              <li data-id="3720027691477385" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li3720027691477385/" >21号线(阳逻线)</a>
+        </li>

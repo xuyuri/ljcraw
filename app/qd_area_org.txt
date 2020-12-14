@@ -1,0 +1,30 @@
+<li data-id="370202" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/shinan/"  >市南</a>
+        </li>
+              <li data-id="370203" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/shibei/"  >市北</a>
+        </li>
+              <li data-id="370213" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/licang/"  >李沧</a>
+        </li>
+              <li data-id="370212" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/laoshan/"  >崂山</a>
+        </li>
+              <li data-id="370211" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/huangdao/"  >黄岛</a>
+        </li>
+              <li data-id="370214" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/chengyang/"  >城阳</a>
+        </li>
+              <li data-id="370281" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jiaozhou/"  >胶州</a>
+        </li>
+              <li data-id="370282" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jimo/"  >即墨</a>
+        </li>
+              <li data-id="370283" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/pingdu/"  >平度</a>
+        </li>
+              <li data-id="370285" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/laixi/"  >莱西</a>
+        </li>

@@ -1,0 +1,30 @@
+<li data-id="99564937" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li99564937/" >1号线</a>
+        </li>
+              <li data-id="99565004" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li99565004/" >2号线</a>
+        </li>
+              <li data-id="99565454" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li99565454/" >3号线</a>
+        </li>
+              <li data-id="3616933680589841" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li3616933680589841/" >3号线(空港线)</a>
+        </li>
+              <li data-id="3620036937288401" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li3620036937288401/" >4号线</a>
+        </li>
+              <li data-id="3620028000976146" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li3620028000976146/" >5号线</a>
+        </li>
+              <li data-id="99565455" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li99565455/" >6号线</a>
+        </li>
+              <li data-id="3620027972660258" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li3620027972660258/" >10号线</a>
+        </li>
+              <li data-id="99565456" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li99565456/" >国博线</a>
+        </li>
+              <li data-id="3620038069956918" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li3620038069956918/" >环线</a>
+        </li>

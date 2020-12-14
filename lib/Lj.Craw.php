@@ -307,13 +307,13 @@ Class Craw
 
         $area = ZDBTool::queryAll($sql);
         foreach ($area as $k => $v) {
-            $url = $url = 'http://' . LjConfig::CITY . LjConfig::DETAIL_BASE_URL . $v['lj_no'];
+            $url = 'http://' . LjConfig::CITY . LjConfig::DETAIL_BASE_URL . $v['lj_no'];
             echo $url."\n";
             $contents = Helper::getContents($url);
             if (!empty($contents)) {
                 $result += self::parseArea($contents, $v['id']);
-                sleep(2);
             }
+	        sleep(3);
         }
         echo __FUNCTION__." done.\n\n";
         return $result;
@@ -338,6 +338,7 @@ Class Craw
             if (!empty($contents)) {
                 $result += self::parseLine($contents, $v['id']);
             }
+	        sleep(3);
         }
 	    echo __FUNCTION__." done.\n\n";
 	    return $result;
@@ -461,7 +462,7 @@ Class Craw
                         $info['meters'] = $meters ? str_replace('&nbsp;', '', $meters[1]) : '';
                         //朝向
                         $info['direction'] = $meters ? str_replace('&nbsp;', '', $meters[2]) : '';
-                        preg_match('~<div class="con"><a href="http://bj.lianjia.com/zufang/(.*?)/">(.*?)租房</a><span>/</span>(.*?)楼层\(共(\d+)层\)<span>/</span>(\d+)年建(.*?)</div>~', $v, $area);
+                        preg_match('~<div class="con"><a href="http://'.LjConfig::CITY.'.lianjia.com/zufang/(.*?)/">(.*?)租房</a><span>/</span>(.*?)楼层\(共(\d+)层\)<span>/</span>(\d+)年建(.*?)</div>~', $v, $area);
                         /*//区域ID
                         $info['area'] = $area ? $area[1] : '';
                         //区域名称
@@ -730,7 +731,7 @@ Class Craw
         if (!empty($content) && !empty($line) && $areaid > 0) {
             $line_name = array_column($line, 'name');
             $line_flip = array_flip($line_name);
-            $head_preg = '~<div class="title">\s*<a href="http://bj.lianjia.com/xiaoqu/(\d+)/" target="_blank">\S+</a>\s*</div>[\s\S]*?<div class="tagList">([\s\S]*?)</div>~';
+            $head_preg = '~<div class="title">\s*<a href="http://'.LjConfig::CITY.'.lianjia.com/xiaoqu/(\d+)/" target="_blank">\S+</a>\s*</div>[\s\S]*?<div class="tagList">([\s\S]*?)</div>~';
             $list = array();
             preg_match_all($head_preg, $content, $list);
             if (!empty($list)) {

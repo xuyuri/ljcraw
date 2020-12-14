@@ -1,0 +1,17 @@
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('东城', 'dongcheng', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('西城', 'xicheng', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('朝阳', 'chaoyang', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('海淀', 'haidian', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('丰台', 'fengtai', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('石景山', 'shijingshan', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('通州', 'tongzhou', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('昌平', 'changping', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('大兴', 'daxing', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('亦庄开发区', 'yizhuangkaifaqu', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('顺义', 'shunyi', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('房山', 'fangshan', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('门头沟', 'mentougou', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('平谷', 'pinggu', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('怀柔', 'huairou', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('密云', 'miyun', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('延庆', 'yanqing', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');

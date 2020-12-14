@@ -1,0 +1,51 @@
+<li data-id="23008614" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/dongcheng/"  >东城</a>
+        </li>
+              <li data-id="23008626" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xicheng/"  >西城</a>
+        </li>
+              <li data-id="23008613" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/chaoyang/"  >朝阳</a>
+        </li>
+              <li data-id="23008618" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/haidian/"  >海淀</a>
+        </li>
+              <li data-id="23008617" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/fengtai/"  >丰台</a>
+        </li>
+              <li data-id="23008623" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/shijingshan/"  >石景山</a>
+        </li>
+              <li data-id="23008625" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/tongzhou/"  >通州</a>
+        </li>
+              <li data-id="23008611" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/changping/"  >昌平</a>
+        </li>
+              <li data-id="23008615" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/daxing/"  >大兴</a>
+        </li>
+              <li data-id="23008629" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/yizhuangkaifaqu/"  >亦庄开发区</a>
+        </li>
+              <li data-id="23008624" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/shunyi/"  >顺义</a>
+        </li>
+              <li data-id="23008616" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/fangshan/"  >房山</a>
+        </li>
+              <li data-id="23008620" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/mentougou/"  >门头沟</a>
+        </li>
+              <li data-id="23008622" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/pinggu/"  >平谷</a>
+        </li>
+              <li data-id="23008619" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/huairou/"  >怀柔</a>
+        </li>
+              <li data-id="23008621" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/miyun/"  >密云</a>
+        </li>
+              <li data-id="23008628" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/yanqing/"  >延庆</a>
+        </li>

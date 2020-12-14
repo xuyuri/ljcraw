@@ -7,9 +7,9 @@
  */
 Class LjConfig {
     //城市
-    const CITY = 'cd';
+    const CITY = 'qd';
     //城市名称
-    const CITY_NAME = '成都';
+    const CITY_NAME = '青岛';
     //房源列表
     const PAGE_BASE_URL = '.lianjia.com/zufang/pg';
     //房源详情
@@ -41,6 +41,6 @@ Class LjConfig {
     const CURL_PROXY_HOST = "0.0.0.0";
     const CURL_PROXY_PORT = 0;
 
-    /*const CURL_PROXY_HOST = "dGNwOi8vcHJveHkudGVuY2VudC5jb20=";
-    const CURL_PROXY_PORT = 8080;*/
+//    const CURL_PROXY_HOST = "dGNwOi8vcHJveHkudGVuY2VudC5jb20=";
+//    const CURL_PROXY_PORT = 8080;
 }

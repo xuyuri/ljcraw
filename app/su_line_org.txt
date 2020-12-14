@@ -1,0 +1,18 @@
+<li data-id="23000001365686" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li23000001365686/" >3号线</a>
+        </li>
+              <li data-id="2320053514047396" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li2320053514047396/" >11号线</a>
+        </li>
+              <li data-id="110460705" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li110460705/" >1号线</a>
+        </li>
+              <li data-id="110460706" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li110460706/" >2号线</a>
+        </li>
+              <li data-id="2320021509639759" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li2320021509639759/" >4号线</a>
+        </li>
+              <li data-id="2320021529562828" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li2320021529562828/" >4号线支线</a>
+        </li>

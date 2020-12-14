@@ -1,0 +1,6 @@
+          INSERT INTO `t_line`(`type`,name,lj_no,parentid,create_time,operate_time) VALUES (1, '3号线', 'li23000001365686', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_line`(`type`,name,lj_no,parentid,create_time,operate_time) VALUES (1, '11号线', 'li2320053514047396', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_line`(`type`,name,lj_no,parentid,create_time,operate_time) VALUES (1, '1号线', 'li110460705', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_line`(`type`,name,lj_no,parentid,create_time,operate_time) VALUES (1, '2号线', 'li110460706', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_line`(`type`,name,lj_no,parentid,create_time,operate_time) VALUES (1, '4号线', 'li2320021509639759', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');
+          INSERT INTO `t_line`(`type`,name,lj_no,parentid,create_time,operate_time) VALUES (1, '4号线支线', 'li2320021529562828', 0, '2020-03-08 00:00:00', '2020-03-08 00:00:00');

@@ -1,0 +1,33 @@
+<li data-id="0" data-type="district" class="filter__item--level2 filter__item--aside strong">
+          <a href="/zufang/"  rel="nofollow">不限</a>
+        </li>
+              <li data-id="23008663" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/gusu/"  >姑苏</a>
+        </li>
+              <li data-id="23008664" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/gaoxin1/"  >高新</a>
+        </li>
+              <li data-id="23008665" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/wuzhong/"  >吴中</a>
+        </li>
+              <li data-id="23008666" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xiangcheng/"  >相城</a>
+        </li>
+              <li data-id="23008667" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/wujiang/"  >吴江</a>
+        </li>
+              <li data-id="23008668" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/changshu/"  >常熟</a>
+        </li>
+              <li data-id="23008669" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/zhangjiagang/"  >张家港</a>
+        </li>
+              <li data-id="23008670" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/kunshan/"  >昆山</a>
+        </li>
+              <li data-id="23008671" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/taicang/"  >太仓</a>
+        </li>
+              <li data-id="23008818" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/gongyeyuan/"  >工业园区</a>
+        </li>

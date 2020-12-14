@@ -1,0 +1,42 @@
+<li data-id="23008779" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jiangan/"  >江岸</a>
+        </li>
+              <li data-id="23008780" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jianghan/"  >江汉</a>
+        </li>
+              <li data-id="23008782" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/qiaokou/"  >硚口</a>
+        </li>
+              <li data-id="23008785" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/dongxihu/"  >东西湖</a>
+        </li>
+              <li data-id="23008781" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/wuchang/"  >武昌</a>
+        </li>
+              <li data-id="23008786" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/qingshan/"  >青山</a>
+        </li>
+              <li data-id="23008784" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/hongshan/"  >洪山</a>
+        </li>
+              <li data-id="23008783" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/hanyang/"  >汉阳</a>
+        </li>
+              <li data-id="23009129" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/donghugaoxin/"  >东湖高新</a>
+        </li>
+              <li data-id="420115" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jiangxia/"  >江夏</a>
+        </li>
+              <li data-id="420114" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/caidian/"  >蔡甸</a>
+        </li>
+              <li data-id="420116" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/huangbei/"  >黄陂</a>
+        </li>
+              <li data-id="420117" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xinzhou/"  >新洲</a>
+        </li>
+              <li data-id="23011832" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/zhuankoukaifaqu/"  >沌口开发区</a>
+        </li>

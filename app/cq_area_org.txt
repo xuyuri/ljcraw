@@ -1,0 +1,63 @@
+<li data-id="23008771" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jiangbei/"  >江北</a>
+        </li>
+              <li data-id="23008778" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/yubei/"  >渝北</a>
+        </li>
+              <li data-id="23008772" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/nanan/"  >南岸</a>
+        </li>
+              <li data-id="23008776" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/banan/"  >巴南</a>
+        </li>
+              <li data-id="23008775" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/shapingba/"  >沙坪坝</a>
+        </li>
+              <li data-id="23008774" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jiulongpo/"  >九龙坡</a>
+        </li>
+              <li data-id="23008770" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/yuzhong/"  >渝中</a>
+        </li>
+              <li data-id="23008773" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/dadukou/"  >大渡口</a>
+        </li>
+              <li data-id="500116" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/jiangjing/"  >江津</a>
+        </li>
+              <li data-id="500115" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/changshou1/"  >长寿</a>
+        </li>
+              <li data-id="23011527" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/dianjiangxian/"  >垫江县</a>
+        </li>
+              <li data-id="23011530" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/wuxixian/"  >巫溪县</a>
+        </li>
+              <li data-id="23011529" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/pengshuimiaozutujiazuzizhixian/"  >彭水苗族土家族自治县</a>
+        </li>
+              <li data-id="23011528" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/youyangtujiazumiaozuzizhixian/"  >酉阳土家族苗族自治县</a>
+        </li>
+              <li data-id="23011521" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xiushantujiazumiaozuzizhixian/"  >秀山土家族苗族自治县</a>
+        </li>
+              <li data-id="23011526" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/kaizhouqu/"  >开州区</a>
+        </li>
+              <li data-id="23011525" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/fengjiexian/"  >奉节县</a>
+        </li>
+              <li data-id="23011524" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/rongchangqu/"  >荣昌区</a>
+        </li>
+              <li data-id="23011523" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/wushanxian1/"  >巫山县</a>
+        </li>
+              <li data-id="23011522" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/zhongxian/"  >忠县</a>
+        </li>
+              <li data-id="23011531" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/chengkouxian/"  >城口县</a>
+        </li>

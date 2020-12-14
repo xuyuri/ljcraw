@@ -1,0 +1,72 @@
+<li data-id="11000002613368" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li11000002613368/" >新机场线</a>
+        </li>
+              <li data-id="647" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li647/" >1号线</a>
+        </li>
+              <li data-id="648" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li648/" >2号线</a>
+        </li>
+              <li data-id="656" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li656/" >4号线大兴线</a>
+        </li>
+              <li data-id="649" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li649/" >5号线</a>
+        </li>
+              <li data-id="46107350" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li46107350/" >6号线</a>
+        </li>
+              <li data-id="46537785" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li46537785/" >7号线</a>
+        </li>
+              <li data-id="659" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li659/" >8号线</a>
+        </li>
+              <li data-id="1120037074696977" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li1120037074696977/" >8号线南段</a>
+        </li>
+              <li data-id="43145267" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li43145267/" >9号线</a>
+        </li>
+              <li data-id="651" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li651/" >10号线</a>
+        </li>
+              <li data-id="652" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li652/" >13号线</a>
+        </li>
+              <li data-id="46461179" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li46461179/" >14号线东段</a>
+        </li>
+              <li data-id="1110790465974155" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li1110790465974155/" >14号线西段</a>
+        </li>
+              <li data-id="43143633" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li43143633/" >15号线</a>
+        </li>
+              <li data-id="1116796246117001" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li1116796246117001/" >16号线</a>
+        </li>
+              <li data-id="653" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li653/" >八通线</a>
+        </li>
+              <li data-id="43144847" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li43144847/" >亦庄线</a>
+        </li>
+              <li data-id="43144993" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li43144993/" >昌平线</a>
+        </li>
+              <li data-id="43145111" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li43145111/" >房山线</a>
+        </li>
+              <li data-id="654" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li654/" >机场线</a>
+        </li>
+              <li data-id="1120027908698063" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li1120027908698063/" >燕房线</a>
+        </li>
+              <li data-id="1120028159353771" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li1120028159353771/" >s1线</a>
+        </li>
+              <li data-id="1120028158304639" data-type="line" class="filter__item--level2  ">
+          <a href="/ditiezufang/li1120028158304639/" >西郊线</a>
+        </li>

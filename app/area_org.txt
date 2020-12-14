@@ -1,0 +1,42 @@
+<li data-id="23008792" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xinchengqu/"  >新城区</a>
+        </li>
+              <li data-id="23008789" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/beilin/"  >碑林</a>
+        </li>
+              <li data-id="23008899" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/lianhu/"  >莲湖</a>
+        </li>
+              <li data-id="23008790" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/weiyang/"  >未央</a>
+        </li>
+              <li data-id="23008900" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/yanta/"  >雁塔</a>
+        </li>
+              <li data-id="23008791" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/baqiao/"  >灞桥</a>
+        </li>
+              <li data-id="23008795" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/changan4/"  >长安</a>
+        </li>
+              <li data-id="990008" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/xixianxinquxian/"  >西咸新区（西安）</a>
+        </li>
+              <li data-id="610126" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/gaoling1/"  >高陵</a>
+        </li>
+              <li data-id="23008793" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/lintong/"  >临潼</a>
+        </li>
+              <li data-id="23008794" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/yanliang/"  >阎良</a>
+        </li>
+              <li data-id="23008903" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/lantian/"  >蓝田</a>
+        </li>
+              <li data-id="23008954" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/huyiqu/"  >鄠邑区</a>
+        </li>
+              <li data-id="23008955" data-type="district" class="filter__item--level2  ">
+          <a href="/zufang/zhouzhi/"  >周至</a>
+        </li>

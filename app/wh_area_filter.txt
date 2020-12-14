@@ -1,0 +1,14 @@
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('江岸', 'jiangan', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('江汉', 'jianghan', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('硚口', 'qiaokou', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('东西湖', 'dongxihu', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('武昌', 'wuchang', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('青山', 'qingshan', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('洪山', 'hongshan', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('汉阳', 'hanyang', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('东湖高新', 'donghugaoxin', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('江夏', 'jiangxia', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('蔡甸', 'caidian', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('黄陂', 'huangbei', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('新洲', 'xinzhou', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
+          INSERT INTO `t_area`(name,lj_no,parentid,create_time,operate_time) VALUES ('沌口开发区', 'zhuankoukaifaqu', 0, '2020-11-25 00:00:00', '2020-11-25 00:00:00');
